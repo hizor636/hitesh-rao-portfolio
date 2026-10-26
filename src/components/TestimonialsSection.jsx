@@ -16,7 +16,7 @@ export default function TestimonialsSection() {
   const current = TESTIMONIALS[activeIndex];
 
   return (
-    <section className="relative py-28 md:py-36 px-4 md:px-8 max-w-7xl mx-auto z-10 border-b border-white/10">
+    <section id="testimonials" className="relative py-28 md:py-36 px-4 md:px-8 max-w-7xl mx-auto z-10 border-b border-white/10 text-left">
       {/* Section Header */}
       <div className="flex items-center justify-between pb-12 border-b border-white/10">
         <div className="flex items-center gap-3">

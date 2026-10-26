@@ -1,0 +1,333 @@
+/* highlights.css — Instagram-style Story Highlights for Hitesh Rao M Portfolio */
+/* Design Token Mapping */
+:root {
+  --hl-bg: var(--bg-primary, var(--bg, #080808));
+  --hl-tx: var(--text-primary, var(--tx, #ecebe6));
+  --hl-mu: var(--text-muted, var(--mu, rgba(236, 235, 230, 0.66)));
+  --hl-ln: var(--border-subtle, var(--ln, rgba(236, 235, 230, 0.14)));
+  --hl-ac: var(--accent-lime, var(--ac, #d4ff4f));
+  --hl-sans: var(--sans, 'Inter Tight', system-ui, sans-serif);
+  --hl-mono: var(--mono, 'JetBrains Mono', monospace);
+}
+
+.hl-section {
+  position: relative;
+  padding: 2.5rem 1.25rem;
+  border-bottom: 1px solid var(--hl-ln);
+  color: var(--hl-tx);
+  font-family: var(--hl-sans);
+}
+
+@media (min-width: 768px) {
+  .hl-section {
+    padding: 3rem 2.5rem;
+  }
+}
+
+.hl-section .wrap {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.hl-section h2 {
+  font-family: var(--hl-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--hl-ac);
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+}
+
+/* Horizontal Highlights Row */
+.hl-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.75rem;
+  padding-top: 0.25rem;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.hl-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual Story Circle Button */
+.hl-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  padding: 0.25rem;
+  flex-shrink: 0;
+  text-align: center;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  outline-offset: 4px;
+}
+
+.hl-circle:focus-visible {
+  outline: 2px solid var(--hl-ac);
+  border-radius: 12px;
+}
+
+.hl-circle:hover {
+  transform: scale(1.05);
+}
+
+.hl-circle:active {
+  transform: scale(0.96);
+}
+
+/* Ring Gradient Wrapper */
+.hl-ring {
+  padding: 3px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, var(--hl-ac), #00baf2, #a855f7);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+  transition: box-shadow 0.25s ease;
+}
+
+.hl-circle:hover .hl-ring {
+  box-shadow: 0 0 18px rgba(212, 255, 79, 0.45);
+}
+
+.hl-avatar-box {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 9999px;
+  overflow: hidden;
+  background: #000;
+  padding: 2px;
+}
+
+@media (min-width: 640px) {
+  .hl-avatar-box {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.hl-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  object-fit: cover;
+  display: block;
+}
+
+.hl-label {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--hl-tx);
+  letter-spacing: -0.01em;
+}
+
+.hl-badge {
+  font-family: var(--hl-mono);
+  font-size: 0.62rem;
+  color: var(--hl-mu);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Fullscreen Story Viewer */
+.hl-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.hl-viewer.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.hl-modal {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 100%;
+  max-height: 840px;
+  background: #0b0b0e;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+@media (min-width: 640px) {
+  .hl-modal {
+    height: 88vh;
+    border-radius: 24px;
+  }
+}
+
+/* Background image */
+.hl-bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hl-vignette {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.82) 0%, transparent 30%, transparent 60%, rgba(0, 0, 0, 0.92) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Top Progress Bars & Header */
+.hl-top {
+  position: relative;
+  z-index: 10;
+  padding: 1.25rem 1rem 0.5rem;
+}
+
+.hl-bars {
+  display: flex;
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.hl-bar {
+  flex: 1;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.hl-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: #ffffff;
+  transition: width 0.05s linear;
+}
+
+.hl-bar.done .hl-bar-fill {
+  width: 100%;
+}
+
+.hl-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hl-header-info {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.hl-header-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.hl-header-sub {
+  font-family: var(--hl-mono);
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hl-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hl-btn-icon {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 9999px;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.hl-btn-icon:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.hl-btn-icon:focus-visible {
+  outline: 2px solid var(--hl-ac);
+}
+
+/* Touch / Click Nav Zones */
+.hl-tap-zones {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+}
+
+.hl-tap-left, .hl-tap-right {
+  height: 100%;
+  flex: 1;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+/* Bottom Caption */
+.hl-bottom {
+  position: relative;
+  z-index: 10;
+  padding: 1.5rem 1.25rem;
+  color: #fff;
+}
+
+.hl-tag {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 99px;
+  font-family: var(--hl-mono);
+  font-size: 0.68rem;
+  background: rgba(212, 255, 79, 0.2);
+  color: var(--hl-ac);
+  border: 1px solid rgba(212, 255, 79, 0.35);
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+}
+
+.hl-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #f5f5f5;
+  margin: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hl-circle, .hl-bar-fill, .hl-viewer {
+    transition: none !important;
+  }
+}

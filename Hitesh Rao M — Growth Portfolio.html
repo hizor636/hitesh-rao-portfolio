@@ -45,6 +45,7 @@ input,textarea{background:none;border:0;border-bottom:1px solid var(--ln);color:
 details{border-top:1px solid var(--ln);padding:1.1rem 0}summary{cursor:pointer;font-size:1.3rem;list-style:none}summary::-webkit-details-marker{display:none}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
 </style>
+<link rel="stylesheet" href="highlights.css">
 </head>
 <body>
 <a href="#main" class="sr-only focus:not-sr-only">Skip to content</a>
@@ -94,6 +95,13 @@ home:()=>`<section class="px-5 md:px-10 pt-16 md:pt-28 text-left">
 <section class="px-5 md:px-10 mt-16 grid grid-cols-2 lg:grid-cols-4 gap-px" style="background:var(--ln)">
 ${[['125K+','Google SA pool','Per Google selection email'],['800+','Event registrations','Presto & MUG summit scale'],['70+','SQL programs solved','Torii Minds & HackerRank'],['2','Industry simulations','Deloitte & Google Gemini']].map(x=>`<div class="p-6" style="background:var(--bg)"><p class="text-3xl md:text-5xl font-semibold tracking-tight">${x[0]}</p><p class="text-sm font-medium text-white mt-1">${x[1]}</p><p class="mono mu text-xs mt-1">${x[2]}</p></div>`).join('')}
 </section>
+<section id="highlights" class="hl hl-section" aria-labelledby="hl-title">
+  <div class="wrap">
+    <h2 id="hl-title">Highlights</h2>
+    <div id="hl-row" class="hl-row"></div>
+    <noscript><p>Highlights need JavaScript. See the Work section below.</p></noscript>
+  </div>
+</section>
 <section class="px-5 md:px-10 mt-28"><div class="flex justify-between items-end mb-8 rv"><h2 class="mono text-sm">(Selected Work — 4 Deep Case Studies)</h2><a href="#/work" class="mono">View detail →</a></div><div class="rv">${rows(P)}</div></section>
 <section class="px-5 md:px-10 mt-28"><p class="mono mu mb-3 rv">(The reality behind the work)</p><h2 class="rv text-3xl md:text-5xl tracking-tighter font-medium mb-10">How I actually work.</h2>
 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">${[['01','Follow up.','Most things stall because nobody asked twice. In events and campaigns, polite persistence is the difference between an empty slot and a confirmed speaker.'],['02','Prepare the boring stuff.','Checklists, collateral and backup connectivity plans. Glitz fails when operations haven’t planned for badge printer jams.'],['03','Stay calm when plans change.','They always do. When registration surges or sessions encounter latency, calm triage matters ten times more than panic.'],['04','Measure, then improve.','Collect feedback and verifiable numbers immediately after shipping, run an honest retro, and improve the next one.']].map(b=>`<div class="p-6 rounded-2xl border border-white/10" style="background:rgba(255,255,255,0.015)"><span class="mono" style="color:var(--ac)">${b[0]} //</span><h3 class="text-xl font-medium mt-3 mb-2">${b[1]}</h3><p class="text-sm mu">${b[2]}</p></div>`).join('')}</div></section>
@@ -138,5 +146,6 @@ document.addEventListener('click',e=>{
   d.innerHTML=`<div role="dialog" aria-modal="true" aria-label="${esc(p.t)}" class="w-full max-w-4xl my-auto p-6 md:p-10 border rounded-2xl text-left" style="background:var(--bg);border-color:var(--ln)"><div class="flex justify-between items-center mono mb-6 border-b pb-4" style="border-color:var(--ln)"><span class="mu">${p.i} · ${p.k}</span><button data-x class="px-3 py-1 rounded-full border border-white/20 hover:border-white/40" aria-label="Close case study">Close ✕</button></div>${cov(p).replace('aspect-ratio:4/3','min-height:200px')}<h2 class="text-3xl md:text-5xl tracking-tighter font-medium mt-8 text-white">${p.t}</h2><p class="mt-4 text-base mu leading-relaxed">${p.d}</p><div class="grid md:grid-cols-2 gap-8 mt-8 pt-6 border-t" style="border-color:var(--ln)"><div><p class="mono mu mb-3">Key Responsibilities</p><ul class="li text-base">${p.sv.map(s=>`<li>${s}</li>`).join('')}</ul></div><div><p class="mono mu mb-3">Verified Details</p><ul class="li text-base">${p.aw.map(s=>`<li>${s}</li>`).join('')}</ul></div></div></div>`;
   document.body.appendChild(d);d.querySelector('[data-x]').focus();d.addEventListener('click',ev=>{if(ev.target===d||ev.target.closest('[data-x]'))close()})}});
 </script>
+<script src="highlights.js" defer></script>
 </body>
 </html>

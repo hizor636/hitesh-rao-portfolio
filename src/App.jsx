@@ -6,6 +6,7 @@ import BackgroundCanvas from './components/BackgroundCanvas';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ValueProposition from './components/ValueProposition';
+import StoryHighlights from './components/StoryHighlights';
 import FeaturedProjects from './components/FeaturedProjects';
 import ProcessSection from './components/ProcessSection';
 import AboutDegreeLife from './components/AboutDegreeLife';
@@ -80,6 +81,9 @@ export default function App() {
         <ValueProposition
           onOpenAbout={() => setIsAboutOpen(true)}
         />
+
+        {/* Story Highlights: Professional, College, My Lyfff */}
+        <StoryHighlights />
 
         {/* 3. Selected Work: 4 case studies in the honest structure */}
         <FeaturedProjects

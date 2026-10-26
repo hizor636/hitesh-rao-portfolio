@@ -4,7 +4,7 @@ import { Compass, Sparkles, BookOpen, Layers, Cpu } from 'lucide-react';
 
 export default function Capabilities() {
   return (
-    <section id="beyond-work" className="relative px-5 md:px-10 py-24 md:py-32 max-w-7xl mx-auto z-10 border-b border-[rgba(236,235,230,0.14)] text-left">
+    <section id="capabilities" className="relative px-5 md:px-10 py-24 md:py-32 max-w-7xl mx-auto z-10 border-b border-[rgba(236,235,230,0.14)] text-left">
       {/* Eyebrow Label */}
       <div className="flex items-center gap-3 mb-4">
         <span className="font-mono text-xs uppercase tracking-widest text-[#d4ff4f]">

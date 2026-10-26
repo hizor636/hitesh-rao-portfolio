@@ -133,7 +133,7 @@ export default function RecognitionSection() {
       </div>
 
       {/* Ledger Table */}
-      <div className="mt-10 overflow-x-auto">
+      <div id="credentials" className="mt-10 overflow-x-auto scroll-mt-24">
         <table className="w-full text-left border-collapse">
           <thead>
             <tr className="border-b border-white/10 text-xs font-mono uppercase tracking-widest text-neutral-400 bg-white/[0.02]">
