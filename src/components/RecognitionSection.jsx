@@ -1,6 +1,16 @@
 import React, { useState } from 'react';
 import { Briefcase, Award, ExternalLink, Calendar, CheckCircle } from 'lucide-react';
 import { SUPPORTING_CREDENTIALS } from '../data/portfolioData';
+import {
+  GoogleLogo,
+  PaytmLogo,
+  MongoDBLogo,
+  PrestoLogo,
+  DeloitteLogo,
+  GeminiLogo,
+  HackerRankLogo,
+  CiscoLogo
+} from './CompanyLogos';
 
 const TIMELINE_EXPERIENCE = [
   {
@@ -94,6 +104,24 @@ export default function RecognitionSection() {
     ? TIMELINE_EXPERIENCE
     : TIMELINE_EXPERIENCE.filter((item) => item.type === filterType || (filterType === 'Certification' && (item.type === 'Simulation & Modeling' || item.type === 'Certification')));
 
+  const getOrgLogo = (org = '', role = '') => {
+    if (org.includes('Paytm')) return <PaytmLogo size="xs" />;
+    if (role.includes('Google') || org.includes('Google for Education')) return <GoogleLogo size="xs" />;
+    if (org.includes('Presto') || org.includes('MUG')) {
+      return (
+        <span className="inline-flex items-center gap-1">
+          <PrestoLogo size="xs" />
+          <MongoDBLogo size="xs" />
+        </span>
+      );
+    }
+    if (org.includes('Deloitte')) return <DeloitteLogo size="xs" />;
+    if (role.includes('Gemini')) return <GeminiLogo size="xs" />;
+    if (org.includes('HackerRank') || role.includes('HackerRank')) return <HackerRankLogo size="xs" />;
+    if (org.includes('Cisco') || role.includes('Cisco')) return <CiscoLogo size="xs" />;
+    return null;
+  };
+
   return (
     <section id="experience" className="relative px-5 md:px-10 py-24 md:py-32 max-w-7xl mx-auto z-10 border-b border-[rgba(236,235,230,0.14)] text-left">
       {/* Header */}
@@ -144,25 +172,32 @@ export default function RecognitionSection() {
             </tr>
           </thead>
           <tbody className="divide-y divide-white/5 font-sans">
-            {filteredItems.map((item, idx) => (
-              <tr key={idx} className="interactive-row hover:bg-white/[0.04] transition-all group">
-                {/* Dates */}
-                <td className="py-5 px-4 font-mono text-xs text-neutral-400 whitespace-nowrap align-top">
-                  {item.period}
-                </td>
+            {filteredItems.map((item, idx) => {
+              const orgLogo = getOrgLogo(item.org, item.role);
+              return (
+                <tr key={idx} className="interactive-row hover:bg-white/[0.04] transition-all group">
+                  {/* Dates */}
+                  <td className="py-5 px-4 font-mono text-xs text-neutral-400 whitespace-nowrap align-top">
+                    {item.period}
+                  </td>
 
-                {/* Role & Org */}
-                <td className="py-5 px-4 align-top">
-                  <div className="font-semibold text-white group-hover:text-[#d4ff4f] transition-colors text-base">
-                    {item.role}
-                  </div>
-                  <div className="text-xs text-[rgba(236,235,230,0.6)] font-mono mt-0.5">
-                    {item.org}
-                  </div>
-                  <div className="md:hidden text-xs text-[rgba(236,235,230,0.7)] mt-2">
-                    {item.contribution}
-                  </div>
-                </td>
+                  {/* Role & Org */}
+                  <td className="py-5 px-4 align-top">
+                    <div className="font-semibold text-white group-hover:text-[#d4ff4f] transition-colors text-base">
+                      {item.role}
+                    </div>
+                    <div className="flex items-center gap-2 text-xs text-[rgba(236,235,230,0.7)] font-mono mt-1">
+                      {orgLogo && (
+                        <span className="shrink-0 p-1 rounded-md bg-white/[0.05] border border-white/10">
+                          {orgLogo}
+                        </span>
+                      )}
+                      <span>{item.org}</span>
+                    </div>
+                    <div className="md:hidden text-xs text-[rgba(236,235,230,0.7)] mt-2">
+                      {item.contribution}
+                    </div>
+                  </td>
 
                 {/* Contribution */}
                 <td className="py-5 px-4 align-top hidden md:table-cell">
@@ -187,8 +222,9 @@ export default function RecognitionSection() {
                   </a>
                 </td>
               </tr>
-            ))}
-          </tbody>
+            );
+          })}
+        </tbody>
         </table>
       </div>
     </section>

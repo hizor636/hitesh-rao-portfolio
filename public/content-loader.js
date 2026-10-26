@@ -1,4 +1,4 @@
-/* Renders page content from /content/*.json.
+/* Renders page content from /content/*.json (edited through /admin).
    If a file can't be loaded, the static HTML already in index.html stays as the fallback.
    Note: fetch() needs http(s), so test with a local server, not file://. */
 (function () {
@@ -26,9 +26,9 @@
     var pill = $('#availability');
     if (pill) { if (d.availability) { pill.textContent = d.availability; pill.hidden = false; } else pill.hidden = true; }
     var stmtEl = $('#info .statement') || $('.statement');
-    if (a.statement && stmtEl) { stmtEl.textContent = a.statement; stmtEl.classList.add('protected-content'); stmtEl.setAttribute('data-protect-content', 'true'); }
+    if (a.statement && stmtEl) stmtEl.textContent = a.statement;
     var proseEl = $('#info .prose') || $('.prose');
-    if (a.paragraph && proseEl) { proseEl.textContent = a.paragraph; proseEl.classList.add('protected-content'); proseEl.setAttribute('data-protect-content', 'true'); }
+    if (a.paragraph && proseEl) proseEl.textContent = a.paragraph;
     if (c.email) document.querySelectorAll('[data-cms="email"]').forEach(function (el) { el.href = 'mailto:' + c.email; el.textContent = c.email; });
     ['linkedin', 'behance', 'instagram'].forEach(function (k) {
       if (c[k]) document.querySelectorAll('[data-cms="' + k + '"]').forEach(function (el) { el.href = safeUrl(c[k]); });
@@ -36,10 +36,10 @@
   }
 
   function card(p) {
-    var cover = (p.image ? '<img src="' + esc(safeUrl(p.image)) + '" alt="' + esc(p.image_alt || '') + '" loading="lazy" decoding="async" width="800" height="450" draggable="false" data-protect-image="true" class="protect-img">' : '') +
+    var cover = (p.image ? '<img src="' + esc(safeUrl(p.image)) + '" alt="' + esc(p.image_alt || '') + '" loading="lazy" decoding="async" width="800" height="450">' : '') +
       (p.stat ? '<p class="stat">' + esc(p.stat) + '</p>' : '') + (p.stat_label ? '<p>' + esc(p.stat_label) + '</p>' : '');
     return '<li data-category="' + esc(p.category) + '"><article class="card" style="--h:' + (+p.hue || 210) + '"><div class="cover">' + cover + '</div><div class="body">' +
-      '<p class="meta">' + esc(p.index) + ' · ' + esc(p.kind) + ' · ' + esc(p.year) + '</p><h3>' + esc(p.title) + '</h3><p class="desc protected-content" data-protect-content="true">' + esc(p.description) + '</p>' +
+      '<p class="meta">' + esc(p.index) + ' · ' + esc(p.kind) + ' · ' + esc(p.year) + '</p><h3>' + esc(p.title) + '</h3><p>' + esc(p.description) + '</p>' +
       '<ul class="tags">' + (p.tags || []).map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul>' +
       (p.link_url ? '<p><a class="card-link" href="' + esc(safeUrl(p.link_url)) + '" target="_blank" rel="noopener noreferrer">' + esc(p.link_label || 'View proof') + ' ↗</a></p>' : '') +
       (p.recognition ? '<p class="rec">' + esc(p.recognition) + '</p>' : '') + '</div></article></li>';

@@ -1,5 +1,14 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { X, Play, Pause, ChevronLeft, ChevronRight, Sparkles, GraduationCap, Briefcase, Compass, Award } from 'lucide-react';
+import {
+  GoogleLogo,
+  PaytmLogo,
+  MongoDBLogo,
+  PrestoLogo,
+  DeloitteLogo,
+  GeminiLogo,
+  HackerRankLogo
+} from './CompanyLogos';
 
 export const HIGHLIGHTS = [
   {
@@ -352,13 +361,11 @@ export default function StoryHighlights() {
                   <img
                     src={hl.coverImg}
                     alt={hl.title}
-                    draggable="false"
-                    data-protect-image="true"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 select-none pointer-events-none"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"
                   />
-                  {/* Subtle Dark Gradient Overlay & Protection Layer */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-auto" data-protect-image="true" />
+                  {/* Subtle Dark Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                 </div>
               </div>
             </div>
@@ -391,13 +398,11 @@ export default function StoryHighlights() {
         >
           {/* Main Story Container (Instagram 9:16 aspect ratio) */}
           <div className="relative w-full max-w-[420px] h-full sm:h-[88vh] sm:max-h-[840px] sm:rounded-3xl overflow-hidden bg-[#0c0d10] border border-white/15 shadow-2xl flex flex-col justify-between select-none">
-            {/* Background Story Image (Protected) */}
+            {/* Background Story Image */}
             <img
               src={currentSlide.img}
               alt={currentSlide.alt}
-              draggable="false"
-              data-protect-image="true"
-              className="absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-300 select-none pointer-events-none"
+              className="absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-300"
             />
 
             {/* Ambient Vignette Gradients */}
@@ -500,14 +505,43 @@ export default function StoryHighlights() {
 
             {/* Bottom Caption & Narrative Description */}
             <div className="relative z-30 p-5 pb-6 text-white space-y-2">
-              <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider bg-[#d4ff4f]/20 text-[#d4ff4f] border border-[#d4ff4f]/30">
-                {currentSlide.tag}
-              </span>
+              <div className="flex items-center gap-2">
+                {currentSlide.tag.includes('Paytm') && (
+                  <PaytmLogo size="xs" variant="badge" />
+                )}
+                {currentSlide.tag.includes('Google') && !currentSlide.tag.includes('Gemini') && (
+                  <span className="p-1 rounded bg-black/60 border border-white/20">
+                    <GoogleLogo size="xs" />
+                  </span>
+                )}
+                {currentSlide.tag.includes('Presto') && (
+                  <span className="p-1 rounded bg-black/60 border border-white/20 flex items-center gap-1">
+                    <PrestoLogo size="xs" />
+                    <MongoDBLogo size="xs" />
+                  </span>
+                )}
+                {currentSlide.tag.includes('Deloitte') && (
+                  <span className="p-1 rounded bg-black/60 border border-white/20">
+                    <DeloitteLogo size="xs" />
+                  </span>
+                )}
+                {currentSlide.tag.includes('Gemini') && (
+                  <span className="p-1 rounded bg-black/60 border border-white/20">
+                    <GeminiLogo size="xs" />
+                  </span>
+                )}
+                {currentSlide.tag.includes('SQL') && (
+                  <span className="p-1 rounded bg-black/60 border border-white/20">
+                    <HackerRankLogo size="xs" />
+                  </span>
+                )}
 
-              <p
-                className="text-sm font-sans font-normal leading-relaxed text-neutral-100 protected-content select-none"
-                data-protect-content="true"
-              >
+                <span className="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider bg-[#d4ff4f]/20 text-[#d4ff4f] border border-[#d4ff4f]/30">
+                  {currentSlide.tag}
+                </span>
+              </div>
+
+              <p className="text-sm font-sans font-normal leading-relaxed text-neutral-100">
                 {currentSlide.text}
               </p>
 

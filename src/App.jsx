@@ -15,10 +15,18 @@ import Capabilities from './components/Capabilities';
 import TestimonialsSection from './components/TestimonialsSection';
 import ContactSection from './components/ContactSection';
 import ContactModal from './components/ContactModal';
-import VisitorProtections from './components/VisitorProtections';
 import { PERSONAL_INFO } from './data/portfolioData';
+import { ThemeProvider } from './context/ThemeContext';
 
 export default function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
+  );
+}
+
+function AppContent() {
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [showStickyEmail, setShowStickyEmail] = useState(false);
 
@@ -63,19 +71,16 @@ export default function App() {
           }
         });
       },
-      { threshold: 0, rootMargin: '150px 0px 150px 0px' }
+      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
     );
 
     const observeElements = () => {
       const elements = document.querySelectorAll('.rv, .rv-stagger');
-      elements.forEach((el) => {
-        el.classList.add('in');
-        observer.observe(el);
-      });
+      elements.forEach((el) => observer.observe(el));
     };
 
     observeElements();
-    const timer = setTimeout(observeElements, 100);
+    const timer = setTimeout(observeElements, 300);
 
     return () => {
       observer.disconnect();
@@ -84,15 +89,12 @@ export default function App() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-[#080808] text-[#f5f5f5] selection:bg-white selection:text-black overflow-x-hidden font-sans">
+    <div className="relative min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)] selection:bg-[var(--accent-lime)] selection:text-black overflow-x-hidden font-sans transition-colors duration-500">
       {/* Fluid Magnetic Cursor */}
       <CustomCursor />
 
       {/* Ambient Interactive Canvas & Film Grain */}
       <BackgroundCanvas />
-
-      {/* Visitor Protections: Image and written content deterrents & accessible toasts */}
-      <VisitorProtections />
 
       {/* Fixed Floating Navbar */}
       <Navbar onOpenContact={() => setIsContactOpen(true)} />

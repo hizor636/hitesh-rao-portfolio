@@ -1,6 +1,14 @@
 import React from 'react';
 import { DEGREE_LIFE_MATRIX, PERSONAL_INFO } from '../data/portfolioData';
 import { GraduationCap, BookOpen, Sparkles, ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import {
+  GoogleLogo,
+  PaytmLogo,
+  MongoDBLogo,
+  PrestoLogo,
+  GeminiLogo,
+  HackerRankLogo
+} from './CompanyLogos';
 
 export default function AboutDegreeLife({ onOpenContact }) {
   const highlights = [
@@ -41,14 +49,11 @@ export default function AboutDegreeLife({ onOpenContact }) {
         Learning the fundamentals, <span className="font-serif italic font-normal text-[#d4ff4f]">using them early.</span>
       </h2>
 
-      {/* Narrative Intro (Protected written content) */}
-      <div
-        className="rv grid grid-cols-1 md:grid-cols-12 gap-8 text-[rgba(236,235,230,0.8)] text-base sm:text-lg leading-relaxed mb-16 protected-content select-none"
-        data-protect-content="true"
-      >
+      {/* Narrative Intro */}
+      <div className="rv grid grid-cols-1 md:grid-cols-12 gap-8 text-[rgba(236,235,230,0.8)] text-base sm:text-lg leading-relaxed mb-16">
         <div className="md:col-span-6 space-y-4">
           <p>
-            I’m Hitesh, a second-year BCA student at <strong className="text-white font-medium">Nagarjuna College of Engineering and Technology</strong> in Bengaluru (Class of 2028). I got into marketing through events and communities, then realised the best decisions come from data.
+            I’m <span className="font-sans font-bold text-white tracking-wide uppercase">Hitesh</span> <span className="font-serif italic font-normal text-[#d4ff4f] text-xl ml-1">Rao M</span>, a second-year BCA student at <strong className="text-white font-medium">Nagarjuna College of Engineering and Technology</strong> in Bengaluru (Class of 2028). I got into marketing through events and communities, then realised the best decisions come from data.
           </p>
           <p>
             So I study both: I write SQL and Python for my degree, and I apply them while running student communities, workshops, and hackathon operations.
@@ -107,24 +112,51 @@ export default function AboutDegreeLife({ onOpenContact }) {
           </h3>
         </div>
 
-        <div className="rv-stagger grid grid-cols-1 md:grid-cols-2 gap-4 protected-content select-none" data-protect-content="true">
-          {highlights.map((h, i) => (
-            <div
-              key={i}
-              className="interactive-card p-6 rounded-2xl border border-white/10 bg-white/[0.015] hover:bg-white/[0.03] transition-all flex flex-col justify-between"
-            >
-              <div>
-                <div className="flex items-center justify-between mb-3">
-                  <span className="font-mono text-xs uppercase tracking-wider text-[#d4ff4f] px-2.5 py-1 rounded-full bg-[#d4ff4f]/10 border border-[#d4ff4f]/20">
-                    {h.tag}
-                  </span>
-                  <CheckCircle2 className="w-4 h-4 text-white/40" />
+        <div className="rv-stagger grid grid-cols-1 md:grid-cols-2 gap-4">
+          {highlights.map((h, i) => {
+            const getHighlightLogo = (index) => {
+              switch (index) {
+                case 0:
+                  return <GoogleLogo size="sm" />;
+                case 1:
+                  return <GeminiLogo size="sm" />;
+                case 2:
+                  return <HackerRankLogo size="sm" />;
+                case 3:
+                  return (
+                    <div className="inline-flex items-center gap-1.5">
+                      <PaytmLogo size="xs" />
+                      <PrestoLogo size="xs" />
+                    </div>
+                  );
+                default:
+                  return null;
+              }
+            };
+
+            return (
+              <div
+                key={i}
+                className="interactive-card p-6 rounded-2xl border border-white/10 bg-white/[0.015] hover:bg-white/[0.03] transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      <span className="p-1 rounded-md bg-white/[0.05] border border-white/10">
+                        {getHighlightLogo(i)}
+                      </span>
+                      <span className="font-mono text-xs uppercase tracking-wider text-[#d4ff4f] px-2.5 py-0.5 rounded-full bg-[#d4ff4f]/10 border border-[#d4ff4f]/20">
+                        {h.tag}
+                      </span>
+                    </div>
+                    <CheckCircle2 className="w-4 h-4 text-white/40" />
+                  </div>
+                  <h4 className="text-lg font-medium text-white mb-2">{h.title}</h4>
+                  <p className="text-sm text-[rgba(236,235,230,0.7)] leading-relaxed">{h.desc}</p>
                 </div>
-                <h4 className="text-lg font-medium text-white mb-2">{h.title}</h4>
-                <p className="text-sm text-[rgba(236,235,230,0.7)] leading-relaxed">{h.desc}</p>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

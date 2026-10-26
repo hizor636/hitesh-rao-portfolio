@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { useTheme } from '../context/ThemeContext';
 
 export default function CustomCursor() {
+  const { isDark } = useTheme();
   const cursorRef = useRef(null);
   const ringRef = useRef(null);
   const [cursorText, setCursorText] = useState('');
@@ -81,9 +83,9 @@ export default function CustomCursor() {
       {/* Center sharp dot */}
       <div
         ref={cursorRef}
-        className={`fixed top-0 left-0 -ml-1 -mt-1 w-2 h-2 rounded-full bg-white transition-transform duration-75 ease-out ${
-          isView ? 'opacity-0 scale-0' : 'opacity-100 scale-100'
-        }`}
+        className={`fixed top-0 left-0 -ml-1 -mt-1 w-2 h-2 rounded-full transition-transform duration-75 ease-out ${
+          isDark ? 'bg-white' : 'bg-[#121215]'
+        } ${isView ? 'opacity-0 scale-0' : 'opacity-100 scale-100'}`}
         style={{ willChange: 'transform' }}
       />
 
@@ -92,10 +94,16 @@ export default function CustomCursor() {
         ref={ringRef}
         className={`fixed top-0 left-0 transition-all duration-200 ease-out flex items-center justify-center font-mono-tech ${
           isView
-            ? '-ml-12 -mt-5 w-24 h-10 rounded-full bg-white text-black font-semibold text-[11px] tracking-widest shadow-[0_0_25px_rgba(255,255,255,0.4)] uppercase scale-100'
+            ? isDark
+              ? '-ml-12 -mt-5 w-24 h-10 rounded-full bg-white text-black font-semibold text-[11px] tracking-widest shadow-[0_0_25px_rgba(255,255,255,0.4)] uppercase scale-100'
+              : '-ml-12 -mt-5 w-24 h-10 rounded-full bg-[#121215] text-white font-semibold text-[11px] tracking-widest shadow-[0_0_25px_rgba(0,0,0,0.2)] uppercase scale-100'
             : isPointer
-            ? '-ml-6 -mt-6 w-12 h-12 rounded-full border border-white/80 bg-white/10 backdrop-blur-xs scale-100'
-            : '-ml-4 -mt-4 w-8 h-8 rounded-full border border-white/30 scale-75'
+            ? isDark
+              ? '-ml-6 -mt-6 w-12 h-12 rounded-full border border-white/80 bg-white/10 backdrop-blur-xs scale-100'
+              : '-ml-6 -mt-6 w-12 h-12 rounded-full border border-black/70 bg-black/5 backdrop-blur-xs scale-100'
+            : isDark
+            ? '-ml-4 -mt-4 w-8 h-8 rounded-full border border-white/30 scale-75'
+            : '-ml-4 -mt-4 w-8 h-8 rounded-full border border-black/30 scale-75'
         }`}
         style={{ willChange: 'transform' }}
       >

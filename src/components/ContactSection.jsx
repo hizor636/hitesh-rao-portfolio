@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PERSONAL_INFO, INTERNSHIP_BLOCK, WORKFLOW_STEPS, FAQS } from '../data/portfolioData';
-import { Mail, ArrowUpRight, MapPin, Calendar, Clock, CheckCircle2, Globe, ExternalLink } from 'lucide-react';
+import { Mail, FileText, ArrowUpRight, MapPin, Calendar, Clock, CheckCircle2, Globe, ExternalLink } from 'lucide-react';
+import { BrandSignatureName, LinkedInLogo, GitHubLogo } from './CompanyLogos';
 
 export default function ContactSection({ onOpenContactModal }) {
   const [openFaq, setOpenFaq] = useState(null);
@@ -75,7 +76,16 @@ export default function ContactSection({ onOpenContactModal }) {
               <ArrowUpRight className="w-4 h-4" />
             </a>
 
-            {/* TODO: Downloadable resume removed; resume goes through email instead upon request */}
+            <a
+              href={PERSONAL_INFO.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium text-sm transition-all hover:scale-[1.02]"
+              data-cursor="pointer"
+            >
+              <FileText className="w-4 h-4" />
+              <span>Download Résumé (PDF)</span>
+            </a>
 
             <a
               data-cms="linkedin"
@@ -85,7 +95,7 @@ export default function ContactSection({ onOpenContactModal }) {
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-neutral-300 hover:text-white text-sm transition-all"
               data-cursor="pointer"
             >
-              <ExternalLink className="w-4 h-4 text-[#00baf2]" />
+              <LinkedInLogo size="xs" />
               <span>Connect on LinkedIn</span>
             </a>
           </div>
@@ -119,26 +129,28 @@ export default function ContactSection({ onOpenContactModal }) {
           <p className="font-mono text-xs uppercase tracking-widest text-[rgba(236,235,230,0.5)] mb-2">
             Verified Profiles
           </p>
-          <div className="text-xl md:text-2xl space-x-6 font-sans text-neutral-200">
+          <div className="text-xl md:text-2xl flex items-center gap-6 font-sans text-neutral-200">
             <a
               data-cms="linkedin"
               href={PERSONAL_INFO.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#d4ff4f] transition-colors"
+              className="hover:text-[#d4ff4f] transition-colors inline-flex items-center gap-2"
               data-cursor="pointer"
             >
-              LinkedIn ↗
+              <LinkedInLogo size="sm" />
+              <span>LinkedIn ↗</span>
             </a>
             <a
               data-cms="github"
               href={PERSONAL_INFO.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#d4ff4f] transition-colors"
+              className="hover:text-[#d4ff4f] transition-colors inline-flex items-center gap-2"
               data-cursor="pointer"
             >
-              GitHub ↗
+              <GitHubLogo size="sm" />
+              <span>GitHub ↗</span>
             </a>
           </div>
         </div>
@@ -223,7 +235,10 @@ export default function ContactSection({ onOpenContactModal }) {
 
       {/* Massive Iconic Headline */}
       <div className="rv pt-16 pb-8">
-        <h2 className="text-[clamp(2.6rem,10vw,9rem)] leading-[0.92] tracking-tighter font-semibold text-white">
+        <div className="mb-4">
+          <BrandSignatureName size="xl" />
+        </div>
+        <h2 className="text-[clamp(2.6rem,10vw,8.5rem)] leading-[0.92] tracking-tighter font-semibold text-white">
           Tech marketer<br />
           &amp; <span className="font-serif italic font-normal text-[#d4ff4f]">data builder.</span><br />
           Based in Bengaluru.
@@ -232,8 +247,9 @@ export default function ContactSection({ onOpenContactModal }) {
 
       {/* Bottom Row: Last Updated, Copyright & Back to Top */}
       <div className="rv flex flex-col sm:flex-row justify-between items-center gap-4 mt-16 pt-8 border-t border-[rgba(236,235,230,0.1)] font-mono text-xs uppercase tracking-wider text-[rgba(236,235,230,0.5)]">
-        <div className="flex items-center gap-4">
-          <span>© {new Date().getFullYear()} Hitesh Rao M</span>
+        <div className="flex flex-wrap items-center gap-3">
+          <span className="text-neutral-400">© {new Date().getFullYear()}</span>
+          <BrandSignatureName size="sm" />
           <span>•</span>
           <span className="text-[#d4ff4f]">Last updated: October 2026</span>
         </div>

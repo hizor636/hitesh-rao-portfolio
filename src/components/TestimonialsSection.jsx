@@ -58,10 +58,10 @@ export default function TestimonialsSection() {
             {current.avatarInitials}
           </div>
           <span className="text-base font-semibold text-white tracking-wide">
-            {current.author}
+            {current.name || current.author}
           </span>
           <span className="text-xs font-mono-tech text-neutral-400 mt-1 uppercase tracking-widest">
-            {current.title} • {current.company}
+            {current.role || current.title} • {current.org || current.company}
           </span>
         </div>
 

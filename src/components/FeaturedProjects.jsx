@@ -1,12 +1,50 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowUpRight, CheckCircle2, ShieldCheck } from 'lucide-react';
 import { DEEP_CASE_STUDIES, SUPPORTING_CREDENTIALS } from '../data/portfolioData';
+import {
+  PaytmLogo,
+  GoogleLogo,
+  MongoDBLogo,
+  PrestoLogo,
+  GeminiLogo,
+  DeloitteLogo,
+  CiscoLogo,
+  HackerRankLogo
+} from './CompanyLogos';
 
 export default function FeaturedProjects() {
   const [hoveredProject, setHoveredProject] = useState(null);
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [activeModalProject, setActiveModalProject] = useState(null);
   const [isFinePointer, setIsFinePointer] = useState(true);
+
+  const renderProjectBrandLogo = (id, size = "md") => {
+    switch (id) {
+      case 'paytm-hackathon':
+        return <PaytmLogo size={size} />;
+      case 'google-student-ambassador':
+        return <GoogleLogo size={size} />;
+      case 'presto-namma-mug':
+        return (
+          <div className="inline-flex items-center gap-1.5">
+            <PrestoLogo size={size} />
+            <MongoDBLogo size={size} />
+          </div>
+        );
+      case 'careergroww':
+        return <GeminiLogo size={size} />;
+      default:
+        return null;
+    }
+  };
+
+  const renderCredentialLogo = (tag = '') => {
+    if (tag.includes('Google') || tag.includes('Gemini')) return <GeminiLogo size="xs" />;
+    if (tag.includes('Deloitte') || tag.includes('Intelligence')) return <DeloitteLogo size="xs" />;
+    if (tag.includes('Programming') || tag.includes('Python')) return <CiscoLogo size="xs" />;
+    if (tag.includes('Data') || tag.includes('HackerRank') || tag.includes('SQL')) return <HackerRankLogo size="xs" />;
+    return null;
+  };
 
   // Check pointer precision and bind mousemove for cursor preview
   useEffect(() => {
@@ -68,9 +106,14 @@ export default function FeaturedProjects() {
 
             {/* Title & Role */}
             <div className="text-left">
-              <span className="text-2xl sm:text-3xl md:text-4xl tracking-tight font-medium text-white group-hover:text-[#d4ff4f] transition-colors block">
-                {project.title}
-              </span>
+              <div className="flex items-center gap-3">
+                <span className="shrink-0 p-1.5 rounded-lg bg-white/[0.04] border border-white/10 group-hover:border-[#d4ff4f]/40 transition-colors">
+                  {renderProjectBrandLogo(project.id, "sm")}
+                </span>
+                <span className="text-2xl sm:text-3xl md:text-4xl tracking-tight font-medium text-white group-hover:text-[#d4ff4f] transition-colors block">
+                  {project.title}
+                </span>
+              </div>
               <span className="text-xs sm:text-sm text-[rgba(236,235,230,0.6)] font-mono mt-1 block">
                 {project.role} · {project.dates}
               </span>
@@ -136,7 +179,10 @@ export default function FeaturedProjects() {
             >
               <div>
                 <div className="flex items-center justify-between text-xs font-mono text-[rgba(236,235,230,0.5)] mb-2">
-                  <span className="text-[#d4ff4f]">{item.tag}</span>
+                  <div className="flex items-center gap-1.5">
+                    {renderCredentialLogo(item.tag)}
+                    <span className="text-[#d4ff4f]">{item.tag}</span>
+                  </div>
                   <span>{item.dates}</span>
                 </div>
                 <h3 className="text-base font-medium text-white mb-2">
@@ -212,9 +258,14 @@ export default function FeaturedProjects() {
 
             {/* Case Study Title */}
             <div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl tracking-tighter font-medium text-white">
-                {activeModalProject.title}
-              </h2>
+              <div className="flex items-center gap-3 mb-2">
+                <span className="p-2 rounded-xl bg-white/5 border border-white/10 shrink-0">
+                  {renderProjectBrandLogo(activeModalProject.id, "md")}
+                </span>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl tracking-tighter font-medium text-white">
+                  {activeModalProject.title}
+                </h2>
+              </div>
               <div className="flex flex-wrap items-center gap-3 mt-2 font-mono text-xs text-[#d4ff4f]">
                 <span>{activeModalProject.role}</span>
                 <span>•</span>
@@ -222,11 +273,8 @@ export default function FeaturedProjects() {
               </div>
             </div>
 
-            {/* Deep-Dive Honest Case Breakdown (Protected written content) */}
-            <div
-              className="space-y-6 pt-4 border-t border-[rgba(236,235,230,0.1)] text-sm sm:text-base leading-relaxed text-[rgba(236,235,230,0.8)] protected-content select-none"
-              data-protect-content="true"
-            >
+            {/* Deep-Dive Honest Case Breakdown */}
+            <div className="space-y-6 pt-4 border-t border-[rgba(236,235,230,0.1)] text-sm sm:text-base leading-relaxed text-[rgba(236,235,230,0.8)]">
               <div>
                 <strong className="block font-mono text-xs uppercase tracking-wider text-white mb-1.5">
                   The Opportunity

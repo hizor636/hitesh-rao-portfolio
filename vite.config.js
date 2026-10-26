@@ -7,22 +7,10 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    {
-      name: 'legacy-admin-redirect',
-      configureServer(server) {
-        server.middlewares.use((req, res, next) => {
-          if (req.url && (req.url.startsWith('/studio-portal') || req.url.startsWith('/admin'))) {
-            res.writeHead(302, { Location: '/' });
-            res.end();
-            return;
-          }
-          next();
-        });
-      }
-    }
   ],
   server: {
+    host: '0.0.0.0',
     port: 3000,
-    host: '127.0.0.1'
+    allowedHosts: true
   }
 });

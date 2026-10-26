@@ -1,12 +1,13 @@
 {
-  "name": "new-folder-(3)",
+  "name": "hitesh-rao-portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "Tech Marketer & Data Builder portfolio",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 0.0.0.0 --port 3000",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "vite build"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",

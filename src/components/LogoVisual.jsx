@@ -72,98 +72,108 @@ export default function LogoVisual({ size = 'md', interactive = true }) {
   );
 }
 
-/* Institutional Partner Logos Banner */
+/* Institutional Partner Logos Banner featuring authentic MNC brand marks */
+import {
+  GoogleLogo,
+  PaytmLogo,
+  MongoDBLogo,
+  DeloitteLogo,
+  GeminiLogo,
+  CiscoLogo,
+  PrestoLogo,
+  HackerRankLogo
+} from './CompanyLogos';
+
 export function PartnerLogosBar() {
   const partners = [
     {
       name: 'Google',
       role: 'Student Ambassador 2026',
       badge: '125K+ APPLICANTS',
-      svg: (
-        <svg className="h-6 w-auto fill-current" viewBox="0 0 24 24">
-          <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/>
-        </svg>
-      )
+      logo: <GoogleLogo size="md" />,
+      brandClass: 'font-sans font-medium tracking-tight text-white'
     },
     {
       name: 'Paytm',
       role: 'Hackathon Core Ops',
       badge: 'ONE97 COMM',
-      svg: (
-        <span className="font-mono-tech text-base font-black tracking-tighter text-white">
-          Pay<span className="text-[#00baf2] group-hover:text-[#d4ff4f] transition-colors">tm</span>
-        </span>
-      )
+      logo: <PaytmLogo size="md" />,
+      brandClass: 'font-sans font-bold text-white'
     },
     {
       name: 'MongoDB',
       role: 'Namma MUG Partner',
       badge: '800+ ATTENDEES',
-      svg: (
-        <svg className="h-6 w-auto fill-current" viewBox="0 0 24 24">
-          <path d="M17.193 9.555c-1.264-5.18-4.434-7.55-4.9-7.893-.162-.12-.395-.12-.557 0-.466.343-3.636 2.713-4.9 7.893-1.42 5.83-.07 10.45 4.9 12.87.162.08.395.08.557 0 4.97-2.42 6.32-7.04 4.9-12.87z"/>
-        </svg>
-      )
+      logo: <MongoDBLogo size="md" />,
+      brandClass: 'font-sans font-semibold text-white'
     },
     {
       name: 'Deloitte.',
-      role: 'Analytics Verified',
+      role: 'Analytics Simulation',
       badge: 'BUSINESS INTEL',
-      svg: (
-        <span className="font-sans text-base font-bold tracking-tight text-white">
-          Deloitte<span className="text-[#86bc25] group-hover:text-[#d4ff4f] text-lg leading-none">.</span>
-        </span>
-      )
+      logo: <DeloitteLogo size="sm" />,
+      brandClass: 'font-sans font-bold text-white'
     },
     {
       name: 'Google Gemini',
       role: 'Certified Student',
       badge: 'GOOGLE FOR EDU',
-      svg: (
-        <span className="font-sans text-base font-semibold tracking-wide text-white">
-          ✦ Gemini
-        </span>
-      )
+      logo: <GeminiLogo size="md" />,
+      brandClass: 'font-sans font-medium text-white'
+    },
+    {
+      name: 'Cisco',
+      role: 'Python Essentials 1',
+      badge: 'PROGRAMMING',
+      logo: <CiscoLogo size="sm" />,
+      brandClass: 'font-sans font-semibold text-white'
+    },
+    {
+      name: 'Presto Foundation',
+      role: 'Distributed SQL Summit',
+      badge: 'LINUX FOUNDATION',
+      logo: <PrestoLogo size="md" />,
+      brandClass: 'font-sans font-medium text-white'
     },
     {
       name: 'HackerRank',
       role: 'SQL Intermediate',
-      badge: 'LEADERBOARD',
-      svg: (
-        <span className="font-mono-tech text-base font-bold text-white tracking-widest">
-          [H<span className="text-[#00ea64] group-hover:text-[#d4ff4f]">R</span>]
-        </span>
-      )
+      badge: 'VERIFIED SKILL',
+      logo: <HackerRankLogo size="md" />,
+      brandClass: 'font-mono text-white'
     }
   ];
 
   return (
     <div className="w-full pt-10 pb-6 border-y border-white/10">
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6">
-        <span className="font-mono-tech text-[10px] tracking-[0.25em] text-neutral-500 uppercase">
-          [COMMUNITY & INSTITUTIONAL ECOSYSTEM]
+        <span className="font-mono-tech text-[10px] tracking-[0.25em] text-neutral-400 uppercase flex items-center gap-2">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#d4ff4f]" />
+          [OFFICIAL MNC PARTNERS &amp; VERIFIED INSTITUTIONAL CREDENTIALS]
         </span>
         <span className="font-mono-tech text-[10px] tracking-widest text-[#d4ff4f] uppercase flex items-center gap-1.5">
           <span className="w-1.5 h-1.5 rounded-full bg-[#d4ff4f] animate-pulse" />
-          ACTIVE ROLES & CREDENTIALS
+          ACTIVE ROLES · NATIONAL SELECTIONS
         </span>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
         {partners.map((p) => (
           <div
             key={p.name}
-            className="group p-4 rounded-xl border border-white/5 bg-white/[0.015] hover:border-[#d4ff4f]/40 hover:bg-white/[0.04] transition-all duration-300 flex flex-col justify-between"
+            className="group p-3.5 rounded-xl border border-white/10 bg-white/[0.02] hover:border-[#d4ff4f]/50 hover:bg-white/[0.05] transition-all duration-300 flex flex-col justify-between"
           >
-            <div className="flex items-center justify-between text-neutral-400 group-hover:text-white transition-colors h-8">
-              {p.svg}
-              <span className="text-[9px] font-mono-tech text-neutral-600 group-hover:text-[#d4ff4f] transition-colors">
+            <div className="flex items-center justify-between h-7 mb-2">
+              <div className="transition-transform duration-300 group-hover:scale-105">
+                {p.logo}
+              </div>
+              <span className="text-[8px] font-mono-tech text-neutral-500 group-hover:text-[#d4ff4f] transition-colors tracking-tight">
                 {p.badge}
               </span>
             </div>
-            <div className="mt-3">
-              <span className="block text-xs font-semibold text-white tracking-tight">{p.name}</span>
-              <span className="block text-[10px] font-mono-tech text-neutral-400">{p.role}</span>
+            <div className="mt-2">
+              <span className={`block text-xs text-white ${p.brandClass}`}>{p.name}</span>
+              <span className="block text-[10px] font-mono-tech text-neutral-400 truncate">{p.role}</span>
             </div>
           </div>
         ))}

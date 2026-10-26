@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { ArrowDown, ArrowUpRight, Mail, MapPin } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, FileText, Mail, MapPin } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { PartnerLogosBar } from './LogoVisual';
+import { BrandSignatureName } from './CompanyLogos';
 
 export default function Hero() {
   const [photoHovered, setPhotoHovered] = useState(false);
@@ -17,12 +18,17 @@ export default function Hero() {
         <div className="lg:col-span-7 flex flex-col items-start text-left">
           
           {/* Status Pill: Open to internships with pulsating green dot */}
-          <div className="rv kicker inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[rgba(52,168,83,0.12)] border border-[rgba(52,168,83,0.25)] text-[#81C995] text-xs font-mono mb-6 select-none">
+          <div className="rv kicker inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[rgba(52,168,83,0.12)] border border-[rgba(52,168,83,0.25)] text-[#81C995] text-xs font-mono mb-4 select-none">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#34A853] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#34A853]"></span>
             </span>
             <span>Open to internships · Bengaluru · Immediate</span>
+          </div>
+
+          {/* Personal Signature Name */}
+          <div className="rv mb-3">
+            <BrandSignatureName size="lg" />
           </div>
 
           {/* Primary H1: Audited headline with 'data' serif accent */}
@@ -60,7 +66,17 @@ export default function Hero() {
               <span>Email me</span>
             </a>
 
-            {/* TODO: Downloadable resume removed; resume goes through email instead upon request */}
+            {/* Tertiary Link: Download résumé */}
+            <a
+              href={PERSONAL_INFO.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-3 text-xs font-mono uppercase tracking-wider text-[rgba(236,235,230,0.65)] hover:text-white transition-colors flex items-center gap-1.5 border-b border-transparent hover:border-white/40"
+              data-cursor="pointer"
+            >
+              <FileText className="w-3.5 h-3.5" />
+              <span>Download résumé ↗</span>
+            </a>
           </div>
         </div>
 
@@ -77,31 +93,21 @@ export default function Hero() {
             <div className="absolute inset-0 rounded-[28px] bg-gradient-to-tr from-[#4285F4]/20 via-[#d4ff4f]/15 to-transparent blur-2xl -z-10 opacity-70 group-hover:opacity-100 transition-opacity duration-500" />
 
             {/* Inner Image Container */}
-            <div className="relative w-full h-full rounded-[22px] overflow-hidden bg-[#0c0d11] select-none">
+            <div className="relative w-full h-full rounded-[22px] overflow-hidden bg-[#0c0d11]">
               <img
                 src="/images/hitesh-profile.jpg"
                 alt="Portrait of Hitesh Rao M — Tech Marketer & Data Builder"
                 width="420"
                 height="420"
-                draggable="false"
-                data-protect-image="true"
-                className="w-full h-full object-cover object-top filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out select-none pointer-events-none"
+                className="w-full h-full object-cover object-top filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
                 loading="eager"
-              />
-              {/* Transparent click/drag protection overlay */}
-              <div
-                className="absolute inset-0 z-10"
-                data-protect-image="true"
-                aria-hidden="true"
               />
 
               {/* Bottom Photo Caption */}
-              <div className="absolute bottom-4 left-4 right-4 p-3 rounded-2xl bg-black/75 backdrop-blur-md border border-white/10 flex items-center justify-between text-xs font-mono shadow-xl">
+              <div className="absolute bottom-4 left-4 right-4 p-3 rounded-2xl bg-black/80 backdrop-blur-md border border-white/10 flex items-center justify-between text-xs font-mono shadow-xl">
                 <div>
-                  <span className="block text-white font-medium tracking-tight text-[13px]">
-                    Hitesh Rao M
-                  </span>
-                  <span className="block text-[11px] text-neutral-400">
+                  <BrandSignatureName size="sm" />
+                  <span className="block text-[11px] text-neutral-400 font-mono mt-0.5">
                     BCA Class of '28 · NCET Bengaluru
                   </span>
                 </div>

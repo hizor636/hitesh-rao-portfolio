@@ -3,6 +3,7 @@ import { X, Send, CheckCircle2, Sparkles, MessageSquare } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import LogoVisual from './LogoVisual';
+import { BrandSignatureName } from './CompanyLogos';
 
 export default function ContactModal({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
@@ -67,11 +68,11 @@ export default function ContactModal({ isOpen, onClose }) {
       <div className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-[#0b0b0e] border border-white/15 rounded-3xl shadow-2xl my-auto text-white">
         {/* Header */}
         <div className="sticky top-0 z-30 flex items-center justify-between px-6 py-4 bg-[#0b0b0e]/95 backdrop-blur-md border-b border-white/10">
-          <div className="flex items-center gap-3 font-mono-tech text-xs">
+          <div className="flex items-center gap-3">
             <LogoVisual size="sm" interactive={false} />
-            <span className="text-white font-bold">HITESH RAO M</span>
-            <span className="text-neutral-500">•</span>
-            <span className="text-[#d4ff4f]">OPPORTUNITY INQUIRY</span>
+            <BrandSignatureName size="sm" />
+            <span className="text-neutral-500 hidden sm:inline">•</span>
+            <span className="text-[#d4ff4f] font-mono-tech text-xs hidden sm:inline">OPPORTUNITY INQUIRY</span>
           </div>
 
           <button

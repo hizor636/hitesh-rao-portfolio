@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, ArrowUpRight, MapPin } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import LogoVisual from './LogoVisual';
+import { BrandSignatureName } from './CompanyLogos';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navbar({ onOpenContact }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -134,14 +136,7 @@ export default function Navbar({ onOpenContact }) {
                 <LogoVisual size="sm" interactive={false} />
               </div>
 
-              <div className="flex items-baseline tracking-tight">
-                <span className="font-sans text-xs sm:text-sm font-semibold text-white tracking-wide uppercase transition-colors group-hover:text-neutral-200">
-                  HITESH
-                </span>
-                <span className="font-serif italic font-normal text-sm sm:text-base text-[#d4ff4f] ml-1 leading-none transition-transform duration-300 group-hover:scale-105">
-                  RAO M
-                </span>
-              </div>
+              <BrandSignatureName size="sm" />
             </a>
 
             {/* Organic Available Status Pill */}
@@ -184,10 +179,23 @@ export default function Navbar({ onOpenContact }) {
           </nav>
 
           {/* ========================================================= */}
-          {/* RIGHT ZONE: Primary CTA & Mobile Toggle                  */}
+          {/* RIGHT ZONE: Primary CTA, Theme Toggle & Mobile Toggle    */}
           {/* ========================================================= */}
-          <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-            {/* TODO: Downloadable resume removed; resume goes through email instead upon request */}
+          <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
+            {/* Theme Toggle Button */}
+            <ThemeToggle />
+
+            {/* Direct Résumé Link */}
+            <a
+              href={PERSONAL_INFO.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-mono text-neutral-300 hover:text-white transition-all focus-visible:outline-2 focus-visible:outline-[#d4ff4f] focus-visible:outline-offset-1"
+              data-cursor="pointer"
+            >
+              <span>Résumé</span>
+              <ArrowUpRight className="w-3 h-3 text-neutral-400" />
+            </a>
 
             {/* Primary Action Button */}
             <button
@@ -271,7 +279,16 @@ export default function Navbar({ onOpenContact }) {
                 </a>
               );
             })}
-            {/* TODO: Downloadable resume removed; resume goes through email instead upon request */}
+            <a
+              href={PERSONAL_INFO.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-[#d4ff4f] hover:bg-white/5 transition-colors focus-visible:outline-2 focus-visible:outline-[#d4ff4f]"
+            >
+              <span>Download Résumé (PDF)</span>
+              <ArrowUpRight className="w-3.5 h-3.5 text-[#d4ff4f]" />
+            </a>
           </nav>
 
           {/* Bottom details */}
@@ -280,15 +297,18 @@ export default function Navbar({ onOpenContact }) {
               <MapPin className="w-3 h-3 text-[#d4ff4f]" />
               Bengaluru, Karnataka
             </span>
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenContact();
-              }}
-              className="px-3.5 py-1.5 rounded-full bg-[#d4ff4f] text-black text-xs font-semibold hover:bg-[#c2ef3e] transition-colors focus-visible:outline-2 focus-visible:outline-black"
-            >
-              Connect →
-            </button>
+            <div className="flex items-center gap-2">
+              <ThemeToggle showLabel={true} />
+              <button
+                onClick={() => {
+                  setMobileMenuOpen(false);
+                  onOpenContact();
+                }}
+                className="px-3.5 py-1.5 rounded-full bg-[#d4ff4f] text-black text-xs font-semibold hover:bg-[#c2ef3e] transition-colors focus-visible:outline-2 focus-visible:outline-black"
+              >
+                Connect →
+              </button>
+            </div>
           </div>
         </div>
       )}

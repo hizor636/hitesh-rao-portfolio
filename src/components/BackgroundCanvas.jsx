@@ -1,7 +1,14 @@
 import React, { useEffect, useRef } from 'react';
+import { useTheme } from '../context/ThemeContext';
 
 export default function BackgroundCanvas() {
   const canvasRef = useRef(null);
+  const { isDark } = useTheme();
+  const isDarkRef = useRef(isDark);
+
+  useEffect(() => {
+    isDarkRef.current = isDark;
+  }, [isDark]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -33,10 +40,10 @@ export default function BackgroundCanvas() {
 
     // Subtle ambient orbs that slowly float with mouse inertia
     const orbs = [
-      { x: width * 0.2, y: height * 0.25, radius: 380, color: 'rgba(255, 255, 255, 0.022)', vx: 0.15, vy: 0.12 },
-      { x: width * 0.8, y: height * 0.35, radius: 450, color: 'rgba(220, 215, 205, 0.018)', vx: -0.12, vy: 0.18 },
-      { x: width * 0.5, y: height * 0.75, radius: 520, color: 'rgba(120, 130, 160, 0.015)', vx: 0.18, vy: -0.15 },
-      { x: width * 0.3, y: height * 0.85, radius: 320, color: 'rgba(255, 255, 255, 0.012)', vx: -0.1, vy: -0.1 }
+      { x: width * 0.2, y: height * 0.25, radius: 380, vx: 0.15, vy: 0.12 },
+      { x: width * 0.8, y: height * 0.35, radius: 450, vx: -0.12, vy: 0.18 },
+      { x: width * 0.5, y: height * 0.75, radius: 520, vx: 0.18, vy: -0.15 },
+      { x: width * 0.3, y: height * 0.85, radius: 320, vx: -0.1, vy: -0.1 }
     ];
 
     // Delicate floating stardust particles
@@ -61,8 +68,10 @@ export default function BackgroundCanvas() {
 
       ctx.clearRect(0, 0, width, height);
 
-      // Base solid dark
-      ctx.fillStyle = '#080808';
+      const dark = isDarkRef.current;
+
+      // Base solid theme color
+      ctx.fillStyle = dark ? '#080808' : '#f8f7f4';
       ctx.fillRect(0, 0, width, height);
 
       // Render floating subtle light orbs
@@ -85,8 +94,15 @@ export default function BackgroundCanvas() {
           currentY,
           orb.radius
         );
-        gradient.addColorStop(0, orb.color);
-        gradient.addColorStop(1, 'rgba(8, 8, 8, 0)');
+
+        const orbColor = dark
+          ? (i === 0 ? 'rgba(255, 255, 255, 0.022)' : i === 1 ? 'rgba(220, 215, 205, 0.018)' : i === 2 ? 'rgba(120, 130, 160, 0.015)' : 'rgba(255, 255, 255, 0.012)')
+          : (i === 0 ? 'rgba(215, 205, 190, 0.25)' : i === 1 ? 'rgba(195, 215, 200, 0.2)' : i === 2 ? 'rgba(180, 195, 215, 0.18)' : 'rgba(225, 220, 210, 0.15)');
+
+        const transparentEdge = dark ? 'rgba(8, 8, 8, 0)' : 'rgba(248, 247, 244, 0)';
+
+        gradient.addColorStop(0, orbColor);
+        gradient.addColorStop(1, transparentEdge);
 
         ctx.fillStyle = gradient;
         ctx.beginPath();
@@ -104,7 +120,10 @@ export default function BackgroundCanvas() {
         if (p.y < 0) p.y = height;
         if (p.y > height) p.y = 0;
 
-        ctx.fillStyle = `rgba(255, 255, 255, ${p.alpha})`;
+        ctx.fillStyle = dark
+          ? `rgba(255, 255, 255, ${p.alpha})`
+          : `rgba(20, 20, 25, ${p.alpha * 0.35})`;
+
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
         ctx.fill();
@@ -126,9 +145,15 @@ export default function BackgroundCanvas() {
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
       <canvas ref={canvasRef} className="block w-full h-full" />
       {/* Luxury Film Grain Overlay */}
-      <div className="absolute inset-0 grain-overlay opacity-50" />
+      <div className="absolute inset-0 grain-overlay opacity-40" />
       {/* Top subtle vignette */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#080808]/40 via-transparent to-[#080808] pointer-events-none" />
+      <div
+        className={`absolute inset-0 pointer-events-none transition-colors duration-500 ${
+          isDark
+            ? 'bg-gradient-to-b from-[#080808]/40 via-transparent to-[#080808]'
+            : 'bg-gradient-to-b from-[#f8f7f4]/40 via-transparent to-[#f8f7f4]'
+        }`}
+      />
     </div>
   );
 }
