@@ -538,28 +538,31 @@ export const EDUCATION_LIST = [
     logoImg: getAssetUrl("/assets/aistudio/image_098a23c4.png")
   },
   {
-    id: "pu-board",
+    id: "nagarjuna-vidyaniketan",
     index: "02",
-    degree: "Pre-University Education",
-    institution: "Department of Pre-University Education, Karnataka",
+    degree: "High School, Secondary Education",
+    institution: "Nagarjuna Vidyaniketan",
     location: "Bengaluru, Karnataka, India",
-    period: "2022 – 2024",
-    status: "Completed with Distinction",
-    score: "First Class with Distinction",
-    summary: "Senior secondary education establishing strong foundations in quantitative mathematics, logical reasoning, computer applications, and analytical communication.",
+    period: "Jun 2013 – Mar 2025",
+    status: "Completed",
+    score: "Secondary Education",
+    summary: "Secondary education at Nagarjuna Vidyaniketan, fostering strong academic disciplines, team management leadership, active athletics and competitive football, alongside early exploration of technical coding.",
     highlights: [
-      "Graduated with First Class with Distinction, demonstrating consistent academic diligence",
-      "Built rigorous mathematical and logical problem-solving foundations directly applicable to programming and database querying",
-      "Participated actively in collegiate science and tech forums"
+      "Team Management: Led school initiatives, collaborative student projects, and peer groups with proven organizational leadership",
+      "Football & Athletics: Active in competitive football and sports tournaments, cultivating high endurance, discipline, and collaborative teamwork",
+      "Technical Coding: Early practical immersion in computer programming foundations, logical problem-solving, and computational thinking",
+      "Maintained consistent academic dedication and well-rounded extracurricular leadership throughout schooling"
     ],
     coursework: [
+      "Team Management",
+      "Technical Coding",
+      "Football & Sports",
       "Mathematics",
-      "Computer Science Foundations",
-      "Statistics & Quantitative Methods",
+      "Computer Science",
       "Analytical Reasoning"
     ],
     link: "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
-    linkText: "Academic History ↗",
+    linkText: "LinkedIn Record ↗",
     logoKey: "general"
   }
 ];

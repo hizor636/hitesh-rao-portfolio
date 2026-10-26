@@ -187,7 +187,7 @@ export default function Navbar({ onOpenContact }) {
             {/* Theme Toggle Button */}
             <ThemeToggle />
 
-            {/* Direct Résumé Link */}
+            {/* Direct Resume Link */}
             <a
               href={info.resumeUrl}
               target="_blank"
@@ -195,7 +195,7 @@ export default function Navbar({ onOpenContact }) {
               className="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-black/5 hover:bg-black/10 border-black/10 dark:bg-white/5 dark:hover:bg-white/15 dark:border-white/10 text-xs font-mono text-neutral-800 hover:text-black dark:text-neutral-300 dark:hover:text-white transition-all focus-visible:outline-2 focus-visible:outline-[#d4ff4f] focus-visible:outline-offset-1"
               data-cursor="pointer"
             >
-              <span>Résumé</span>
+              <span>Resume</span>
               <ArrowUpRight className="w-3 h-3 text-neutral-500 dark:text-neutral-400" />
             </a>
 
@@ -288,7 +288,7 @@ export default function Navbar({ onOpenContact }) {
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-[#15803d] dark:text-[#d4ff4f] hover:bg-black/5 dark:hover:bg-white/5 transition-colors focus-visible:outline-2 focus-visible:outline-[#d4ff4f]"
             >
-              <span>Download Résumé (PDF)</span>
+              <span>Download Resume (PDF)</span>
               <ArrowUpRight className="w-3.5 h-3.5 text-[#15803d] dark:text-[#d4ff4f]" />
             </a>
           </nav>

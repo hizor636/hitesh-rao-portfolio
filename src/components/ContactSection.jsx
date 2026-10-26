@@ -134,7 +134,7 @@ export default function ContactSection({ onOpenContactModal }) {
               <span className="text-[11px] font-mono text-neutral-400 group-hover:text-white">500+ Conn ↗</span>
             </a>
 
-            {/* Primary Action 4: Download Résumé */}
+            {/* Primary Action 4: Download Resume */}
             <a
               href={PERSONAL_INFO.resumeUrl}
               target="_blank"
@@ -144,7 +144,7 @@ export default function ContactSection({ onOpenContactModal }) {
             >
               <div className="flex items-center gap-2.5">
                 <FileText className="w-4 h-4 text-neutral-400 group-hover:text-white" />
-                <span className="font-mono text-xs uppercase tracking-wider">Download Résumé</span>
+                <span className="font-mono text-xs uppercase tracking-wider">Download Resume</span>
               </div>
               <span className="text-[11px] font-mono text-neutral-400 group-hover:text-white">PDF ↗</span>
             </a>

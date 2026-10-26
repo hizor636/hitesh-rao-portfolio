@@ -74,16 +74,16 @@ export default function Hero() {
               <span>Email me</span>
             </a>
 
-            {/* Tertiary Link: Download résumé */}
+            {/* Tertiary Link: Download resume */}
             <a
               href={PERSONAL_INFO.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 py-3 text-xs font-mono uppercase tracking-wider text-[rgba(236,235,230,0.65)] hover:text-white transition-colors flex items-center gap-1.5 border-b border-transparent hover:border-white/40"
+              className="px-4 py-3 text-xs font-mono uppercase tracking-wider text-[var(--text-muted)] hover:text-[var(--text-primary)] transition-colors flex items-center gap-1.5 border-b border-transparent hover:border-[var(--text-primary)]"
               data-cursor="pointer"
             >
               <FileText className="w-3.5 h-3.5" />
-              <span>Download résumé ↗</span>
+              <span>Download Resume ↗</span>
             </a>
           </div>
         </div>
