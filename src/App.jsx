@@ -14,18 +14,14 @@ import RecognitionSection from './components/RecognitionSection';
 import Capabilities from './components/Capabilities';
 import TestimonialsSection from './components/TestimonialsSection';
 import ContactSection from './components/ContactSection';
-import CaseStudyModal from './components/CaseStudyModal';
-import AboutModal from './components/AboutModal';
 import ContactModal from './components/ContactModal';
 import { PERSONAL_INFO } from './data/portfolioData';
 
 export default function App() {
-  const [selectedProject, setSelectedProject] = useState(null);
-  const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [showStickyEmail, setShowStickyEmail] = useState(false);
 
-  // Initialize Lenis smooth scrolling
+  // Initialize Lenis buttery smooth scrolling
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -64,41 +60,29 @@ export default function App() {
       <BackgroundCanvas />
 
       {/* Fixed Floating Navbar */}
-      <Navbar
-        onOpenAbout={() => setIsAboutOpen(true)}
-        onOpenContact={() => setIsContactOpen(true)}
-      />
+      <Navbar onOpenContact={() => setIsContactOpen(true)} />
 
-      {/* Main Content Layout — Sequenced exactly to Audited Strategy */}
+      {/* Main Content Layout — Clean & Sequenced */}
       <main className="relative z-10">
         {/* 1. Hero: Who, what, looking for, CTAs, availability pill */}
-        <Hero
-          onOpenAbout={() => setIsAboutOpen(true)}
-          onOpenContact={() => setIsContactOpen(true)}
-        />
+        <Hero />
 
         {/* 2. Proof Strip: 4 verified facts, each linking to proof */}
-        <ValueProposition
-          onOpenAbout={() => setIsAboutOpen(true)}
-        />
+        <ValueProposition />
 
-        {/* Story Highlights: Professional, College, My Lyfff */}
+        {/* Story Highlights: Professional, NCET College, My Lyfff, Credentials */}
         <StoryHighlights />
 
-        {/* 3. Selected Work: 4 case studies in the honest structure */}
-        <FeaturedProjects
-          onSelectProject={(project) => setSelectedProject(project)}
-        />
+        {/* 3. Selected Work: 4 deep case studies with honest metrics + supporting credentials */}
+        <FeaturedProjects />
 
-        {/* 4. How I Actually Work: 4 principles */}
+        {/* 4. How I Actually Work: 4 operational principles */}
         <ProcessSection />
 
-        {/* 5. About + Degree Life: BCA at NCET, what I study, how it connects */}
-        <AboutDegreeLife
-          onOpenContact={() => setIsContactOpen(true)}
-        />
+        {/* 5. About + Degree Life: BCA at NCET, coursework matrix */}
+        <AboutDegreeLife onOpenContact={() => setIsContactOpen(true)} />
 
-        {/* 6. Credentials & Experience: Compact timeline with proof links */}
+        {/* 6. Credentials & Experience: Compact timeline with verified proof links */}
         <RecognitionSection />
 
         {/* 7. Beyond Work: Outside the laptop + working style philosophy */}
@@ -108,9 +92,7 @@ export default function App() {
         <TestimonialsSection />
 
         {/* 8. Open to Internships + Contact + Footer */}
-        <ContactSection
-          onOpenContactModal={() => setIsContactOpen(true)}
-        />
+        <ContactSection onOpenContactModal={() => setIsContactOpen(true)} />
       </main>
 
       {/* Sticky "Email me" Quick-Action Button */}
@@ -132,23 +114,7 @@ export default function App() {
         </a>
       </div>
 
-      {/* Deep-Dive Case Study Modal */}
-      {selectedProject && (
-        <CaseStudyModal
-          project={selectedProject}
-          onClose={() => setSelectedProject(null)}
-          onSelectProject={(proj) => setSelectedProject(proj)}
-        />
-      )}
-
-      {/* Academic & Professional Profile Modal */}
-      <AboutModal
-        isOpen={isAboutOpen}
-        onClose={() => setIsAboutOpen(false)}
-        onOpenContact={() => setIsContactOpen(true)}
-      />
-
-      {/* Interactive Communication Modal */}
+      {/* Interactive Connect Modal */}
       <ContactModal
         isOpen={isContactOpen}
         onClose={() => setIsContactOpen(false)}

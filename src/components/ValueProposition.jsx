@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
-export default function ValueProposition({ onOpenAbout }) {
+export default function ValueProposition() {
   return (
     <section id="proof-strip" className="relative px-5 md:px-10 mt-20 max-w-7xl mx-auto z-10 border-b border-[rgba(236,235,230,0.14)] pb-20">
       

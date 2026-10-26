@@ -146,8 +146,6 @@ export const DEEP_CASE_STUDIES = [
   }
 ];
 
-export const PROJECTS = DEEP_CASE_STUDIES;
-
 // Supporting Items (one-liners with verified links)
 export const SUPPORTING_CREDENTIALS = [
   {

@@ -3,7 +3,7 @@ import { Menu, X, ArrowUpRight, MapPin } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import LogoVisual from './LogoVisual';
 
-export default function Navbar({ onOpenAbout, onOpenContact }) {
+export default function Navbar({ onOpenContact }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('work');
