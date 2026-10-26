@@ -18,11 +18,15 @@ import ContactSection from './components/ContactSection';
 import ContactModal from './components/ContactModal';
 import { PERSONAL_INFO } from './data/portfolioData';
 import { ThemeProvider } from './context/ThemeContext';
+import { ContentProvider, useContent } from './context/ContentContext';
+import AdminPortal from './components/AdminPortal';
 
 export default function App() {
   return (
     <ThemeProvider>
-      <AppContent />
+      <ContentProvider>
+        <AppContent />
+      </ContentProvider>
     </ThemeProvider>
   );
 }
@@ -30,6 +34,58 @@ export default function App() {
 function AppContent() {
   const [isContactOpen, setIsContactOpen] = useState(false);
   const [showStickyEmail, setShowStickyEmail] = useState(false);
+
+  const [isAdminOpen, setIsAdminOpen] = useState(() => {
+    if (typeof window === 'undefined') return false;
+    const path = window.location.pathname;
+    const hash = window.location.hash;
+    const search = window.location.search;
+    return (
+      path.endsWith('/admin') ||
+      path.endsWith('/admin/') ||
+      hash === '#admin' ||
+      hash.startsWith('#/admin') ||
+      search.includes('admin=true')
+    );
+  });
+
+  // Listen for admin navigation triggers via URL, hash, or shortcut (Ctrl+Shift+A)
+  useEffect(() => {
+    const checkRoute = () => {
+      const path = window.location.pathname;
+      const hash = window.location.hash;
+      const search = window.location.search;
+      if (
+        path.endsWith('/admin') ||
+        path.endsWith('/admin/') ||
+        hash === '#admin' ||
+        hash.startsWith('#/admin') ||
+        search.includes('admin=true')
+      ) {
+        setIsAdminOpen(true);
+      }
+    };
+
+    const handleKeyNav = (e) => {
+      if (
+        (e.ctrlKey && e.shiftKey && (e.key === 'A' || e.key === 'a')) ||
+        (e.altKey && (e.key === 'a' || e.key === 'A'))
+      ) {
+        e.preventDefault();
+        setIsAdminOpen((prev) => !prev);
+      }
+    };
+
+    window.addEventListener('hashchange', checkRoute);
+    window.addEventListener('popstate', checkRoute);
+    window.addEventListener('keydown', handleKeyNav);
+
+    return () => {
+      window.removeEventListener('hashchange', checkRoute);
+      window.removeEventListener('popstate', checkRoute);
+      window.removeEventListener('keydown', handleKeyNav);
+    };
+  }, []);
 
   // Initialize Lenis buttery smooth scrolling
   useEffect(() => {
@@ -160,6 +216,18 @@ function AppContent() {
         isOpen={isContactOpen}
         onClose={() => setIsContactOpen(false)}
       />
+
+      {/* Admin Content Management Portal */}
+      {isAdminOpen && (
+        <AdminPortal
+          onClose={() => {
+            setIsAdminOpen(false);
+            if (window.location.hash === '#admin' || window.location.hash.startsWith('#/admin')) {
+              history.pushState(null, '', window.location.pathname);
+            }
+          }}
+        />
+      )}
     </div>
   );
 }

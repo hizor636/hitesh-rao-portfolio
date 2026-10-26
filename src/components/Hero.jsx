@@ -4,8 +4,13 @@ import { PERSONAL_INFO } from '../data/portfolioData';
 import { PartnerLogosBar } from './LogoVisual';
 import { BrandSignatureName } from './CompanyLogos';
 import { getAssetUrl } from '../utils/assetPath';
+import { useContent } from '../context/ContentContext';
+import WatermarkOverlay from './WatermarkOverlay';
 
 export default function Hero() {
+  const { personalInfo: contextInfo, photos } = useContent();
+  const info = contextInfo || PERSONAL_INFO;
+  const heroPhoto = photos?.find((p) => p.visible)?.url || getAssetUrl("/images/hitesh-profile.jpg");
   const [photoHovered, setPhotoHovered] = useState(false);
 
   return (
@@ -24,7 +29,7 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#34A853] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#34A853]"></span>
             </span>
-            <span>Open to internships · Bengaluru · Immediate</span>
+            <span>{info.status || 'Open to internships · Bengaluru · Immediate'}</span>
           </div>
 
           {/* Personal Signature Name */}
@@ -34,12 +39,14 @@ export default function Hero() {
 
           {/* Primary H1: Audited headline with 'data' serif accent */}
           <h1 id="hero-title" className="rv text-[clamp(2.2rem,6.4vw,5.4rem)] leading-[1.02] tracking-tighter font-medium text-white max-w-4xl [text-wrap:balance]">
-            I help campuses and brands grow, with <span className="font-serif italic font-normal text-[#d4ff4f]">data</span> behind every decision.
+            {info.headline || (
+              <>I help campuses and brands grow, with <span className="font-serif italic font-normal text-[#d4ff4f]">data</span> behind every decision.</>
+            )}
           </h1>
 
           {/* Subheadline: 2nd-year BCA student in Bengaluru seeking internship */}
           <p className="rv lead text-[1.05rem] md:text-[1.2rem] font-normal text-[rgba(236,235,230,0.78)] leading-[1.6] max-w-xl mt-6">
-            {PERSONAL_INFO.subheadline}
+            {info.subheadline || PERSONAL_INFO.subheadline}
           </p>
 
           {/* Availability banner pill (Sveltia CMS) */}
@@ -96,13 +103,17 @@ export default function Hero() {
             {/* Inner Image Container */}
             <div className="relative w-full h-full rounded-[22px] overflow-hidden bg-[#0c0d11]">
               <img
-                src={getAssetUrl("/images/hitesh-profile.jpg")}
+                src={heroPhoto}
                 alt="Portrait of Hitesh Rao M — Tech Marketer & Data Builder"
                 width="420"
                 height="420"
-                className="w-full h-full object-cover object-top filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
+                draggable={false}
+                className="w-full h-full object-cover object-top filter grayscale-[15%] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out select-none"
                 loading="eager"
               />
+
+              {/* Dynamic Watermark on Hero Photo */}
+              <WatermarkOverlay />
 
               {/* Bottom Photo Caption */}
               <div className="absolute bottom-4 left-4 right-4 p-3 rounded-2xl bg-black/85 backdrop-blur-md border border-white/15 flex items-center justify-between text-xs font-mono shadow-xl">

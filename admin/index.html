@@ -3,11 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
-  <title>Content Manager</title>
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin Portal — Redirecting</title>
+  <script>
+    var base = window.location.pathname.replace(/\/admin\/?$/, '');
+    window.location.replace((base || '') + '/#admin');
+  </script>
 </head>
-<body>
-  <!-- Sveltia CMS reads admin/config.yml automatically. Update the version occasionally. -->
-  <script src="https://unpkg.com/@sveltia/cms@0.128.5/dist/sveltia-cms.js"></script>
+<body style="background:#080808;color:#d4ff4f;font-family:monospace;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;">
+  <p>Loading Admin Management Portal...</p>
 </body>
 </html>

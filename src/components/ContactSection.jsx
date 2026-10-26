@@ -321,6 +321,14 @@ export default function ContactSection({ onOpenContactModal }) {
           <BrandSignatureName size="sm" />
           <span>•</span>
           <span className="text-[#d4ff4f]">Bengaluru, Karnataka</span>
+          <span>•</span>
+          <a
+            href="#admin"
+            className="text-neutral-500 hover:text-[#d4ff4f] transition-colors"
+            title="Open Admin Content Portal (or press Ctrl+Shift+A)"
+          >
+            [Admin]
+          </a>
         </div>
         <button
           onClick={scrollToTop}

@@ -10,6 +10,8 @@ import {
   HackerRankLogo
 } from './CompanyLogos';
 import { getAssetUrl } from '../utils/assetPath';
+import { useContent } from '../context/ContentContext';
+import WatermarkOverlay from './WatermarkOverlay';
 
 export const HIGHLIGHTS = [
   {
@@ -139,6 +141,9 @@ export const HIGHLIGHTS = [
 ];
 
 export default function StoryHighlights() {
+  const { highlights: contextHighlights } = useContent();
+  const highlightsList = contextHighlights && contextHighlights.length > 0 ? contextHighlights : HIGHLIGHTS;
+
   const [activeStoryIdx, setActiveStoryIdx] = useState(null);
   const [activeSlideIdx, setActiveSlideIdx] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -157,7 +162,7 @@ export default function StoryHighlights() {
     ? window.matchMedia('(prefers-reduced-motion: reduce)').matches
     : false;
 
-  const activeStory = activeStoryIdx !== null ? HIGHLIGHTS[activeStoryIdx] : null;
+  const activeStory = activeStoryIdx !== null ? highlightsList[activeStoryIdx] : null;
   const currentSlide = activeStory ? activeStory.slides[activeSlideIdx] : null;
 
   // Close story viewer
@@ -347,7 +352,7 @@ export default function StoryHighlights() {
 
       {/* Horizontal Story Highlight Circles Row */}
       <div id="hl-row" className="rv-stagger flex items-center gap-6 sm:gap-8 overflow-x-auto pb-4 pt-1 no-scrollbar focus:outline-hidden">
-        {HIGHLIGHTS.map((hl, index) => (
+        {highlightsList.map((hl, index) => (
           <button
             key={hl.id}
             onClick={(e) => handleOpenStory(index, e)}
@@ -403,8 +408,12 @@ export default function StoryHighlights() {
             <img
               src={currentSlide.img}
               alt={currentSlide.alt}
-              className="absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-300"
+              draggable={false}
+              className="absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-300 pointer-events-none"
             />
+
+            {/* Dynamic Copyright Watermark Overlay */}
+            <WatermarkOverlay />
 
             {/* Ambient Vignette Gradients */}
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/90 z-10 pointer-events-none" />
