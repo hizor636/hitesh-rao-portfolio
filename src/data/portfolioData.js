@@ -16,7 +16,8 @@ export const PERSONAL_INFO = {
   emailSubject: "Internship enquiry: [Role] · Hitesh Rao M",
   linkedin: "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
   github: "https://github.com/hizor636/hitesh-rao-portfolio",
-  resumeUrl: "/assets/Hitesh-Rao-M-Resume.html",
+  // TODO: Downloadable resume removed; resume goes through email instead upon request
+  resumeUrl: "mailto:hiteshraom@email.com?subject=Resume%20Request%20·%20Hitesh%20Rao%20M",
   socials: [
     { label: "LinkedIn", url: "https://www.linkedin.com/in/hitesh-rao-m-593775358/" },
     { label: "GitHub", url: "https://github.com/hizor636/hitesh-rao-portfolio" },

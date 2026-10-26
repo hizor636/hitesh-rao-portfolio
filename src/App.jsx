@@ -15,6 +15,7 @@ import Capabilities from './components/Capabilities';
 import TestimonialsSection from './components/TestimonialsSection';
 import ContactSection from './components/ContactSection';
 import ContactModal from './components/ContactModal';
+import VisitorProtections from './components/VisitorProtections';
 import { PERSONAL_INFO } from './data/portfolioData';
 
 export default function App() {
@@ -86,6 +87,9 @@ export default function App() {
 
       {/* Ambient Interactive Canvas & Film Grain */}
       <BackgroundCanvas />
+
+      {/* Visitor Protections: Image and written content deterrents & accessible toasts */}
+      <VisitorProtections />
 
       {/* Fixed Floating Navbar */}
       <Navbar onOpenContact={() => setIsContactOpen(true)} />

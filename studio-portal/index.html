@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex">
+  <meta name="robots" content="noindex, nofollow">
   <title>Content Manager</title>
+  <link href="config.yml" type="text/yaml" rel="cms-config-url">
 </head>
 <body>
-  <!-- Sveltia CMS reads admin/config.yml automatically. Update the version occasionally. -->
+  <!-- Sveltia CMS reads config.yml automatically or via cms-config-url link. -->
   <script src="https://unpkg.com/@sveltia/cms@0.128.5/dist/sveltia-cms.js"></script>
 </body>
 </html>

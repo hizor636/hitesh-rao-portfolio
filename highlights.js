@@ -150,7 +150,7 @@ const HIGHLIGHTS = [
     <button class="hl-circle" data-index="${idx}" aria-label="Open ${hl.title} highlights with ${hl.slides.length} slides">
       <div class="hl-ring">
         <div class="hl-avatar-box">
-          <img class="hl-avatar" src="${hl.coverImg}" alt="${hl.title}" loading="lazy">
+          <img class="hl-avatar" src="${hl.coverImg}" alt="${hl.title}" loading="lazy" draggable="false" data-protect-image="true">
         </div>
       </div>
       <span class="hl-label">${hl.title}</span>
@@ -167,7 +167,7 @@ const HIGHLIGHTS = [
   viewer.setAttribute('aria-label', 'Highlight Viewer');
   viewer.innerHTML = `
     <div class="hl-modal" id="hl-modal-box">
-      <img id="hl-img" class="hl-bg-img" src="" alt="">
+      <img id="hl-img" class="hl-bg-img" src="" alt="" draggable="false" data-protect-image="true">
       <div class="hl-vignette"></div>
 
       <div class="hl-top">
@@ -193,7 +193,7 @@ const HIGHLIGHTS = [
 
       <div class="hl-bottom">
         <div id="hl-tag-text" class="hl-tag"></div>
-        <p id="hl-desc-text" class="hl-text"></p>
+        <p id="hl-desc-text" class="hl-text protected-content" data-protect-content="true"></p>
       </div>
     </div>
   `;

@@ -187,17 +187,7 @@ export default function Navbar({ onOpenContact }) {
           {/* RIGHT ZONE: Primary CTA & Mobile Toggle                  */}
           {/* ========================================================= */}
           <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-            {/* Direct Résumé Link */}
-            <a
-              href={PERSONAL_INFO.resumeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-mono text-neutral-300 hover:text-white transition-all focus-visible:outline-2 focus-visible:outline-[#d4ff4f] focus-visible:outline-offset-1"
-              data-cursor="pointer"
-            >
-              <span>Résumé</span>
-              <ArrowUpRight className="w-3 h-3 text-neutral-400" />
-            </a>
+            {/* TODO: Downloadable resume removed; resume goes through email instead upon request */}
 
             {/* Primary Action Button */}
             <button
@@ -281,16 +271,7 @@ export default function Navbar({ onOpenContact }) {
                 </a>
               );
             })}
-            <a
-              href={PERSONAL_INFO.resumeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-[#d4ff4f] hover:bg-white/5 transition-colors focus-visible:outline-2 focus-visible:outline-[#d4ff4f]"
-            >
-              <span>Download Résumé (PDF)</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-[#d4ff4f]" />
-            </a>
+            {/* TODO: Downloadable resume removed; resume goes through email instead upon request */}
           </nav>
 
           {/* Bottom details */}

@@ -352,11 +352,13 @@ export default function StoryHighlights() {
                   <img
                     src={hl.coverImg}
                     alt={hl.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    draggable="false"
+                    data-protect-image="true"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 select-none pointer-events-none"
                     loading="lazy"
                   />
-                  {/* Subtle Dark Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                  {/* Subtle Dark Gradient Overlay & Protection Layer */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-auto" data-protect-image="true" />
                 </div>
               </div>
             </div>
@@ -389,11 +391,13 @@ export default function StoryHighlights() {
         >
           {/* Main Story Container (Instagram 9:16 aspect ratio) */}
           <div className="relative w-full max-w-[420px] h-full sm:h-[88vh] sm:max-h-[840px] sm:rounded-3xl overflow-hidden bg-[#0c0d10] border border-white/15 shadow-2xl flex flex-col justify-between select-none">
-            {/* Background Story Image */}
+            {/* Background Story Image (Protected) */}
             <img
               src={currentSlide.img}
               alt={currentSlide.alt}
-              className="absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-300"
+              draggable="false"
+              data-protect-image="true"
+              className="absolute inset-0 w-full h-full object-cover z-0 transition-opacity duration-300 select-none pointer-events-none"
             />
 
             {/* Ambient Vignette Gradients */}
@@ -500,7 +504,10 @@ export default function StoryHighlights() {
                 {currentSlide.tag}
               </span>
 
-              <p className="text-sm font-sans font-normal leading-relaxed text-neutral-100">
+              <p
+                className="text-sm font-sans font-normal leading-relaxed text-neutral-100 protected-content select-none"
+                data-protect-content="true"
+              >
                 {currentSlide.text}
               </p>
 

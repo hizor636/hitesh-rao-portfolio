@@ -41,8 +41,11 @@ export default function AboutDegreeLife({ onOpenContact }) {
         Learning the fundamentals, <span className="font-serif italic font-normal text-[#d4ff4f]">using them early.</span>
       </h2>
 
-      {/* Narrative Intro */}
-      <div className="rv grid grid-cols-1 md:grid-cols-12 gap-8 text-[rgba(236,235,230,0.8)] text-base sm:text-lg leading-relaxed mb-16">
+      {/* Narrative Intro (Protected written content) */}
+      <div
+        className="rv grid grid-cols-1 md:grid-cols-12 gap-8 text-[rgba(236,235,230,0.8)] text-base sm:text-lg leading-relaxed mb-16 protected-content select-none"
+        data-protect-content="true"
+      >
         <div className="md:col-span-6 space-y-4">
           <p>
             I’m Hitesh, a second-year BCA student at <strong className="text-white font-medium">Nagarjuna College of Engineering and Technology</strong> in Bengaluru (Class of 2028). I got into marketing through events and communities, then realised the best decisions come from data.
@@ -104,7 +107,7 @@ export default function AboutDegreeLife({ onOpenContact }) {
           </h3>
         </div>
 
-        <div className="rv-stagger grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="rv-stagger grid grid-cols-1 md:grid-cols-2 gap-4 protected-content select-none" data-protect-content="true">
           {highlights.map((h, i) => (
             <div
               key={i}

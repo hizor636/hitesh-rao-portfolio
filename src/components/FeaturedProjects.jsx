@@ -222,8 +222,11 @@ export default function FeaturedProjects() {
               </div>
             </div>
 
-            {/* Deep-Dive Honest Case Breakdown */}
-            <div className="space-y-6 pt-4 border-t border-[rgba(236,235,230,0.1)] text-sm sm:text-base leading-relaxed text-[rgba(236,235,230,0.8)]">
+            {/* Deep-Dive Honest Case Breakdown (Protected written content) */}
+            <div
+              className="space-y-6 pt-4 border-t border-[rgba(236,235,230,0.1)] text-sm sm:text-base leading-relaxed text-[rgba(236,235,230,0.8)] protected-content select-none"
+              data-protect-content="true"
+            >
               <div>
                 <strong className="block font-mono text-xs uppercase tracking-wider text-white mb-1.5">
                   The Opportunity

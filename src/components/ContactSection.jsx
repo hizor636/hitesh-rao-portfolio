@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PERSONAL_INFO, INTERNSHIP_BLOCK, WORKFLOW_STEPS, FAQS } from '../data/portfolioData';
-import { Mail, FileText, ArrowUpRight, MapPin, Calendar, Clock, CheckCircle2, Globe, ExternalLink } from 'lucide-react';
+import { Mail, ArrowUpRight, MapPin, Calendar, Clock, CheckCircle2, Globe, ExternalLink } from 'lucide-react';
 
 export default function ContactSection({ onOpenContactModal }) {
   const [openFaq, setOpenFaq] = useState(null);
@@ -75,16 +75,7 @@ export default function ContactSection({ onOpenContactModal }) {
               <ArrowUpRight className="w-4 h-4" />
             </a>
 
-            <a
-              href={PERSONAL_INFO.resumeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium text-sm transition-all hover:scale-[1.02]"
-              data-cursor="pointer"
-            >
-              <FileText className="w-4 h-4" />
-              <span>Download Résumé (PDF)</span>
-            </a>
+            {/* TODO: Downloadable resume removed; resume goes through email instead upon request */}
 
             <a
               data-cms="linkedin"
