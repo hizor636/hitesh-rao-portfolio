@@ -65,6 +65,7 @@ export default function ContactSection({ onOpenContactModal }) {
           {/* Quick Action Buttons */}
           <div className="flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0">
             <a
+              data-cms="email"
               href={`mailto:${PERSONAL_INFO.email}?subject=Internship%20enquiry:%20[Role]%20·%20Hitesh%20Rao%20M`}
               className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#d4ff4f] text-black font-semibold text-sm hover:bg-[#c2ef3e] transition-all shadow-[0_0_20px_rgba(212,255,79,0.3)] hover:scale-[1.02]"
               data-cursor="pointer"
@@ -86,6 +87,7 @@ export default function ContactSection({ onOpenContactModal }) {
             </a>
 
             <a
+              data-cms="linkedin"
               href={PERSONAL_INFO.linkedin}
               target="_blank"
               rel="noopener noreferrer"
@@ -109,6 +111,7 @@ export default function ContactSection({ onOpenContactModal }) {
             Direct Email
           </p>
           <a
+            data-cms="email"
             href={`mailto:${PERSONAL_INFO.email}?subject=Internship%20enquiry:%20[Role]%20·%20Hitesh%20Rao%20M`}
             className="text-xl md:text-2xl font-sans hover:text-[#d4ff4f] transition-colors break-all"
             data-cursor="pointer"
@@ -127,6 +130,7 @@ export default function ContactSection({ onOpenContactModal }) {
           </p>
           <div className="text-xl md:text-2xl space-x-6 font-sans text-neutral-200">
             <a
+              data-cms="linkedin"
               href={PERSONAL_INFO.linkedin}
               target="_blank"
               rel="noopener noreferrer"
@@ -136,6 +140,7 @@ export default function ContactSection({ onOpenContactModal }) {
               LinkedIn ↗
             </a>
             <a
+              data-cms="github"
               href={PERSONAL_INFO.github}
               target="_blank"
               rel="noopener noreferrer"

@@ -1,0 +1,76 @@
+{
+  "timeline": [
+    {
+      "role": "Marketing Intern & Core Organising Team",
+      "org": "Paytm Bengaluru Hackathon",
+      "dates": "Jun – Oct 2026"
+    },
+    {
+      "role": "Google Student Ambassador",
+      "org": "NCET Bengaluru",
+      "dates": "May – Oct 2026"
+    },
+    {
+      "role": "Core Organising Team (Bengaluru)",
+      "org": "Build with Presto & Namma MUG",
+      "dates": "Oct 2026"
+    },
+    {
+      "role": "Team of Four Participant & Pitcher",
+      "org": "CareerGroww @ VibeXathon 1.0",
+      "dates": "Mar 2026"
+    },
+    {
+      "role": "Operations Team Member",
+      "org": "KCET Coaching Centre, Bengaluru",
+      "dates": "Mar – May 2026"
+    },
+    {
+      "role": "Data Analytics Simulation Participant",
+      "org": "Deloitte Australia (via Forage)",
+      "dates": "Feb – Apr 2026"
+    },
+    {
+      "role": "Gemini Certified Student",
+      "org": "Google for Education",
+      "dates": "Apr 2026"
+    },
+    {
+      "role": "SQL 70+ Sprints & HackerRank Intermediate",
+      "org": "Torii Minds & HackerRank",
+      "dates": "Oct – Nov 2025"
+    }
+  ],
+  "columns": [
+    {
+      "title": "Technical Marketing",
+      "items": [
+        "Go-To-Market Operations",
+        "Event Production & Operations",
+        "Campus Program Architecture",
+        "Community Growth & Outreach",
+        "DevRel Logistics & Ingress"
+      ]
+    },
+    {
+      "title": "Data & Analysis",
+      "items": [
+        "Relational SQL (70+ Problems Solved)",
+        "Python (Cisco Verified)",
+        "Spreadsheet Modeling & Audits",
+        "Campaign Funnel Analytics",
+        "Prompt Engineering with Gemini"
+      ]
+    },
+    {
+      "title": "Execution Principles",
+      "items": [
+        "Follow up twice on confirmations",
+        "Boring operational checklists first",
+        "Calm triage when plans change",
+        "Measure immediately, iterate fast",
+        "Enterprise privacy compliance"
+      ]
+    }
+  ]
+}

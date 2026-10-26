@@ -336,7 +336,7 @@ export default function StoryHighlights() {
       </div>
 
       {/* Horizontal Story Highlight Circles Row */}
-      <div className="rv-stagger flex items-center gap-6 sm:gap-8 overflow-x-auto pb-4 pt-1 no-scrollbar focus:outline-hidden">
+      <div id="hl-row" className="rv-stagger flex items-center gap-6 sm:gap-8 overflow-x-auto pb-4 pt-1 no-scrollbar focus:outline-hidden">
         {HIGHLIGHTS.map((hl, index) => (
           <button
             key={hl.id}

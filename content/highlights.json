@@ -1,0 +1,115 @@
+{
+  "highlights": [
+    {
+      "id": "professional",
+      "title": "Professional",
+      "initials": "PR",
+      "hue": 200,
+      "cover": "/images/highlight-professional.jpg",
+      "slides": [
+        {
+          "kicker": "Events & Operations",
+          "stat": "800+",
+          "title": "Paytm Bengaluru Hackathon",
+          "text": "Core organizing team member managing university partner outreach and on-ground attendee verification for 800+ student developers.",
+          "img": "/images/highlight-professional.jpg",
+          "alt": "Namma Bengaluru Hackathon tech event with collegiate developers and stage",
+          "link": {
+            "href": "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+            "label": "View post verification"
+          }
+        },
+        {
+          "kicker": "DevRel & Conference",
+          "stat": "189+",
+          "title": "Build with Presto & Namma MUG",
+          "text": "Coordinated developer summit logistics with MongoDB & Google partner booths, speaker green-room prep, and crowd ingress for 189+ industry pros.",
+          "img": "/images/highlight-professional.jpg",
+          "alt": "Build with Presto & Namma MUG Developer Conference in Bengaluru",
+          "link": {
+            "href": "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+            "label": "View summit recap"
+          }
+        },
+        {
+          "kicker": "Community Leadership",
+          "stat": "500+",
+          "title": "Google Student Ambassador",
+          "text": "Selected from 125,000+ national applicants to demystify Google Cloud and Gemini AI for 500+ student peers through interactive sandboxes.",
+          "img": "/images/highlight-professional.jpg",
+          "alt": "Google Student Ambassador campus event",
+          "link": {
+            "href": "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+            "label": "View selection record"
+          }
+        }
+      ]
+    },
+    {
+      "id": "college",
+      "title": "NCET College",
+      "initials": "NC",
+      "hue": 80,
+      "cover": "/images/highlight-college.jpg",
+      "slides": [
+        {
+          "kicker": "Academics & Degree",
+          "stat": "2028",
+          "title": "NCET Bengaluru · BCA 2028",
+          "text": "Studying Bachelor of Computer Applications at NCET Bengaluru — building rigorous foundations in relational SQL, Python, C, and system architectures.",
+          "img": "/images/highlight-college.jpg",
+          "alt": "Modern campus architecture at Nagarjuna College of Engineering and Technology",
+          "link": {
+            "href": "https://ncet.co.in/",
+            "label": "Visit NCET"
+          }
+        },
+        {
+          "kicker": "Study Circles",
+          "stat": "45m",
+          "title": "Campus Developer Study Circles",
+          "text": "Formed focused 45-minute lunchtime developer sessions connecting coursework database theory with real-world campaign metrics and SQL sprints.",
+          "img": "/images/highlight-college.jpg",
+          "alt": "Students walking through college campus grounds in afternoon sunlight",
+          "link": {
+            "href": "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+            "label": "Study circle updates"
+          }
+        }
+      ]
+    },
+    {
+      "id": "life",
+      "title": "My Lyfff",
+      "initials": "LF",
+      "hue": 280,
+      "cover": "/images/highlight-life.jpg",
+      "slides": [
+        {
+          "kicker": "Trekking & Trails",
+          "stat": "Ghats",
+          "title": "Western Ghats Treks",
+          "text": "Finding clarity and physical discipline on the rugged mountain ridges and trails of Karnataka. Disconnecting outdoors builds resilience for intense hackathon sprints.",
+          "img": "/images/highlight-life.jpg",
+          "alt": "Lush misty green peaks and ridges of the Western Ghats during sunrise",
+          "link": {
+            "href": "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+            "label": "Follow adventures"
+          }
+        },
+        {
+          "kicker": "Hackathon Energy",
+          "stat": "36h",
+          "title": "VibeXathon Sprint",
+          "text": "36 hours of continuous problem formulation, whiteboard sketches, late-night prompt debugging, and pitching CareerGroww to startup judges.",
+          "img": "/images/highlight-life.jpg",
+          "alt": "Hackathon team collaborating intensely around laptops with paper notes",
+          "link": {
+            "href": "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+            "label": "Hackathon recap"
+          }
+        }
+      ]
+    }
+  ]
+}

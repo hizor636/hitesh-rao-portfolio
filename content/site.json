@@ -1,0 +1,36 @@
+{
+  "availability": "Available for internships · Immediate",
+  "hero": {
+    "kicker": "(Tech Marketer & Data Builder)",
+    "headline": "I help campuses and brands grow, with *data* behind every decision.",
+    "lead": "I’m a 2nd-year BCA student in Bengaluru who runs events, builds communities and queries data in SQL and Python. I’m looking for a marketing, growth or community internship where I can keep learning by shipping real work.",
+    "facts": [
+      {
+        "value": "125K+",
+        "label": "Google SA pool"
+      },
+      {
+        "value": "800+",
+        "label": "Event registrations"
+      },
+      {
+        "value": "70+",
+        "label": "SQL programs solved"
+      },
+      {
+        "value": "2",
+        "label": "Industry credentials"
+      }
+    ]
+  },
+  "about": {
+    "statement": "A 2nd-year BCA student who connects technology, analytics and community to help brands reach their audience and leave a mark.",
+    "paragraph": "I’m Hitesh, a second-year BCA student at Nagarjuna College of Engineering and Technology in Bengaluru (Class of 2028). I got into marketing through events and communities, then realised the best decisions come from data. So I study both: I write SQL and Python for my degree, and I apply them while running student communities, workshops, and hackathon operations."
+  },
+  "contact": {
+    "email": "hiteshraom@email.com",
+    "linkedin": "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+    "behance": "",
+    "instagram": ""
+  }
+}

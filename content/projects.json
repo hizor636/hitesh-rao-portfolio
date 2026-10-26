@@ -1,0 +1,92 @@
+{
+  "projects": [
+    {
+      "index": "00-1",
+      "category": "Career",
+      "title": "Paytm Bengaluru Hackathon",
+      "kind": "Fintech Campus Marketing & Event Ops",
+      "year": "2026",
+      "stat": "8,261+",
+      "stat_label": "LinkedIn post impressions",
+      "description": "Supported campaign frameworks aligned to national brand strategy, managed collegiate partner outreach across Karnataka universities, and handled attendee verification operations under enterprise privacy standards.",
+      "tags": [
+        "Google Sheets",
+        "Event Operations",
+        "Partner Outreach",
+        "Data Privacy"
+      ],
+      "recognition": "Jun – Oct 2026 · Core Organising Team",
+      "hue": 250,
+      "image": "/images/highlight-professional.jpg",
+      "image_alt": "Paytm Hackathon event operations in Bengaluru",
+      "link_url": "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+      "link_label": "Post verification"
+    },
+    {
+      "index": "00-2",
+      "category": "Career",
+      "title": "Google Student Ambassador",
+      "kind": "Campus Leadership & AI",
+      "year": "2026",
+      "stat": "125,000+",
+      "stat_label": "Applicant pool selected from",
+      "description": "Selected per Google's selection notification from 125,000+ applicants nationwide. Organized AI Sandboxes, Gemini technical talks, and cloud study circles for 500+ student peers at NCET.",
+      "tags": [
+        "Gemini AI",
+        "Google Cloud",
+        "Community Ops",
+        "Technical Pedagogy"
+      ],
+      "recognition": "May – Oct 2026 · NCET Bengaluru",
+      "hue": 215,
+      "image": "/images/highlight-professional.jpg",
+      "image_alt": "Google Student Ambassador workshop at NCET",
+      "link_url": "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+      "link_label": "Selection email verified"
+    },
+    {
+      "index": "00-3",
+      "category": "Project",
+      "title": "Build with Presto & Namma MUG",
+      "kind": "DevRel & Conference Ops",
+      "year": "2026",
+      "stat": "800+",
+      "stat_label": "Summit registrations",
+      "description": "Coordinated developer summit logistics with MongoDB and Google partner booths, green-room speaker transitions, and resolved track-2 AV downtime in under 3 minutes for 189+ industry pros.",
+      "tags": [
+        "DevRel Ops",
+        "Crowd Ingress",
+        "Speaker Prep",
+        "Sponsor Alignment"
+      ],
+      "recognition": "Oct 2026 · Bengaluru Edition",
+      "hue": 285,
+      "image": "/images/highlight-professional.jpg",
+      "image_alt": "Presto and Namma MUG summit in Bengaluru",
+      "link_url": "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+      "link_label": "Conference Page"
+    },
+    {
+      "index": "00-4",
+      "category": "Project",
+      "title": "CareerGroww @ VibeXathon 1.0",
+      "kind": "AI Prototyping & Pitching",
+      "year": "2026",
+      "stat": "4,566+",
+      "stat_label": "Post reach & impressions",
+      "description": "First-year team of four that formulated the problem architecture, chained Gemini prompts to parse job requirements against skill vectors, and pitched the prototype live on stage to tech founders.",
+      "tags": [
+        "Prompt Chaining",
+        "Python",
+        "Rapid Prototyping",
+        "Pitching"
+      ],
+      "recognition": "Mar 2026 · Team of Four",
+      "hue": 160,
+      "image": "/images/highlight-life.jpg",
+      "image_alt": "VibeXathon pitch presentation",
+      "link_url": "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+      "link_label": "Pitch summary"
+    }
+  ]
+}

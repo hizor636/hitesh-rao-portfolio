@@ -1,0 +1,150 @@
+# Sveltia CMS configuration. Sign in at /admin with a GitHub fine-grained token (see README).
+backend:
+  name: github
+  repo: hizor636/hitesh-rao-portfolio   # Set to your github repo (e.g. hizor636/hitesh-rao-portfolio or hizor636/hitesh-rao-m-portfolio)
+  branch: main
+
+media_folder: assets/uploads
+public_folder: assets/uploads
+publish_mode: simple
+site_url: https://hizor636.github.io/hitesh-rao-portfolio/
+locale: en
+
+collections:
+  - name: site
+    label: "Site, hero and contact"
+    files:
+      - name: site
+        label: "Site text"
+        file: content/site.json
+        fields:
+          - label: "Availability banner (leave empty to hide)"
+            name: availability
+            widget: string
+            required: false
+          - label: Hero
+            name: hero
+            widget: object
+            fields:
+              - { label: Kicker, name: kicker, widget: string }
+              - { label: "Headline (put *stars* around the word to highlight)", name: headline, widget: string }
+              - { label: "Lead paragraph", name: lead, widget: text }
+              - label: "Key facts"
+                name: facts
+                widget: list
+                max: 4
+                fields:
+                  - { label: Number, name: value, widget: string }
+                  - { label: Label, name: label, widget: string }
+          - label: About
+            name: about
+            widget: object
+            fields:
+              - { label: Statement, name: statement, widget: text }
+              - { label: Paragraph, name: paragraph, widget: text }
+          - label: Contact
+            name: contact
+            widget: object
+            fields:
+              - { label: Email, name: email, widget: string }
+              - { label: "LinkedIn URL", name: linkedin, widget: string }
+              - { label: "Behance URL", name: behance, widget: string }
+              - { label: "Instagram URL", name: instagram, widget: string }
+
+  - name: projects
+    label: "Work / projects"
+    files:
+      - name: projects
+        label: "Project cards"
+        file: content/projects.json
+        fields:
+          - label: Projects
+            name: projects
+            widget: list
+            label_singular: project
+            summary: "{{fields.index}} · {{fields.title}}"
+            fields:
+              - { label: "Index (e.g. 00-1)", name: index, widget: string }
+              - { label: Category, name: category, widget: select, options: [Career, Project, Skill] }
+              - { label: Title, name: title, widget: string }
+              - { label: "Kind (small label)", name: kind, widget: string }
+              - { label: Year, name: year, widget: string }
+              - { label: "Big number or stat (optional)", name: stat, widget: string, required: false }
+              - { label: "Stat label (optional)", name: stat_label, widget: string, required: false }
+              - { label: Description, name: description, widget: text }
+              - label: Tags
+                name: tags
+                widget: list
+                field: { label: Tag, name: tag, widget: string }
+              - { label: "Recognition / dates line", name: recognition, widget: string, required: false }
+              - { label: "Cover colour (0-360)", name: hue, widget: number, value_type: int, min: 0, max: 360, default: 210 }
+              - { label: "Cover image (optional)", name: image, widget: image, required: false }
+              - { label: "Image alt text", name: image_alt, widget: string, required: false }
+              - { label: "Proof / case-study link (optional)", name: link_url, widget: string, required: false }
+              - { label: "Link label", name: link_label, widget: string, required: false }
+
+  - name: highlights
+    label: "Story highlights"
+    files:
+      - name: highlights
+        label: "Highlights"
+        file: content/highlights.json
+        fields:
+          - label: Highlights
+            name: highlights
+            widget: list
+            label_singular: highlight
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "ID (lowercase, no spaces)", name: id, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: "Initials on the circle", name: initials, widget: string }
+              - { label: "Colour (0-360)", name: hue, widget: number, value_type: int, min: 0, max: 360, default: 210 }
+              - { label: "Cover photo (optional)", name: cover, widget: image, required: false }
+              - label: Slides
+                name: slides
+                widget: list
+                label_singular: slide
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Small label", name: kicker, widget: string, required: false }
+                  - { label: "Big number (optional)", name: stat, widget: string, required: false }
+                  - { label: Title, name: title, widget: string, required: false }
+                  - { label: Text, name: text, widget: text, required: false }
+                  - { label: "Photo (optional)", name: img, widget: image, required: false }
+                  - { label: "Photo alt text", name: alt, widget: string, required: false }
+                  - label: "Proof link (optional)"
+                    name: link
+                    widget: object
+                    required: false
+                    fields:
+                      - { label: URL, name: href, widget: string, required: false }
+                      - { label: "Button text", name: label, widget: string, required: false }
+
+  - name: experience
+    label: "Experience and skills"
+    files:
+      - name: experience
+        label: "Timeline and skills"
+        file: content/experience.json
+        fields:
+          - label: Timeline
+            name: timeline
+            widget: list
+            label_singular: entry
+            summary: "{{fields.role}} · {{fields.org}}"
+            fields:
+              - { label: Role, name: role, widget: string }
+              - { label: "Organisation", name: org, widget: string }
+              - { label: Dates, name: dates, widget: string }
+          - label: "Skills columns"
+            name: columns
+            widget: list
+            label_singular: column
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - label: Items
+                name: items
+                widget: list
+                field: { label: Item, name: item, widget: string }

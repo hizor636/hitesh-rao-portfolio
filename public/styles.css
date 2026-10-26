@@ -1,0 +1,56 @@
+/* Sveltia CMS & Dynamic UI Styles */
+:root {
+  --bg: #080808;
+  --tx: #ecebe6;
+  --mu: rgba(236, 235, 230, 0.66);
+  --ln: #1f1f23;
+  --ac: #d4ff4f;
+}
+
+/* Availability Pill */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  background: rgba(212, 255, 79, 0.1);
+  border: 1px solid rgba(212, 255, 79, 0.25);
+  color: var(--ac, #d4ff4f);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.75rem;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.pill[hidden] {
+  display: none !important;
+}
+
+.pill::before {
+  content: '';
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: var(--ac, #d4ff4f);
+  box-shadow: 0 0 8px var(--ac, #d4ff4f);
+}
+
+/* Card Link */
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.75rem;
+  color: var(--ac, #d4ff4f);
+  text-decoration: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+  opacity: 0.85;
+}

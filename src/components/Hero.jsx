@@ -7,7 +7,7 @@ export default function Hero() {
   const [photoHovered, setPhotoHovered] = useState(false);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-between pt-28 md:pt-36 pb-12 px-5 md:px-10 max-w-7xl mx-auto z-10 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex flex-col justify-between pt-28 md:pt-36 pb-12 px-5 md:px-10 max-w-7xl mx-auto z-10 overflow-hidden">
       {/* Top Hero Grid: Text & Professional Photo */}
       <div className="my-auto py-6 md:py-10 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
         
@@ -17,7 +17,7 @@ export default function Hero() {
         <div className="lg:col-span-7 flex flex-col items-start text-left">
           
           {/* Status Pill: Open to internships with pulsating green dot */}
-          <div className="rv inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[rgba(52,168,83,0.12)] border border-[rgba(52,168,83,0.25)] text-[#81C995] text-xs font-mono mb-6 select-none">
+          <div className="rv kicker inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[rgba(52,168,83,0.12)] border border-[rgba(52,168,83,0.25)] text-[#81C995] text-xs font-mono mb-6 select-none">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#34A853] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#34A853]"></span>
@@ -26,14 +26,17 @@ export default function Hero() {
           </div>
 
           {/* Primary H1: Audited headline with 'data' serif accent */}
-          <h1 className="rv text-[clamp(2.2rem,6.4vw,5.4rem)] leading-[1.02] tracking-tighter font-medium text-white max-w-4xl [text-wrap:balance]">
+          <h1 id="hero-title" className="rv text-[clamp(2.2rem,6.4vw,5.4rem)] leading-[1.02] tracking-tighter font-medium text-white max-w-4xl [text-wrap:balance]">
             I help campuses and brands grow, with <span className="font-serif italic font-normal text-[#d4ff4f]">data</span> behind every decision.
           </h1>
 
           {/* Subheadline: 2nd-year BCA student in Bengaluru seeking internship */}
-          <p className="rv text-[1.05rem] md:text-[1.2rem] font-normal text-[rgba(236,235,230,0.78)] leading-[1.6] max-w-xl mt-6">
+          <p className="rv lead text-[1.05rem] md:text-[1.2rem] font-normal text-[rgba(236,235,230,0.78)] leading-[1.6] max-w-xl mt-6">
             {PERSONAL_INFO.subheadline}
           </p>
+
+          {/* Availability banner pill (Sveltia CMS) */}
+          <p className="pill" id="availability" hidden></p>
 
           {/* Recruiter Action CTAs: Plain verbs */}
           <div className="rv pt-8 flex flex-wrap items-center gap-4">
