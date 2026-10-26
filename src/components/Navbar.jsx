@@ -21,7 +21,7 @@ export default function Navbar({ onOpenContact }) {
     { label: 'Capabilities', href: '#capabilities', id: 'capabilities' },
     { label: 'Experience', href: '#experience', id: 'experience' },
     { label: 'Credentials', href: '#credentials', id: 'credentials' },
-    { label: 'Testimonials', href: '#testimonials', id: 'testimonials' },
+    { label: 'About', href: '#about', id: 'about' },
     { label: 'Contact', href: '#contact', id: 'contact' },
   ];
 
@@ -30,7 +30,7 @@ export default function Navbar({ onOpenContact }) {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
-      const sectionIds = ['work', 'capabilities', 'experience', 'credentials', 'testimonials', 'contact'];
+      const sectionIds = ['work', 'capabilities', 'experience', 'credentials', 'about', 'contact'];
       const scrollY = window.scrollY + 220;
 
       for (let i = sectionIds.length - 1; i >= 0; i--) {
