@@ -20,7 +20,7 @@ export default function ContactSection({ onOpenContactModal }) {
       {/* ========================================================= */}
       {/* 1. DEDICATED RECRUITER CONVERSION BLOCK: OPEN TO INTERNSHIPS */}
       {/* ========================================================= */}
-      <div className="mb-20 p-8 sm:p-12 rounded-3xl border border-[#d4ff4f]/30 bg-gradient-to-b from-[#d4ff4f]/[0.06] to-transparent">
+      <div className="rv interactive-card mb-20 p-8 sm:p-12 rounded-3xl border border-[#d4ff4f]/30 bg-gradient-to-b from-[#d4ff4f]/[0.06] to-transparent">
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-8">
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#d4ff4f]/15 border border-[#d4ff4f]/30 text-[#d4ff4f] text-xs font-mono mb-4">
@@ -102,7 +102,7 @@ export default function ContactSection({ onOpenContactModal }) {
       {/* ========================================================= */}
       {/* 2. THREE COLUMN BAR: EMAIL, SOCIAL, WORKFLOW & FAQ NAV   */}
       {/* ========================================================= */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pb-12 border-b border-[rgba(236,235,230,0.1)]">
+      <div className="rv grid grid-cols-1 md:grid-cols-3 gap-8 pb-12 border-b border-[rgba(236,235,230,0.1)]">
         {/* Email as clickable and visible text */}
         <div>
           <p className="font-mono text-xs uppercase tracking-widest text-[rgba(236,235,230,0.5)] mb-2">
@@ -226,7 +226,7 @@ export default function ContactSection({ onOpenContactModal }) {
       )}
 
       {/* Massive Iconic Headline */}
-      <div className="pt-16 pb-8">
+      <div className="rv pt-16 pb-8">
         <h2 className="text-[clamp(2.6rem,10vw,9rem)] leading-[0.92] tracking-tighter font-semibold text-white">
           Tech marketer<br />
           &amp; <span className="font-serif italic font-normal text-[#d4ff4f]">data builder.</span><br />
@@ -235,7 +235,7 @@ export default function ContactSection({ onOpenContactModal }) {
       </div>
 
       {/* Bottom Row: Last Updated, Copyright & Back to Top */}
-      <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-16 pt-8 border-t border-[rgba(236,235,230,0.1)] font-mono text-xs uppercase tracking-wider text-[rgba(236,235,230,0.5)]">
+      <div className="rv flex flex-col sm:flex-row justify-between items-center gap-4 mt-16 pt-8 border-t border-[rgba(236,235,230,0.1)] font-mono text-xs uppercase tracking-wider text-[rgba(236,235,230,0.5)]">
         <div className="flex items-center gap-4">
           <span>© {new Date().getFullYear()} Hitesh Rao M</span>
           <span>•</span>

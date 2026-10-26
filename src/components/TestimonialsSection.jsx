@@ -18,7 +18,7 @@ export default function TestimonialsSection() {
   return (
     <section id="testimonials" className="relative py-28 md:py-36 px-4 md:px-8 max-w-7xl mx-auto z-10 border-b border-white/10 text-left">
       {/* Section Header */}
-      <div className="flex items-center justify-between pb-12 border-b border-white/10">
+      <div className="rv flex items-center justify-between pb-12 border-b border-white/10">
         <div className="flex items-center gap-3">
           <span className="font-mono-tech text-xs tracking-widest text-neutral-500 uppercase">
             [06 // CLIENT REPUTATION]
@@ -46,7 +46,7 @@ export default function TestimonialsSection() {
       </div>
 
       {/* Editorial Luxury Quote */}
-      <div className="mt-16 max-w-4xl mx-auto text-center flex flex-col items-center">
+      <div className="rv interactive-card mt-16 max-w-4xl mx-auto text-center flex flex-col items-center p-8 sm:p-12 rounded-3xl border border-white/10 bg-white/[0.015]">
         <Quote className="w-10 h-10 text-neutral-600 mb-8 opacity-40" />
 
         <blockquote className="text-[clamp(1.25rem,2.5vw,1.8rem)] font-sans font-normal leading-[1.6] text-neutral-100 max-w-[60ch]">

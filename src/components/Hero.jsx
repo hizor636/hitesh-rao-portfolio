@@ -17,7 +17,7 @@ export default function Hero() {
         <div className="lg:col-span-7 flex flex-col items-start text-left">
           
           {/* Status Pill: Open to internships with pulsating green dot */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[rgba(52,168,83,0.12)] border border-[rgba(52,168,83,0.25)] text-[#81C995] text-xs font-mono mb-6 select-none">
+          <div className="rv inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[rgba(52,168,83,0.12)] border border-[rgba(52,168,83,0.25)] text-[#81C995] text-xs font-mono mb-6 select-none">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#34A853] opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#34A853]"></span>
@@ -26,17 +26,17 @@ export default function Hero() {
           </div>
 
           {/* Primary H1: Audited headline with 'data' serif accent */}
-          <h1 className="text-[clamp(2.2rem,6.4vw,5.4rem)] leading-[1.02] tracking-tighter font-medium text-white max-w-4xl [text-wrap:balance]">
+          <h1 className="rv text-[clamp(2.2rem,6.4vw,5.4rem)] leading-[1.02] tracking-tighter font-medium text-white max-w-4xl [text-wrap:balance]">
             I help campuses and brands grow, with <span className="font-serif italic font-normal text-[#d4ff4f]">data</span> behind every decision.
           </h1>
 
           {/* Subheadline: 2nd-year BCA student in Bengaluru seeking internship */}
-          <p className="text-[1.05rem] md:text-[1.2rem] font-normal text-[rgba(236,235,230,0.78)] leading-[1.6] max-w-xl mt-6">
+          <p className="rv text-[1.05rem] md:text-[1.2rem] font-normal text-[rgba(236,235,230,0.78)] leading-[1.6] max-w-xl mt-6">
             {PERSONAL_INFO.subheadline}
           </p>
 
           {/* Recruiter Action CTAs: Plain verbs */}
-          <div className="pt-8 flex flex-wrap items-center gap-4">
+          <div className="rv pt-8 flex flex-wrap items-center gap-4">
             {/* Primary CTA: See my work */}
             <a
               href="#work"
@@ -76,7 +76,7 @@ export default function Hero() {
         {/* ========================================================= */}
         <div className="lg:col-span-5 flex justify-center lg:justify-end">
           <div
-            className="relative w-full max-w-[380px] sm:max-w-[420px] aspect-[4/5] rounded-[28px] p-2 bg-gradient-to-b from-white/15 via-white/5 to-white/0 border border-white/15 hover:border-[#d4ff4f]/50 transition-all duration-500 shadow-[0_20px_50px_rgba(0,0,0,0.8)] group"
+            className="rv relative w-full max-w-[380px] sm:max-w-[420px] aspect-[4/5] rounded-[28px] p-2 bg-gradient-to-b from-white/15 via-white/5 to-white/0 border border-white/15 hover:border-[#d4ff4f]/50 transition-all duration-500 shadow-[0_20px_50px_rgba(0,0,0,0.8)] group"
             onMouseEnter={() => setPhotoHovered(true)}
             onMouseLeave={() => setPhotoHovered(false)}
           >

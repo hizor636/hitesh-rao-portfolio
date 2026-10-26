@@ -5,7 +5,7 @@ export default function ProcessSection() {
   return (
     <section id="how-i-work" className="relative px-5 md:px-10 mt-28 max-w-7xl mx-auto z-10 border-b border-[rgba(236,235,230,0.14)] pb-24">
       {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-[rgba(236,235,230,0.1)]">
+      <div className="rv flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-[rgba(236,235,230,0.1)]">
         <div>
           <p className="font-mono text-xs uppercase tracking-widest text-[rgba(236,235,230,0.5)] mb-3">
             (The Reality Behind the Work)
@@ -20,11 +20,11 @@ export default function ProcessSection() {
       </div>
 
       {/* 4 Working Principles Grid */}
-      <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="rv-stagger mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {HOW_I_WORK_PRINCIPLES.map((principle) => (
           <div
             key={principle.num}
-            className="p-7 rounded-2xl bg-white/[0.015] border border-white/10 hover:border-[#d4ff4f]/40 transition-all duration-300 flex flex-col justify-between"
+            className="interactive-card p-7 rounded-2xl bg-white/[0.015] border border-white/10 hover:border-[#d4ff4f]/40 transition-all duration-300 flex flex-col justify-between"
           >
             <div>
               <span className="font-mono text-sm text-[#d4ff4f] font-semibold block mb-4">

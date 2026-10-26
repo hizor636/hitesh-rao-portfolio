@@ -35,7 +35,7 @@ export default function FeaturedProjects() {
   return (
     <section id="work" className="relative px-5 md:px-10 mt-28 max-w-7xl mx-auto z-10 border-b border-[rgba(236,235,230,0.14)] pb-24">
       {/* Section Header */}
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-4 border-b border-[rgba(236,235,230,0.1)]">
+      <div className="rv flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 pb-4 border-b border-[rgba(236,235,230,0.1)]">
         <div>
           <p className="font-mono text-xs uppercase tracking-widest text-[rgba(236,235,230,0.5)] mb-2">
             (Selected Work · 4 Deep Case Studies)
@@ -50,7 +50,7 @@ export default function FeaturedProjects() {
       </div>
 
       {/* Folio Interactive Rows List */}
-      <div className="border-b border-[rgba(236,235,230,0.14)]">
+      <div className="rv-stagger border-b border-[rgba(236,235,230,0.14)]">
         {DEEP_CASE_STUDIES.map((project) => (
           <button
             key={project.id}
@@ -125,14 +125,14 @@ export default function FeaturedProjects() {
 
       {/* Supporting Credentials & Background Track Record */}
       <div className="mt-16 pt-8">
-        <p className="font-mono text-xs uppercase tracking-widest text-[rgba(236,235,230,0.5)] mb-4">
+        <p className="rv font-mono text-xs uppercase tracking-widest text-[rgba(236,235,230,0.5)] mb-4">
           (Supporting Credentials &amp; Practice)
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="rv-stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {SUPPORTING_CREDENTIALS.map((item, idx) => (
             <div
               key={idx}
-              className="p-5 rounded-xl border border-[rgba(236,235,230,0.1)] bg-white/[0.015] hover:bg-white/[0.03] transition-colors flex flex-col justify-between"
+              className="interactive-card p-5 rounded-xl border border-[rgba(236,235,230,0.1)] bg-white/[0.015] hover:bg-white/[0.03] transition-colors flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between text-xs font-mono text-[rgba(236,235,230,0.5)] mb-2">

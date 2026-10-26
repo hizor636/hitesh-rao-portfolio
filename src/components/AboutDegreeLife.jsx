@@ -29,7 +29,7 @@ export default function AboutDegreeLife({ onOpenContact }) {
   return (
     <section id="about" className="relative px-5 md:px-10 py-24 md:py-32 max-w-7xl mx-auto z-10 border-b border-[rgba(236,235,230,0.14)] text-left">
       {/* Eyebrow */}
-      <div className="flex items-center gap-3 mb-4">
+      <div className="rv flex items-center gap-3 mb-4">
         <span className="font-mono text-xs uppercase tracking-widest text-[#d4ff4f]">
           (About &amp; Degree Journey)
         </span>
@@ -37,12 +37,12 @@ export default function AboutDegreeLife({ onOpenContact }) {
       </div>
 
       {/* Main Headline */}
-      <h2 className="text-3xl sm:text-5xl md:text-6xl tracking-tighter font-medium text-white mb-6">
+      <h2 className="rv text-3xl sm:text-5xl md:text-6xl tracking-tighter font-medium text-white mb-6">
         Learning the fundamentals, <span className="font-serif italic font-normal text-[#d4ff4f]">using them early.</span>
       </h2>
 
       {/* Narrative Intro */}
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-8 text-[rgba(236,235,230,0.8)] text-base sm:text-lg leading-relaxed mb-16">
+      <div className="rv grid grid-cols-1 md:grid-cols-12 gap-8 text-[rgba(236,235,230,0.8)] text-base sm:text-lg leading-relaxed mb-16">
         <div className="md:col-span-6 space-y-4">
           <p>
             I’m Hitesh, a second-year BCA student at <strong className="text-white font-medium">Nagarjuna College of Engineering and Technology</strong> in Bengaluru (Class of 2028). I got into marketing through events and communities, then realised the best decisions come from data.
@@ -62,7 +62,7 @@ export default function AboutDegreeLife({ onOpenContact }) {
       </div>
 
       {/* Degree Life Matrix: In Class vs Outside Class */}
-      <div className="mb-16">
+      <div className="rv mb-16">
         <div className="flex items-center gap-2 mb-6">
           <GraduationCap className="w-5 h-5 text-[#d4ff4f]" />
           <h3 className="text-xl sm:text-2xl font-medium text-white tracking-tight">
@@ -80,7 +80,7 @@ export default function AboutDegreeLife({ onOpenContact }) {
             </thead>
             <tbody className="divide-y divide-white/5 text-sm sm:text-base">
               {DEGREE_LIFE_MATRIX.map((row, idx) => (
-                <tr key={idx} className="hover:bg-white/[0.02] transition-colors">
+                <tr key={idx} className="interactive-row hover:bg-white/[0.04] transition-all">
                   <td className="py-4 px-6 text-white font-medium flex items-center gap-2.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-white/40 shrink-0" />
                     {row.inClass}
@@ -96,7 +96,7 @@ export default function AboutDegreeLife({ onOpenContact }) {
       </div>
 
       {/* Beyond the Classroom Highlights */}
-      <div>
+      <div className="rv">
         <div className="flex items-center gap-2 mb-6">
           <BookOpen className="w-5 h-5 text-[#d4ff4f]" />
           <h3 className="text-xl sm:text-2xl font-medium text-white tracking-tight">
@@ -104,11 +104,11 @@ export default function AboutDegreeLife({ onOpenContact }) {
           </h3>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="rv-stagger grid grid-cols-1 md:grid-cols-2 gap-4">
           {highlights.map((h, i) => (
             <div
               key={i}
-              className="p-6 rounded-2xl border border-white/10 bg-white/[0.015] hover:bg-white/[0.03] transition-all flex flex-col justify-between"
+              className="interactive-card p-6 rounded-2xl border border-white/10 bg-white/[0.015] hover:bg-white/[0.03] transition-all flex flex-col justify-between"
             >
               <div>
                 <div className="flex items-center justify-between mb-3">

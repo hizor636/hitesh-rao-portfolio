@@ -18,11 +18,11 @@ export default function ValueProposition() {
       </div>
 
       {/* 4 Verified Facts Grid with Live Proof Links */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[rgba(236,235,230,0.14)] border border-[rgba(236,235,230,0.14)] rounded-2xl overflow-hidden shadow-2xl mb-16">
+      <div className="rv-stagger grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-[rgba(236,235,230,0.14)] border border-[rgba(236,235,230,0.14)] rounded-2xl overflow-hidden shadow-2xl mb-16">
         {PERSONAL_INFO.proofStats.map((stat) => (
           <div
             key={stat.label}
-            className="p-6 md:p-7 bg-[#0b0b0c] hover:bg-[#121216] transition-colors flex flex-col justify-between"
+            className="interactive-card p-6 md:p-7 bg-[#0b0b0c] hover:bg-[#121216] transition-colors flex flex-col justify-between"
           >
             <div>
               <p className="text-3xl md:text-5xl font-semibold tracking-tight text-white leading-none">
@@ -51,7 +51,7 @@ export default function ValueProposition() {
       </div>
 
       {/* Info Statement */}
-      <div className="grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-10 items-start pt-6">
+      <div className="rv grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-10 items-start pt-6">
         <div>
           <p className="font-mono text-xs uppercase tracking-widest text-[rgba(236,235,230,0.5)] mb-3">
             (About my focus)

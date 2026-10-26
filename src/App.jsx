@@ -51,6 +51,34 @@ export default function App() {
     };
   }, []);
 
+  // Global scroll reveal observer for animated blocks (.rv and .rv-stagger)
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+    );
+
+    const observeElements = () => {
+      const elements = document.querySelectorAll('.rv, .rv-stagger');
+      elements.forEach((el) => observer.observe(el));
+    };
+
+    observeElements();
+    const timer = setTimeout(observeElements, 300);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
     <div className="relative min-h-screen bg-[#080808] text-[#f5f5f5] selection:bg-white selection:text-black overflow-x-hidden font-sans">
       {/* Fluid Magnetic Cursor */}

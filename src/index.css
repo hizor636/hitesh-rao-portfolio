@@ -273,3 +273,64 @@ html.lenis, html.lenis body {
   padding-left: 0.65rem;
   color: #d4ff4f;
 }
+
+/* ========================================================= */
+/* Scroll Reveal Animation System (.rv & .rv-stagger)        */
+/* ========================================================= */
+.rv {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.rv.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.rv-stagger > * {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.35s ease;
+  will-change: opacity, transform;
+}
+
+.rv-stagger.in > *:nth-child(1) { transition-delay: 40ms; opacity: 1; transform: translateY(0); }
+.rv-stagger.in > *:nth-child(2) { transition-delay: 100ms; opacity: 1; transform: translateY(0); }
+.rv-stagger.in > *:nth-child(3) { transition-delay: 160ms; opacity: 1; transform: translateY(0); }
+.rv-stagger.in > *:nth-child(4) { transition-delay: 220ms; opacity: 1; transform: translateY(0); }
+.rv-stagger.in > *:nth-child(5) { transition-delay: 280ms; opacity: 1; transform: translateY(0); }
+.rv-stagger.in > *:nth-child(6) { transition-delay: 340ms; opacity: 1; transform: translateY(0); }
+.rv-stagger.in > *:nth-child(7) { transition-delay: 400ms; opacity: 1; transform: translateY(0); }
+.rv-stagger.in > *:nth-child(8) { transition-delay: 460ms; opacity: 1; transform: translateY(0); }
+
+/* Interactive Hover Block Animations across the whole site */
+.interactive-card {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.35s ease;
+}
+
+.interactive-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(212, 255, 79, 0.45) !important;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.6), 0 0 20px rgba(212, 255, 79, 0.08);
+}
+
+/* Interactive Table & List Rows */
+.interactive-row {
+  transition: padding-left 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease, background-color 0.3s ease;
+}
+
+.interactive-row:hover {
+  padding-left: 0.75rem;
+  color: #d4ff4f !important;
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rv, .rv-stagger > *, .rv.in, .rv-stagger.in > *, .interactive-card, .interactive-row {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

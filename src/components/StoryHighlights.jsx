@@ -320,7 +320,7 @@ export default function StoryHighlights() {
   return (
     <section id="highlights" className="relative px-5 md:px-10 py-12 max-w-7xl mx-auto z-10 border-b border-[rgba(236,235,230,0.14)] text-left">
       {/* Section Header */}
-      <div className="flex items-center justify-between gap-4 mb-6">
+      <div className="rv flex items-center justify-between gap-4 mb-6">
         <div className="flex items-center gap-3">
           <span className="font-mono text-xs uppercase tracking-widest text-[#d4ff4f]">
             (Story Highlights)
@@ -336,7 +336,7 @@ export default function StoryHighlights() {
       </div>
 
       {/* Horizontal Story Highlight Circles Row */}
-      <div className="flex items-center gap-6 sm:gap-8 overflow-x-auto pb-4 pt-1 no-scrollbar focus:outline-hidden">
+      <div className="rv-stagger flex items-center gap-6 sm:gap-8 overflow-x-auto pb-4 pt-1 no-scrollbar focus:outline-hidden">
         {HIGHLIGHTS.map((hl, index) => (
           <button
             key={hl.id}

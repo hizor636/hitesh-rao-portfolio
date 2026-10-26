@@ -97,7 +97,7 @@ export default function RecognitionSection() {
   return (
     <section id="experience" className="relative px-5 md:px-10 py-24 md:py-32 max-w-7xl mx-auto z-10 border-b border-[rgba(236,235,230,0.14)] text-left">
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-white/10">
+      <div className="rv flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-white/10">
         <div>
           <div className="flex items-center gap-3 mb-4">
             <span className="font-mono text-xs uppercase tracking-widest text-[#d4ff4f]">
@@ -133,7 +133,7 @@ export default function RecognitionSection() {
       </div>
 
       {/* Ledger Table */}
-      <div id="credentials" className="mt-10 overflow-x-auto scroll-mt-24">
+      <div id="credentials" className="rv mt-10 overflow-x-auto scroll-mt-24">
         <table className="w-full text-left border-collapse">
           <thead>
             <tr className="border-b border-white/10 text-xs font-mono uppercase tracking-widest text-neutral-400 bg-white/[0.02]">
@@ -145,7 +145,7 @@ export default function RecognitionSection() {
           </thead>
           <tbody className="divide-y divide-white/5 font-sans">
             {filteredItems.map((item, idx) => (
-              <tr key={idx} className="hover:bg-white/[0.02] transition-colors group">
+              <tr key={idx} className="interactive-row hover:bg-white/[0.04] transition-all group">
                 {/* Dates */}
                 <td className="py-5 px-4 font-mono text-xs text-neutral-400 whitespace-nowrap align-top">
                   {item.period}
