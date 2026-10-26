@@ -3,6 +3,7 @@ import { ArrowDown, ArrowUpRight, FileText, Mail, MapPin } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { PartnerLogosBar } from './LogoVisual';
 import { BrandSignatureName } from './CompanyLogos';
+import { getAssetUrl } from '../utils/assetPath';
 
 export default function Hero() {
   const [photoHovered, setPhotoHovered] = useState(false);
@@ -95,7 +96,7 @@ export default function Hero() {
             {/* Inner Image Container */}
             <div className="relative w-full h-full rounded-[22px] overflow-hidden bg-[#0c0d11]">
               <img
-                src="/images/hitesh-profile.jpg"
+                src={getAssetUrl("/images/hitesh-profile.jpg")}
                 alt="Portrait of Hitesh Rao M — Tech Marketer & Data Builder"
                 width="420"
                 height="420"
@@ -108,7 +109,7 @@ export default function Hero() {
                 <div className="flex items-center gap-2.5">
                   <div className="px-1.5 py-0.5 rounded-md bg-white shrink-0 shadow-xs">
                     <img
-                      src="/assets/aistudio/image_098a23c4.png"
+                      src={getAssetUrl("/assets/aistudio/image_098a23c4.png")}
                       alt="NCET Logo"
                       className="h-6 w-auto object-contain"
                     />

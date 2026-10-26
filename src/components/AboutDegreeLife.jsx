@@ -1,6 +1,7 @@
 import React from 'react';
 import { DEGREE_LIFE_MATRIX, PERSONAL_INFO } from '../data/portfolioData';
 import { GraduationCap, BookOpen, Sparkles, ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import { getAssetUrl } from '../utils/assetPath';
 import {
   GoogleLogo,
   PaytmLogo,
@@ -83,7 +84,7 @@ export default function AboutDegreeLife({ onOpenContact }) {
           <div className="inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-white/[0.04] border border-white/15 shadow-md">
             <div className="px-2 py-1 rounded-md bg-white shrink-0 shadow-xs">
               <img
-                src="/assets/aistudio/image_098a23c4.png"
+                src={getAssetUrl("/assets/aistudio/image_098a23c4.png")}
                 alt="Nagarjuna College of Engineering & Technology (NCET)"
                 className="h-8 w-auto object-contain"
               />

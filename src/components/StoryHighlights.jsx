@@ -9,6 +9,7 @@ import {
   GeminiLogo,
   HackerRankLogo
 } from './CompanyLogos';
+import { getAssetUrl } from '../utils/assetPath';
 
 export const HIGHLIGHTS = [
   {
@@ -16,25 +17,25 @@ export const HIGHLIGHTS = [
     title: 'Professional',
     badge: 'Events & Ops',
     icon: 'briefcase',
-    coverImg: '/images/highlight-professional.jpg',
+    coverImg: getAssetUrl('/images/highlight-professional.jpg'),
     color: '#00baf2',
     slides: [
       {
-        img: '/images/highlight-professional.jpg',
+        img: getAssetUrl('/images/highlight-professional.jpg'),
         alt: 'Paytm / One97 Communications Marketing Intern Social & PR and AI Hackathon Bengaluru',
         tag: 'Paytm (One97 Communications)',
         date: '07-07-2026 – 07-10-2026',
         text: 'Marketing Intern – Social & PR. Worked on corporate PR and supported 800+ AI builders at Paytm AI Hackathon, Bengaluru.'
       },
       {
-        img: '/images/highlight-professional.jpg',
+        img: getAssetUrl('/images/highlight-professional.jpg'),
         alt: 'Build with Presto & Namma MUG Developer Conference in Bengaluru',
         tag: 'Presto & Namma MUG Summit',
         date: 'Oct 2026',
         text: 'Core organizing team with Gagandeep, Reyhana, Apoorva, Sanjana, Suman & lead Alok Kumar. Coordinated 800+ registrations & 189+ pros from Google, IBM, Amazon, Cisco & Salesforce.'
       },
       {
-        img: '/images/highlight-professional.jpg',
+        img: getAssetUrl('/images/highlight-professional.jpg'),
         alt: 'Google Student Ambassador campus event',
         tag: 'Google Student Ambassador',
         date: 'May – Oct 2026',
@@ -47,25 +48,25 @@ export const HIGHLIGHTS = [
     title: 'NCET College',
     badge: 'Campus Life',
     icon: 'graduation',
-    coverImg: '/images/highlight-college.jpg',
+    coverImg: getAssetUrl('/images/highlight-college.jpg'),
     color: '#d4ff4f',
     slides: [
       {
-        img: '/images/highlight-college.jpg',
+        img: getAssetUrl('/images/highlight-college.jpg'),
         alt: 'Modern campus architecture at Nagarjuna College of Engineering and Technology',
         tag: 'NCET Bengaluru · BCA 2028',
         date: 'Class of 2028',
         text: 'Studying Bachelor of Computer Applications at NCET Bengaluru — building rigorous foundations in relational SQL, Python, C, and system architectures.'
       },
       {
-        img: '/images/highlight-college.jpg',
+        img: getAssetUrl('/images/highlight-college.jpg'),
         alt: 'Students walking through college campus grounds in afternoon sunlight',
         tag: 'Campus Developer Study Circles',
         date: '2025 – 2026',
         text: 'Formed focused 45-minute lunchtime developer sessions connecting coursework database theory with real-world campaign metrics and SQL sprints.'
       },
       {
-        img: '/images/highlight-college.jpg',
+        img: getAssetUrl('/images/highlight-college.jpg'),
         alt: 'VibeXathon 1.0 collegiate hackathon pitching',
         tag: 'CareerGroww @ VibeXathon 1.0',
         date: 'Mar 2026',
@@ -78,25 +79,25 @@ export const HIGHLIGHTS = [
     title: 'My Lyfff',
     badge: 'Outdoors & Art',
     icon: 'compass',
-    coverImg: '/images/highlight-life.jpg',
+    coverImg: getAssetUrl('/images/highlight-life.jpg'),
     color: '#10b981',
     slides: [
       {
-        img: '/images/highlight-life.jpg',
+        img: getAssetUrl('/images/highlight-life.jpg'),
         alt: 'Scenic mountain trail through lush misty Western Ghats in Karnataka',
         tag: 'Western Ghats Trekking',
         date: 'Karnataka Trails',
         text: 'I think best when I am outdoors. Trekking through the Western Ghats builds mental resilience, patience, and fresh clarity away from the screen.'
       },
       {
-        img: '/images/highlight-life.jpg',
+        img: getAssetUrl('/images/highlight-life.jpg'),
         alt: 'Rolling green peaks and morning clouds in nature',
         tag: 'Editorial Design & Architecture',
         date: 'Visual Inspiration',
         text: 'Passionate about brutalist digital architecture, intentional white space, and editorial typography. I notice layout balance before reading the words.'
       },
       {
-        img: '/images/highlight-life.jpg',
+        img: getAssetUrl('/images/highlight-life.jpg'),
         alt: 'Hiking trail on green mountain ridge at sunrise',
         tag: 'Learn In Public',
         date: 'Personal Philosophy',
@@ -109,25 +110,25 @@ export const HIGHLIGHTS = [
     title: 'Credentials',
     badge: 'Certifications',
     icon: 'award',
-    coverImg: '/images/hitesh-profile.jpg',
+    coverImg: getAssetUrl('/images/hitesh-profile.jpg'),
     color: '#a855f7',
     slides: [
       {
-        img: '/images/hitesh-profile.jpg',
+        img: getAssetUrl('/images/hitesh-profile.jpg'),
         alt: 'Deloitte Australia Data Analytics Simulation',
         tag: 'Deloitte Australia Job Simulation',
         date: 'Feb – Apr 2026',
         text: 'Completed practical data modeling simulation on Forage analyzing pay-equality statistical distributions and demographic segments.'
       },
       {
-        img: '/images/hitesh-profile.jpg',
+        img: getAssetUrl('/images/hitesh-profile.jpg'),
         alt: 'Google for Education Gemini Certified Student',
         tag: 'Gemini Certified Student',
         date: 'Apr 2026',
         text: 'Official credential from Google for Education validating applied generative AI prompt architectures and multi-turn workflows.'
       },
       {
-        img: '/images/hitesh-profile.jpg',
+        img: getAssetUrl('/images/hitesh-profile.jpg'),
         alt: 'Torii Minds and HackerRank SQL Intermediate',
         tag: '70+ SQL Relational Sprints',
         date: 'Oct – Nov 2025',

@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetUrl } from '../utils/assetPath';
 
 /**
  * Authentic logos and official brand styling for MNCs and Institutional Partners:
@@ -24,8 +25,8 @@ export function NCETLogo({ size = 'md', variant = 'badge', className = '' }) {
     xl: 'h-14 sm:h-16'
   }[size] || 'h-8';
 
-  const logoSrc = "/images/ncet-logo.png";
-  const fallbackSrc = "/assets/aistudio/image_098a23c4.png";
+  const logoSrc = getAssetUrl("/images/ncet-logo.png");
+  const fallbackSrc = getAssetUrl("/assets/aistudio/image_098a23c4.png");
 
   const handleImgError = (e) => {
     if (e.currentTarget.src !== fallbackSrc) {
@@ -118,7 +119,7 @@ export function PaytmLogo({ size = 'md', variant = 'badge', className = '' }) {
     return (
       <div className={`inline-flex items-center select-none ${className}`}>
         <img
-          src="/assets/aistudio/paytm-dark.png"
+          src={getAssetUrl("/assets/aistudio/paytm-dark.png")}
           alt="Paytm Official Logo"
           className={`${heightClasses} w-auto object-contain transition-transform duration-300 group-hover:scale-105`}
           loading="lazy"
@@ -132,7 +133,7 @@ export function PaytmLogo({ size = 'md', variant = 'badge', className = '' }) {
     return (
       <div className={`inline-flex items-center select-none ${className}`}>
         <img
-          src="/assets/aistudio/paytm-transparent.png"
+          src={getAssetUrl("/assets/aistudio/paytm-transparent.png")}
           alt="Paytm Official Logo"
           className={`${heightClasses} w-auto object-contain transition-transform duration-300 group-hover:scale-105`}
           loading="lazy"
@@ -146,7 +147,7 @@ export function PaytmLogo({ size = 'md', variant = 'badge', className = '' }) {
   return (
     <div className={`inline-flex items-center px-1.5 py-0.5 rounded-md bg-white select-none shadow-[0_2px_8px_rgba(0,0,0,0.4)] transition-transform duration-300 group-hover:scale-105 ${className}`}>
       <img
-        src="/assets/aistudio/paytm-transparent.png"
+        src={getAssetUrl("/assets/aistudio/paytm-transparent.png")}
         alt="Paytm Official Logo"
         className={`${heightClasses} w-auto object-contain`}
         loading="lazy"

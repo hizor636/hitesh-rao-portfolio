@@ -1,3 +1,5 @@
+import { getAssetUrl } from '../utils/assetPath';
+
 // Verified portfolio data for Hitesh Rao M — Tech Marketer & Data Builder
 // Reflects Strategy, Audit & Copy recommendations (BCA Class of 2028, NCET Bengaluru)
 
@@ -18,7 +20,7 @@ export const PERSONAL_INFO = {
   emailSubject: "Internship enquiry: [Role] · Hitesh Rao M",
   linkedin: "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
   github: "https://github.com/hizor636/hitesh-rao-portfolio",
-  resumeUrl: "/assets/Hitesh-Rao-M-Resume.html",
+  resumeUrl: getAssetUrl("/assets/Hitesh-Rao-M-Resume.html"),
   socials: [
     { label: "LinkedIn", url: "https://www.linkedin.com/in/hitesh-rao-m-593775358/" },
     { label: "GitHub", url: "https://github.com/hizor636/hitesh-rao-portfolio" },
@@ -52,7 +54,7 @@ export const PERSONAL_INFO = {
       sub: "BCA, NCET Bengaluru",
       proofText: "BCA, NCET ↗",
       proofLink: "https://ncet.co.in/",
-      logoImg: "/assets/aistudio/image_098a23c4.png",
+      logoImg: getAssetUrl("/assets/aistudio/image_098a23c4.png"),
       institution: "Nagarjuna College of Engineering & Technology",
       degree: "BCA, NCET"
     }
@@ -533,7 +535,7 @@ export const EDUCATION_LIST = [
     link: "https://ncet.co.in/",
     linkText: "NCET Portal ↗",
     logoKey: "ncet",
-    logoImg: "/assets/aistudio/image_098a23c4.png"
+    logoImg: getAssetUrl("/assets/aistudio/image_098a23c4.png")
   },
   {
     id: "pu-board",
