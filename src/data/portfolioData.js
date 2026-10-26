@@ -1,4 +1,5 @@
 import { getAssetUrl } from '../utils/assetPath';
+import nvLogoSrc from '../assets/nagarjuna-vidyaniketan-logo.png';
 
 // Verified portfolio data for Hitesh Rao M — Tech Marketer & Data Builder
 // Reflects Strategy, Audit & Copy recommendations (BCA Class of 2028, NCET Bengaluru)
@@ -569,7 +570,7 @@ export const EDUCATION_LIST = [
     link: "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
     linkText: "LinkedIn Record ↗",
     logoKey: "nagarjuna-vidyaniketan",
-    logoImg: getAssetUrl("/images/nagarjuna-vidyaniketan-logo.png"),
+    logoImg: nvLogoSrc || getAssetUrl("/images/nagarjuna-vidyaniketan-logo.png"),
     institutionSubText: "High School & Secondary Education · Bengaluru"
   }
 ];

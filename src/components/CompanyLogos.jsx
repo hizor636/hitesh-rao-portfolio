@@ -1,5 +1,6 @@
 import React from 'react';
 import { getAssetUrl } from '../utils/assetPath';
+import nvLogoSrc from '../assets/nagarjuna-vidyaniketan-logo.png';
 
 /**
  * Authentic logos and official brand styling for MNCs and Institutional Partners:
@@ -64,21 +65,21 @@ export function NCETLogo({ size = 'md', variant = 'badge', className = '' }) {
 // 0b. Nagarjuna Vidyaniketan Official School Logo
 export function NagarjunaVidyaniketanLogo({ size = 'md', variant = 'badge', className = '' }) {
   const heightClasses = {
-    xs: 'h-6',
-    sm: 'h-7',
-    md: 'h-8 sm:h-9',
-    lg: 'h-10 sm:h-12',
-    xl: 'h-14 sm:h-16'
+    xs: 'h-6 sm:h-7 min-w-[24px]',
+    sm: 'h-7 sm:h-8 min-w-[28px]',
+    md: 'h-8 sm:h-9 min-w-[32px]',
+    lg: 'h-10 sm:h-12 min-w-[40px]',
+    xl: 'h-14 sm:h-16 min-w-[56px]'
   }[size] || 'h-8';
 
-  const logoSrc = getAssetUrl("/images/nagarjuna-vidyaniketan-logo.png");
+  const logoSrc = nvLogoSrc || getAssetUrl("/images/nagarjuna-vidyaniketan-logo.png");
 
   if (variant === 'raw') {
     return (
       <img
         src={logoSrc}
         alt="Nagarjuna Vidyaniketan"
-        className={`${heightClasses} w-auto object-contain transition-transform duration-300 group-hover:scale-105 ${className}`}
+        className={`${heightClasses} w-auto object-contain shrink-0 transition-transform duration-300 group-hover:scale-105 ${className}`}
         loading="eager"
         decoding="sync"
       />
@@ -86,11 +87,11 @@ export function NagarjunaVidyaniketanLogo({ size = 'md', variant = 'badge', clas
   }
 
   return (
-    <div className={`inline-flex items-center px-1.5 py-0.5 rounded-lg bg-white select-none shadow-[0_2px_12px_rgba(0,0,0,0.25)] transition-transform duration-300 group-hover:scale-105 border border-white/40 ${className}`}>
+    <div className={`inline-flex items-center justify-center p-1 rounded-lg bg-white select-none shadow-[0_2px_10px_rgba(0,0,0,0.15)] transition-transform duration-300 group-hover:scale-105 border border-black/10 shrink-0 ${className}`}>
       <img
         src={logoSrc}
         alt="Nagarjuna Vidyaniketan"
-        className={`${heightClasses} w-auto object-contain`}
+        className={`${heightClasses} w-auto object-contain shrink-0`}
         loading="eager"
         decoding="sync"
       />

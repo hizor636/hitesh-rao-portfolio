@@ -303,17 +303,19 @@ export default function ExperienceEducationFolio() {
 
                     {/* Official Institution logo callout for education */}
                     {isEducation && item.logoImg && (
-                      <div className="mt-4 p-3 rounded-lg bg-[var(--border-subtle)] flex items-center gap-3">
-                        <div className="p-1.5 rounded-md bg-white shrink-0 shadow-xs">
+                      <div className="mt-4 p-3.5 rounded-xl bg-[var(--border-subtle)]/60 border border-[var(--border-subtle)] flex items-center gap-3.5">
+                        <div className="p-1.5 rounded-lg bg-white shrink-0 shadow-xs border border-black/10 flex items-center justify-center">
                           <img
                             src={item.logoImg}
                             alt={`${item.institution} Crest`}
-                            className="h-7 w-auto object-contain"
+                            className="h-9 w-auto max-w-[54px] object-contain shrink-0"
+                            loading="eager"
+                            decoding="sync"
                           />
                         </div>
-                        <div className="text-[11px] text-[var(--text-muted)] leading-tight">
-                          <div className="font-semibold text-[var(--text-primary)]">{item.institution}</div>
-                          <div>{item.institutionSubText || 'Bengaluru, Karnataka, India'}</div>
+                        <div className="text-xs text-[var(--text-muted)] leading-tight">
+                          <div className="font-semibold text-sm text-[var(--text-primary)]">{item.institution}</div>
+                          <div className="text-[11px] mt-0.5">{item.institutionSubText || 'Bengaluru, Karnataka, India'}</div>
                         </div>
                       </div>
                     )}
