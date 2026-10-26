@@ -16,12 +16,12 @@ import {
 
 const TIMELINE_EXPERIENCE = [
   {
-    period: "2024 – 2028 (Present)",
+    period: "2025 – 2028 (Present)",
     role: "Bachelor of Computer Applications (BCA)",
     org: "NCET Bengaluru (Nagarjuna College of Engineering & Technology)",
-    type: "Data Foundations",
-    contribution: "Undergraduate computer applications curriculum focusing on relational databases (SQL), Python scripting, data structures, and algorithmic logic.",
-    scale: "Current CGPA: 7.50 · BCA Class of 2028",
+    type: "Data Foundations & Leadership",
+    contribution: "3-year undergraduate computer applications curriculum focusing on relational databases (SQL), Python scripting, data structures, and cloud technologies. Core Student Coordinator driving tech meetups, hackathons, and departmental initiatives.",
+    scale: "Core Student Coordinator · CGPA: 7.50 · BCA Class of 2028",
     proofText: "BCA, NCET ↗",
     proofUrl: "https://ncet.co.in/"
   },

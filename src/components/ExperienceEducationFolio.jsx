@@ -20,7 +20,8 @@ import {
   MongoDBLogo,
   PrestoLogo,
   GeminiLogo,
-  NCETLogo
+  NCETLogo,
+  NagarjunaVidyaniketanLogo
 } from './CompanyLogos';
 
 export default function ExperienceEducationFolio() {
@@ -46,6 +47,10 @@ export default function ExperienceEducationFolio() {
         return <GeminiLogo size="xs" />;
       case 'ncet':
         return <NCETLogo size="xs" />;
+      case 'nagarjuna-vidyaniketan':
+      case 'vidyaniketan':
+      case 'nv':
+        return <NagarjunaVidyaniketanLogo size="xs" />;
       default:
         return role.toLowerCase().includes('education') || role.toLowerCase().includes('bca') ? (
           <GraduationCap className="w-3.5 h-3.5 text-[var(--accent-lime)]" />
@@ -296,19 +301,19 @@ export default function ExperienceEducationFolio() {
                       ))}
                     </div>
 
-                    {/* Official NCET logo callout for education */}
+                    {/* Official Institution logo callout for education */}
                     {isEducation && item.logoImg && (
                       <div className="mt-4 p-3 rounded-lg bg-[var(--border-subtle)] flex items-center gap-3">
-                        <div className="p-1 rounded bg-white shrink-0">
+                        <div className="p-1.5 rounded-md bg-white shrink-0 shadow-xs">
                           <img
                             src={item.logoImg}
-                            alt="NCET Crest"
-                            className="h-6 w-auto object-contain"
+                            alt={`${item.institution} Crest`}
+                            className="h-7 w-auto object-contain"
                           />
                         </div>
                         <div className="text-[11px] text-[var(--text-muted)] leading-tight">
-                          <div className="font-semibold text-[var(--text-primary)]">Autonomous Institution</div>
-                          <div>Affiliated to VTU, Bengaluru</div>
+                          <div className="font-semibold text-[var(--text-primary)]">{item.institution}</div>
+                          <div>{item.institutionSubText || 'Bengaluru, Karnataka, India'}</div>
                         </div>
                       </div>
                     )}

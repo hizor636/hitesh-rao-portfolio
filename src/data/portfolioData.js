@@ -513,29 +513,34 @@ export const EDUCATION_LIST = [
     degree: "Bachelor of Computer Applications (BCA)",
     institution: "Nagarjuna College of Engineering and Technology (NCET)",
     location: "Bengaluru, Karnataka, India",
-    period: "2024 – 2028",
-    status: "2nd Year Undergraduate · Class of 2028",
+    period: "2025 – 2028",
+    status: "Core Student Coordinator · BCA Department · Class of 2028",
     score: "Current CGPA: 7.50",
     cgpa: "7.50",
-    summary: "Rigorous 4-year undergraduate curriculum bridging computer science fundamentals, relational database engineering, software development, and modern cloud technologies.",
+    summary: "Rigorous 3-year undergraduate curriculum bridging computer science fundamentals, relational database engineering, software development, and modern cloud technologies with active departmental leadership.",
     highlights: [
-      "Current CGPA: 7.50 through foundational software engineering and database systems modules",
-      "Practical coursework: Relational Databases (SQL), Python Programming, C, Data Structures, Web Technologies, Computer Networks",
-      "Active on-campus contributor: Google Student Ambassador, mentoring peers on Google Cloud tools and generative AI workflows",
-      "Autonomous institution affiliated with Visvesvaraya Technological University (VTU), Bengaluru"
+      "Core Student Coordinator – BCA Department: Acted as primary student–faculty liaison, driving departmental coordination, operational synergy, and seamless academic communication",
+      "Technical Events Leadership: Led end-to-end planning and execution of technical meetups, seminars, workshops, conferences, ideathons, and hackathons",
+      "Departmental Representation: Represented the BCA department in intercollegiate technical competitions, ideathons, and interdepartmental tech events",
+      "Tech Speaker & Community Builder: Delivered talks on technology, developer innovation, and student industry opportunities; built strong campus networks with students, clubs, speakers, and event organisers",
+      "Co-curricular & Sports Leadership: Competed in football tournaments demonstrating disciplined teamwork; collaborated with faculty and peers to boost active student participation",
+      "Academic & Cloud Excellence: Maintained strong academic standing (CGPA: 7.50) while serving as Google Student Ambassador on campus (VTU Autonomous Institution)"
     ],
     coursework: [
       "Relational Databases & SQL",
       "Python Programming",
-      "C Language & Data Structures",
+      "C & Data Structures",
       "Web Technologies",
-      "Computer Architecture & Operating Systems",
-      "Google Cloud & AI Fundamentals"
+      "Hackathon & Event Management",
+      "Google Cloud & AI Workflows",
+      "Team Leadership & Coordination",
+      "Computer Networks"
     ],
     link: "https://ncet.co.in/",
     linkText: "NCET Portal ↗",
     logoKey: "ncet",
-    logoImg: getAssetUrl("/assets/aistudio/image_098a23c4.png")
+    logoImg: getAssetUrl("/assets/aistudio/image_098a23c4.png"),
+    institutionSubText: "Autonomous Institution · Affiliated to VTU, Bengaluru"
   },
   {
     id: "nagarjuna-vidyaniketan",
@@ -546,7 +551,7 @@ export const EDUCATION_LIST = [
     period: "Jun 2013 – Mar 2025",
     status: "Completed",
     score: "Secondary Education",
-    summary: "Secondary education at Nagarjuna Vidyaniketan, fostering strong academic disciplines, team management leadership, active athletics and competitive football, alongside early exploration of technical coding.",
+    summary: "Comprehensive secondary education at Nagarjuna Vidyaniketan, fostering strong academic disciplines, team management leadership, active athletics and competitive football, alongside early exploration of technical coding.",
     highlights: [
       "Team Management: Led school initiatives, collaborative student projects, and peer groups with proven organizational leadership",
       "Football & Athletics: Active in competitive football and sports tournaments, cultivating high endurance, discipline, and collaborative teamwork",
@@ -563,6 +568,8 @@ export const EDUCATION_LIST = [
     ],
     link: "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
     linkText: "LinkedIn Record ↗",
-    logoKey: "general"
+    logoKey: "nagarjuna-vidyaniketan",
+    logoImg: getAssetUrl("/images/nagarjuna-vidyaniketan-logo.png"),
+    institutionSubText: "High School & Secondary Education · Bengaluru"
   }
 ];

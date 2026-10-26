@@ -61,6 +61,43 @@ export function NCETLogo({ size = 'md', variant = 'badge', className = '' }) {
   );
 }
 
+// 0b. Nagarjuna Vidyaniketan Official School Logo
+export function NagarjunaVidyaniketanLogo({ size = 'md', variant = 'badge', className = '' }) {
+  const heightClasses = {
+    xs: 'h-6',
+    sm: 'h-7',
+    md: 'h-8 sm:h-9',
+    lg: 'h-10 sm:h-12',
+    xl: 'h-14 sm:h-16'
+  }[size] || 'h-8';
+
+  const logoSrc = getAssetUrl("/images/nagarjuna-vidyaniketan-logo.png");
+
+  if (variant === 'raw') {
+    return (
+      <img
+        src={logoSrc}
+        alt="Nagarjuna Vidyaniketan"
+        className={`${heightClasses} w-auto object-contain transition-transform duration-300 group-hover:scale-105 ${className}`}
+        loading="eager"
+        decoding="sync"
+      />
+    );
+  }
+
+  return (
+    <div className={`inline-flex items-center px-1.5 py-0.5 rounded-lg bg-white select-none shadow-[0_2px_12px_rgba(0,0,0,0.25)] transition-transform duration-300 group-hover:scale-105 border border-white/40 ${className}`}>
+      <img
+        src={logoSrc}
+        alt="Nagarjuna Vidyaniketan"
+        className={`${heightClasses} w-auto object-contain`}
+        loading="eager"
+        decoding="sync"
+      />
+    </div>
+  );
+}
+
 // 1. Google 4-Color Official 'G' Mark
 export function GoogleLogo({ size = 'md', className = '' }) {
   const dim = {
