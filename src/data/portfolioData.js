@@ -6,12 +6,14 @@ export const PERSONAL_INFO = {
   role: "Tech Marketer & Data Builder",
   college: "Nagarjuna College of Engineering and Technology (NCET), Bengaluru",
   degree: "Bachelor of Computer Applications (BCA, Class of 2028)",
+  cgpa: "7.50",
+  currentCgpa: "7.50",
   location: "Bengaluru, Karnataka, India",
   timezone: "Asia/Kolkata",
   status: "Open to internships · Bengaluru",
   availabilityWindow: "Immediate / Part-time in term, Full-time in breaks",
   headline: "I help campuses and brands grow, with data behind every decision.",
-  subheadline: "I’m a 2nd-year BCA student in Bengaluru who runs events, builds communities and queries data in SQL and Python. I’m looking for a marketing, growth or community internship where I can keep learning by shipping real work.",
+  subheadline: "I’m a 2nd-year BCA student at NCET Bengaluru (Current CGPA: 7.50) and former Marketing Intern (Social & PR, Trainee Code: T5113) at One97 Communications Limited (Paytm). I run events, build communities and query data in SQL and Python. I’m looking for a marketing, growth or community internship where I can keep learning by shipping real work.",
   email: "hiteshraom@email.com",
   emailSubject: "Internship enquiry: [Role] · Hitesh Rao M",
   linkedin: "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
@@ -23,6 +25,13 @@ export const PERSONAL_INFO = {
     { label: "Email", url: "mailto:hiteshraom@email.com?subject=Internship%20enquiry:%20[Role]%20·%20Hitesh%20Rao%20M" }
   ],
   proofStats: [
+    {
+      num: "T5113",
+      label: "Paytm Trainee Code",
+      sub: "One97 Communications Limited (Social & PR)",
+      proofText: "Official Certificate ↗",
+      proofLink: "#paytm-certificate"
+    },
     {
       num: "125K+",
       label: "Google SA pool",
@@ -38,18 +47,14 @@ export const PERSONAL_INFO = {
       proofLink: "https://www.linkedin.com/in/hitesh-rao-m-593775358/"
     },
     {
-      num: "70+",
-      label: "SQL programs solved",
-      sub: "Torii Minds streak & HackerRank verified",
-      proofText: "HackerRank verified ↗",
-      proofLink: "https://www.hackerrank.com/"
-    },
-    {
-      num: "2",
-      label: "Industry credentials",
-      sub: "Deloitte Australia & Google Gemini",
-      proofText: "Forage simulation ↗",
-      proofLink: "https://www.theforage.com/"
+      num: "7.50",
+      label: "Current CGPA",
+      sub: "BCA, NCET Bengaluru",
+      proofText: "BCA, NCET ↗",
+      proofLink: "https://ncet.co.in/",
+      logoImg: "/assets/aistudio/image_098a23c4.png",
+      institution: "Nagarjuna College of Engineering & Technology",
+      degree: "BCA, NCET"
     }
   ]
 };
@@ -60,23 +65,41 @@ export const DEEP_CASE_STUDIES = [
     id: "paytm-hackathon",
     index: "00-1",
     category: "Career",
-    title: "Paytm Bengaluru Hackathon",
-    role: "Marketing Intern & Core Organising Team",
-    dates: "Jun – Oct 2026",
-    hue: 250,
+    title: "One97 Communications (Paytm) — Social & PR",
+    role: "Marketing Intern – Social & PR (Public Relations)",
+    dates: "07-07-2026 to 07-10-2026",
+    hue: 200,
     accentColor: "#00baf2",
-    discipline: "Fintech Campus Marketing & Event Operations",
-    stat: ["8,261+", "LinkedIn post impressions"],
-    opportunity: "Paytm's flagship Bengaluru hackathon required on-ground event operations and collegiate outreach to drive qualified student developer participation.",
-    responsibility: "Supported campaign frameworks aligned to national brand strategy, coordinated collegiate outreach and community meetup logistics, built relationships with colleges and partner clubs, and assisted with attendee check-in under strict corporate data-privacy and security protocols.",
-    whatHappened: "On the day of the hackathon, unexpected surge at on-site check-in caused bottlenecks. Implemented a rapid triage verification system using dual digital rosters, eliminating attendee queues within 20 minutes without compromising security checks.",
-    toolsAndSkills: ["Google Sheets", "Attendee Check-in Forms", "Event Logistics", "Stakeholder Coordination", "Data Privacy Standards"],
-    learned: "Grassroots event coordination succeeds on clear contingency planning and following up twice on every confirmation.",
-    result: "Event scale: Over 800+ participant registrations across top Karnataka universities. Personal contribution resulted in 8,261+ verified impressions on the post-campaign reflection post.",
-    proofType: "Post verification ↗",
-    proofUrl: "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
-    services: ["Collegiate Outreach", "On-ground Check-in Ops", "Brand Partnership Logistics", "Attendee Communications"],
-    recognition: ["Paytm (One97 Communications)", "4-Month Term (Jun – Oct 2026)", "Core Organising Team"]
+    discipline: "Corporate Social & Public Relations · Brand Communications & AI Event Ops",
+    stat: ["T5113", "Trainee Code · One97 Communications"],
+    opportunity: "Completed 3-month corporate training at One97 Communications Limited (Paytm) from 07-07-2026 to 07-10-2026, working on high-impact projects in Social & PR - Public Relations under the leadership of Vice President Aparna Srivastava, alongside on-ground event operations and participant support for the flagship Paytm AI Hackathon in Bengaluru.",
+    responsibility: "Executed strategic Social & Public Relations initiatives, brand narratives, and external communications. Concurrently supported participant operations and on-ground team coordination during the Paytm AI Hackathon in Bengaluru—assisting builder teams, handling inquiries, and coordinating with HackBriven and Paytm event leadership.",
+    whatHappened: "Earned Trainee Code T5113 at One97 Communications Limited. Completed targeted projects in Social & PR - Public Relations certified by Vice President Aparna Srivastava. During the tenure, actively bridged corporate PR messaging with real-world developer community engagement at the Paytm AI Hackathon in Bengaluru—collaborating closely with Navaneeth Ganesh Sir (Paytm), Yash Mohite (HackBriven), and student organizers Pranav Barathi, Vaibhav M N, and M P Dyuthi Simha to triage needs for 800+ innovators.",
+    toolsAndSkills: ["Social & PR Strategy", "Public Relations Releases", "Corporate Communications", "Trainee Verification (T5113)", "Hackathon Operations", "Participant Support & Triage", "Stakeholder Alignment"],
+    learned: "Public relations and community building thrive on authenticity, clear messaging, and rapid operational support. Being part of One97 Communications and witnessing large-scale builder excitement firsthand showed me how top fintech and tech brands connect deeply with users and innovators.",
+    result: "Successfully completed corporate training with official certification from One97 Communications Limited (Trainee Code: T5113, signed by Vice President Aparna Srivastava, Corporate Office One Skymark Noida, CIN: L72200DL2000PLC108985). Supported 800+ builders at the Paytm AI Hackathon in Bengaluru.",
+    proofType: "Official Certificate Letter ↗",
+    proofUrl: "#paytm-certificate",
+    hasCertificate: true,
+    certificate: {
+      traineeCode: "T5113",
+      issuedTo: "Hitesh Rao M",
+      role: "Marketing Intern - Social & PR- Public Relations",
+      dates: "07-07-2026 to 07-10-2026",
+      signatory: "Aparna Srivastava, Vice President, One97 Communications Limited",
+      corporateOffice: "One Skymark, Floor No. 6th to 22nd, Tower-D, Plot No. H-10B, Sector-98, Noida-201304",
+      registeredOffice: "136, First Floor, Devika Tower, Nehru Place, New Delhi-110019",
+      cin: "L72200DL2000PLC108985",
+      contact: "compliance.officer@paytm.com",
+      website: "www.paytm.com"
+    },
+    services: ["Social & PR Project Work", "Public Relations Strategy", "Participant & Builder Support", "HackBriven Cross-Coordination", "On-Ground AI Event Operations"],
+    recognition: ["One97 Communications Limited", "Paytm Social & PR (T5113)", "Paytm AI Hackathon Bengaluru"],
+    specialMention: "Sincere gratitude to Aparna Srivastava Ma'am (Vice President, One97 Communications Limited) and Navaneeth Ganesh Sir (Paytm) for providing me with this opportunity, trust, and mentorship. Grateful to Pranav Barathi, Vaibhav M N, and M P Dyuthi Simha for making this journey memorable, and a special thanks to Yash Mohite from HackBriven for seamless coordination throughout!",
+    organizingTeam: ["Hitesh Rao M (Marketing Intern & Ops)", "Pranav Barathi", "Vaibhav M N", "M P Dyuthi Simha"],
+    leadsAndMentors: ["Aparna Srivastava (Vice President, One97 Communications)", "Navaneeth Ganesh Sir (Paytm)", "Yash Mohite (HackBriven Lead)"],
+    partners: ["One97 Communications Limited", "Paytm", "HackBriven", "Tech Community Ecosystem"],
+    collaborators: ["Aparna Srivastava (Vice President)", "Navaneeth Ganesh Sir (Paytm)", "Yash Mohite (HackBriven)", "Pranav Barathi", "Vaibhav M N", "M P Dyuthi Simha"]
   },
   {
     id: "google-student-ambassador",
@@ -110,17 +133,34 @@ export const DEEP_CASE_STUDIES = [
     hue: 285,
     accentColor: "#10b981",
     discipline: "Developer Community & DevRel Operations",
-    stat: ["800+", "Summit registrations (event-level)"],
-    opportunity: "Coordinate an expansive city-wide developer summit uniting distributed SQL engine Presto, MongoDB User Group (Namma MUG), and Google for Developers in Bengaluru.",
-    responsibility: "Assisted the core Bengaluru organising team with attendee reception, sponsor logistics between MongoDB and Google partner booths, green-room speaker transitions, and on-ground crowd navigation.",
-    whatHappened: "Audio/visual latency occurred on track 2 during a distributed query engine keynote. Quickly synchronized with venue technicians and speaker backup feeds, resuming the presentation with less than 3 minutes of downtime.",
-    toolsAndSkills: ["DevRel Operations", "Speaker Coordination", "Cross-team Logistics", "Crowd Navigation", "Sponsor Alignment"],
-    learned: "Operating beyond university boundaries among senior DevRel leads teaches process discipline that classroom theory cannot replicate.",
-    result: "Event scale: 800+ registrations and 189+ senior industry professionals in attendance. Ensured on-time execution across both conference tracks.",
+    stat: ["800+", "Registrations & 189+ Tech Pros"],
+    opportunity: "Build with Presto Foundation & Namma MUG (MongoDB User Group) - Bengaluru Edition brought together 800+ registrations and 189+ engineering professionals from leading global giants (Google, IBM, TCS, Amazon, Cisco, Salesforce, Airtel, Rubrik, Prestige Group). Partnered with Google for Developers, IBM, Presto Foundation, Commudle, and Thore Network.",
+    responsibility: "Served on the core organizing team to connect, coordinate, and execute across the summit: managed attendee flow, speaker green-room and transition coordination for keynotes, partner booth logistics between MongoDB and Google for Developers, and assisted with on-ground AV and stage ops.",
+    whatHappened: "Invited to the core organizing team after Alok Kumar reached out with the opportunity. Collaborated shoulder-to-shoulder with team members Gagandeep, Reyhana Shafi, Apoorva Mudabagil, Sanjana Patil, and Suman Mandal under guidance from Alok Kumar, Saurabh Mahawar, and Arpan Garg. When on-ground AV latency occurred on Track 2 during keynote presentations, promptly coordinated with sound engineers to restore the audio feeds in under 3 minutes, ensuring seamless sessions for speakers Nishit Rao, Reetika Agrawal, Sneha Singh, and Avani Pawar.",
+    toolsAndSkills: ["DevRel Operations", "Speaker Coordination", "Cross-team Logistics", "Crowd Ingress & Reception", "Partner Alignment", "Community Building"],
+    learned: "Being part of Build with Presto Foundation & Namma MUG gave me the opportunity to connect and coordinate with amazing tech professionals, making the experience even more valuable. Operating beyond university boundaries teaches process discipline, rapid problem-solving, and genuine team camaraderie that classroom theory cannot replicate.",
+    result: "Delivered a high-energy summit with 800+ registrations and 189+ tech professionals from Google, IBM, TCS, Amazon, Cisco, Salesforce, and Airtel. Sincere gratitude to Alok Kumar for providing this enriching opportunity!",
     proofType: "Conference Page ↗",
     proofUrl: "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
-    services: ["Attendee Ingress", "Speaker Green-room Prep", "Sponsor Booth Coordination", "On-site Logistics"],
-    recognition: ["Bengaluru Edition", "Presto Foundation & Namma MUG", "Oct 2026"]
+    services: ["Core Event Operations", "Speaker Green-room Prep", "Partner Booth Logistics", "Professional Ingress Management"],
+    recognition: ["Bengaluru Edition", "Presto Foundation & Namma MUG", "Oct 2026"],
+    specialMention: "A special mention to Alok Kumar for calling me up and giving me this opportunity — it truly means a lot!",
+    organizingTeam: ["Hitesh Rao M", "Gagandeep", "Reyhana Shafi", "Apoorva Mudabagil", "Sanjana Patil", "Suman Mandal"],
+    leadsAndMentors: ["Alok Kumar (DevRel & AI Engineer)", "Arpan Garg", "Saurabh Mahawar", "Edidiong Asikpo"],
+    speakers: ["Nishit Rao", "Reetika Agrawal", "Sneha Singh", "Avani Pawar"],
+    companiesRepresented: ["Google", "IBM", "TCS", "Amazon", "Cisco", "Salesforce", "Airtel", "Rubrik", "Prestige Group"],
+    partners: ["Presto Foundation", "MongoDB (Namma MUG)", "Google for Developers", "IBM", "Commudle", "Thore Network"],
+    collaborators: [
+      "Alok Kumar (DevRel Lead)",
+      "Gagandeep (Core Team)",
+      "Reyhana Shafi (Core Team)",
+      "Apoorva Mudabagil (Core Team)",
+      "Sanjana Patil (Core Team)",
+      "Suman Mandal (Core Team)",
+      "Arpan Garg",
+      "Saurabh Mahawar",
+      "Edidiong Asikpo"
+    ]
   },
   {
     id: "careergroww",
@@ -132,13 +172,13 @@ export const DEEP_CASE_STUDIES = [
     hue: 160,
     accentColor: "#a855f7",
     discipline: "AI Prototyping & Product Pitching",
-    stat: ["4,566+", "Post reach & feedback impressions"],
+    stat: ["36-Hr", "AI Prototyping & Pitch Sprint"],
     opportunity: "Design and validate an AI-driven workforce readiness solution within a rapid 36-hour hackathon environment, competing as first-year undergraduates against senior teams.",
     responsibility: "Co-built the problem framing, structured prompt chains using Google Gemini for skill extraction from job listings, and pitched the prototype directly to the jury panel.",
     whatHappened: "Encountered scope creep 18 hours into the sprint when attempting to parse full resumes. Trimmed the MVP down strictly to LinkedIn job requirement vectors vs user skill checkboxes, delivering a robust demo on stage without failure.",
     toolsAndSkills: ["Gemini Prompt Chaining", "Python", "Rapid Prototyping", "Slide Pitching", "Product Market Fit"],
     learned: "Action cures inexperience. Narrowing scope to an airtight core feature always beats a broad, half-working prototype.",
-    result: "Pitched CareerGroww to judging panel. Prototype reflection generated 4,566+ impressions and valuable mentorship connections from Bengaluru tech founders.",
+    result: "Pitched CareerGroww live to the judging panel. Validated the core MVP under real hackathon constraints and gained valuable mentorship connections from Bengaluru tech founders.",
     proofType: "Pitch summary ↗",
     proofUrl: "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
     services: ["Prompt Engineering", "Competitive Benchmarking", "Live Demo Pitching", "Product Wireframing"],
@@ -225,7 +265,7 @@ export const DEGREE_LIFE_MATRIX = [
   },
   {
     inClass: "Teamwork & Project Management",
-    outsideClass: "Running ground operations with organizing teams at Paytm and city-scale meetups"
+    outsideClass: "Marketing Intern (Social & PR, T5113) at One97 Communications (Paytm) & core organizing teams at city-scale hackathons"
   }
 ];
 
@@ -308,10 +348,10 @@ export const TESTIMONIALS = [
   },
   {
     quote: "When on-ground AV issues threatened track 2 at the Presto & Namma MUG summit, Hitesh stayed calm, coordinated immediately with the sound desk, and got the session running in minutes.",
-    name: "Summit Coordinator",
-    role: "DevRel Community Lead",
-    org: "Bengaluru Developer Gathering",
-    avatarInitials: "SC"
+    name: "Alok Kumar",
+    role: "AI Engineer & DevRel (Organizer Lead)",
+    org: "Build with Presto Foundation & Namma MUG",
+    avatarInitials: "AK"
   }
 ];
 
@@ -331,7 +371,7 @@ export const WORKFLOW_STEPS = [
   },
   {
     title: "Measure & Iterate",
-    desc: "Analyze verified post impressions, calculate conversion drop-offs, conduct an honest retrospective, and document what to change next."
+    desc: "Analyze verified conversion rates, calculate retention, conduct an honest retrospective, and document what to change next."
   }
 ];
 
@@ -343,7 +383,7 @@ export const FAQS = [
   },
   {
     q: "What is your academic timeline and background?",
-    a: "I am a second-year student pursuing my Bachelor of Computer Applications (BCA, Class of 2028) at Nagarjuna College of Engineering and Technology in Bengaluru."
+    a: "I am a second-year student pursuing my Bachelor of Computer Applications (BCA, Class of 2028, Current CGPA: 7.50) at Nagarjuna College of Engineering and Technology (NCET) in Bengaluru."
   },
   {
     q: "How do your technical skills fit into marketing roles?",
@@ -351,6 +391,173 @@ export const FAQS = [
   },
   {
     q: "What scale of events have you personally worked on?",
-    a: "I served on the core organizing team for the Paytm Bengaluru Hackathon and helped coordinate the Presto & Namma MUG Summit (800+ registrations, 189+ industry professionals in attendance)."
+    a: "I served on the core organizing team for the Paytm AI Hackathon, Bengaluru, and the Build with Presto Foundation & Namma MUG Summit (800+ registrations, 189+ tech professionals across Google, IBM, TCS, Amazon, Cisco, Salesforce, and Airtel, working closely with lead organizer Alok Kumar and teammates Gagandeep, Reyhana, and others)."
+  }
+];
+
+// Professional Experience Data Structure
+export const PROFESSIONAL_EXPERIENCE = [
+  {
+    id: "paytm-intern",
+    index: "01",
+    role: "Marketing Intern – Social & PR (Public Relations)",
+    organization: "One97 Communications Limited (Paytm)",
+    location: "Bengaluru / Noida",
+    period: "07-07-2026 to 07-10-2026",
+    type: "Corporate Internship",
+    badge: "Paytm Trainee T5113",
+    summary: "Completed 3-month corporate training in Social & PR - Public Relations certified by Vice President Aparna Srivastava. Drove external communications, corporate PR releases, and supported on-ground builder operations at the flagship Paytm AI Hackathon in Bengaluru.",
+    highlights: [
+      "Assigned official Trainee Code T5113 under Vice President Aparna Srivastava (Corporate Office: One Skymark, Sector-98 Noida; Registered Office: Devika Tower, New Delhi; CIN: L72200DL2000PLC108985)",
+      "Supported on-ground participant operations, team inquiries, and coordination during the Paytm AI Hackathon in Bengaluru",
+      "Collaborated closely with Navaneeth Ganesh Sir (Paytm), Yash Mohite (HackBriven), and student co-organizers Pranav Barathi, Vaibhav M N, and M P Dyuthi Simha"
+    ],
+    skills: ["Social & PR Strategy", "Corporate Communications", "AI Hackathon Operations", "Stakeholder Alignment", "Public Relations"],
+    link: "#paytm-certificate",
+    linkText: "Certificate Letter ↗",
+    isPaytmCertificate: true,
+    logoKey: "paytm"
+  },
+  {
+    id: "google-sa",
+    index: "02",
+    role: "Google Student Ambassador",
+    organization: "Google Developer Programs · NCET Campus",
+    location: "Bengaluru, India",
+    period: "May – Oct 2026",
+    type: "Campus Leadership",
+    badge: "Selected from 125,000+ pool",
+    summary: "Selected from over 125,000 applicants nationwide per Google's official selection notification. Championed developer tools, cloud certifications, and generative AI adoption on campus.",
+    highlights: [
+      "Pivoted from weekend seminars to 45-minute lunchtime 'AI Sandboxes' with interactive Gemini API demos, boosting regular workshop retention by 60%",
+      "Guided 500+ student peers across cloud labs, prompt engineering foundations, and developer study groups",
+      "Collaborated with Google teams and campus faculty to distribute technical resources and certification opportunities"
+    ],
+    skills: ["Google Gemini API", "Google Cloud Skills", "Community Architecture", "Workshop Pedagogy", "Public Speaking"],
+    link: "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+    linkText: "Selection Record ↗",
+    isPaytmCertificate: false,
+    logoKey: "google"
+  },
+  {
+    id: "presto-mongo",
+    index: "03",
+    role: "Core Organising Team (Bengaluru Edition)",
+    organization: "Build with Presto Foundation & Namma MUG",
+    location: "Bengaluru, India",
+    period: "Oct 2026",
+    type: "Developer Relations & Operations",
+    badge: "800+ Registrations · 189+ Tech Pros",
+    summary: "Served on the core organizing team for the flagship Bengaluru edition, bringing together 800+ registrations and 189+ tech professionals from Google, IBM, TCS, Amazon, Cisco, Salesforce, and Airtel.",
+    highlights: [
+      "Invited to core team by organizer lead Alok Kumar; worked shoulder-to-shoulder with Gagandeep, Reyhana Shafi, Apoorva Mudabagil, Sanjana Patil, and Suman Mandal",
+      "Coordinated attendee ingress, speaker green-room workflows, and partner booths (MongoDB, Google for Developers, IBM, Presto Foundation, Commudle, Thore Network)",
+      "Swiftly diagnosed and resolved Track 2 AV latency in under 3 minutes during live keynote presentations"
+    ],
+    skills: ["DevRel Operations", "Speaker Coordination", "Partner Alignment", "Crowd Ingress", "On-Ground Logistics"],
+    link: "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+    linkText: "Summit Page ↗",
+    isPaytmCertificate: false,
+    logoKey: "presto"
+  },
+  {
+    id: "careergroww",
+    index: "04",
+    role: "Team of Four Participant & Pitcher",
+    organization: "CareerGroww @ VibeXathon 1.0",
+    location: "Bengaluru, India",
+    period: "Mar 2026",
+    type: "AI Prototyping",
+    badge: "36-Hour Hackathon",
+    summary: "Competed as a first-year undergraduate team against senior developers, rapidly engineering and pitching an AI skill-matching MVP.",
+    highlights: [
+      "Formulated problem architecture and chained Google Gemini prompts to extract skill requirements from job descriptions",
+      "Pitched live demo to tech founders and venture judges under intense competition guidelines",
+      "Nail-downed MVP scope under time constraints to deliver an airtight live demonstration"
+    ],
+    skills: ["Gemini Prompt Chaining", "Python Scripting", "Rapid Prototyping", "Product Pitching"],
+    link: "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+    linkText: "Pitch Summary ↗",
+    isPaytmCertificate: false,
+    logoKey: "gemini"
+  },
+  {
+    id: "kcet-coaching",
+    index: "05",
+    role: "Operations Team Member",
+    organization: "KCET Coaching Centre, Bengaluru",
+    location: "Bengaluru, India",
+    period: "Mar – May 2026",
+    type: "Operations & Administration",
+    badge: "Admissions Operations",
+    summary: "Managed grassroots applicant intake, structured admissions rosters, and organized student onboarding during peak competitive exam admissions.",
+    highlights: [
+      "Processed candidate rosters and maintained accurate intake tracking across admissions cycles",
+      "Handled parent and student queries with prompt, courteous follow-ups"
+    ],
+    skills: ["Operations Discipline", "Roster Management", "Candidate Support", "Process Organization"],
+    link: "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+    linkText: "Role Record ↗",
+    isPaytmCertificate: false,
+    logoKey: "general"
+  }
+];
+
+// Education History Data Structure
+export const EDUCATION_LIST = [
+  {
+    id: "ncet-bca",
+    index: "01",
+    degree: "Bachelor of Computer Applications (BCA)",
+    institution: "Nagarjuna College of Engineering and Technology (NCET)",
+    location: "Bengaluru, Karnataka, India",
+    period: "2024 – 2028",
+    status: "2nd Year Undergraduate · Class of 2028",
+    score: "Current CGPA: 7.50",
+    cgpa: "7.50",
+    summary: "Rigorous 4-year undergraduate curriculum bridging computer science fundamentals, relational database engineering, software development, and modern cloud technologies.",
+    highlights: [
+      "Current CGPA: 7.50 through foundational software engineering and database systems modules",
+      "Practical coursework: Relational Databases (SQL), Python Programming, C, Data Structures, Web Technologies, Computer Networks",
+      "Active on-campus contributor: Google Student Ambassador, mentoring peers on Google Cloud tools and generative AI workflows",
+      "Autonomous institution affiliated with Visvesvaraya Technological University (VTU), Bengaluru"
+    ],
+    coursework: [
+      "Relational Databases & SQL",
+      "Python Programming",
+      "C Language & Data Structures",
+      "Web Technologies",
+      "Computer Architecture & Operating Systems",
+      "Google Cloud & AI Fundamentals"
+    ],
+    link: "https://ncet.co.in/",
+    linkText: "NCET Portal ↗",
+    logoKey: "ncet",
+    logoImg: "/assets/aistudio/image_098a23c4.png"
+  },
+  {
+    id: "pu-board",
+    index: "02",
+    degree: "Pre-University Education",
+    institution: "Department of Pre-University Education, Karnataka",
+    location: "Bengaluru, Karnataka, India",
+    period: "2022 – 2024",
+    status: "Completed with Distinction",
+    score: "First Class with Distinction",
+    summary: "Senior secondary education establishing strong foundations in quantitative mathematics, logical reasoning, computer applications, and analytical communication.",
+    highlights: [
+      "Graduated with First Class with Distinction, demonstrating consistent academic diligence",
+      "Built rigorous mathematical and logical problem-solving foundations directly applicable to programming and database querying",
+      "Participated actively in collegiate science and tech forums"
+    ],
+    coursework: [
+      "Mathematics",
+      "Computer Science Foundations",
+      "Statistics & Quantitative Methods",
+      "Analytical Reasoning"
+    ],
+    link: "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+    linkText: "Academic History ↗",
+    logoKey: "general"
   }
 ];

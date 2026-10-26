@@ -104,14 +104,23 @@ export default function Hero() {
               />
 
               {/* Bottom Photo Caption */}
-              <div className="absolute bottom-4 left-4 right-4 p-3 rounded-2xl bg-black/80 backdrop-blur-md border border-white/10 flex items-center justify-between text-xs font-mono shadow-xl">
-                <div>
-                  <BrandSignatureName size="sm" />
-                  <span className="block text-[11px] text-neutral-400 font-mono mt-0.5">
-                    BCA Class of '28 · NCET Bengaluru
-                  </span>
+              <div className="absolute bottom-4 left-4 right-4 p-3 rounded-2xl bg-black/85 backdrop-blur-md border border-white/15 flex items-center justify-between text-xs font-mono shadow-xl">
+                <div className="flex items-center gap-2.5">
+                  <div className="px-1.5 py-0.5 rounded-md bg-white shrink-0 shadow-xs">
+                    <img
+                      src="/assets/aistudio/image_098a23c4.png"
+                      alt="NCET Logo"
+                      className="h-6 w-auto object-contain"
+                    />
+                  </div>
+                  <div>
+                    <BrandSignatureName size="sm" />
+                    <span className="block text-[11px] text-neutral-300 font-mono mt-0.5">
+                      BCA, NCET · CGPA: <strong className="text-[#d4ff4f] font-semibold">7.50</strong>
+                    </span>
+                  </div>
                 </div>
-                <div className="text-right flex items-center gap-1.5 text-neutral-300">
+                <div className="text-right flex items-center gap-1.5 text-neutral-300 shrink-0">
                   <MapPin className="w-3 h-3 text-[#d4ff4f]" />
                   <span className="text-[11px]">Bengaluru</span>
                 </div>
@@ -145,11 +154,11 @@ export default function Hero() {
 
         {/* Scroll Indicator */}
         <a
-          href="#proof-strip"
+          href="#highlights"
           className="group flex items-center gap-3 text-xs font-mono text-neutral-400 hover:text-white transition-colors"
           data-cursor="pointer"
         >
-          <span className="tracking-widest uppercase">Verified Proof &amp; Work</span>
+          <span className="tracking-widest uppercase">Explore Experience &amp; Work</span>
           <div className="w-5 h-8 rounded-full border border-neutral-700 group-hover:border-[#d4ff4f] flex items-start justify-center p-1 transition-colors">
             <div className="w-1 h-2 rounded-full bg-[#d4ff4f] animate-bounce" />
           </div>

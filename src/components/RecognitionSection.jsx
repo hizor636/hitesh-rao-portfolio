@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Briefcase, Award, ExternalLink, Calendar, CheckCircle } from 'lucide-react';
 import { SUPPORTING_CREDENTIALS } from '../data/portfolioData';
+import PaytmCertificateModal from './PaytmCertificateModal.jsx';
 import {
   GoogleLogo,
   PaytmLogo,
@@ -9,19 +10,31 @@ import {
   DeloitteLogo,
   GeminiLogo,
   HackerRankLogo,
-  CiscoLogo
+  CiscoLogo,
+  NCETLogo
 } from './CompanyLogos';
 
 const TIMELINE_EXPERIENCE = [
   {
-    period: "Jun – Oct 2026",
-    role: "Marketing Intern & Core Organising Team",
-    org: "Paytm Bengaluru Hackathon",
+    period: "2024 – 2028 (Present)",
+    role: "Bachelor of Computer Applications (BCA)",
+    org: "NCET Bengaluru (Nagarjuna College of Engineering & Technology)",
+    type: "Data Foundations",
+    contribution: "Undergraduate computer applications curriculum focusing on relational databases (SQL), Python scripting, data structures, and algorithmic logic.",
+    scale: "Current CGPA: 7.50 · BCA Class of 2028",
+    proofText: "BCA, NCET ↗",
+    proofUrl: "https://ncet.co.in/"
+  },
+  {
+    period: "07-07-2026 to 07-10-2026",
+    role: "Marketing Intern – Social & PR (Public Relations)",
+    org: "One97 Communications Limited (Paytm)",
     type: "Internship & Operations",
-    contribution: "Supported national brand campaign framework, managed collegiate partner outreach across Karnataka universities, and handled attendee verification operations under enterprise privacy standards.",
-    scale: "Event Scale: 800+ registrations · Personal post impressions: 8,261+",
-    proofText: "Post verification ↗",
-    proofUrl: "https://www.linkedin.com/in/hitesh-rao-m-593775358/"
+    contribution: "Completed 3-month corporate training (Trainee Code: T5113) certified by Vice President Aparna Srivastava. Worked on Social & PR projects, public relations releases, corporate communications, and supported participant operations at the Paytm AI Hackathon in Bengaluru.",
+    scale: "Trainee Code: T5113 · Certified by VP Aparna Srivastava · One97 Communications",
+    proofText: "Certificate Letter ↗",
+    proofUrl: "#paytm-certificate",
+    isPaytmCertificate: true
   },
   {
     period: "May – Oct 2026",
@@ -38,8 +51,8 @@ const TIMELINE_EXPERIENCE = [
     role: "Core Organising Team (Bengaluru)",
     org: "Build with Presto & Namma MUG",
     type: "DevRel & Conference Ops",
-    contribution: "Coordinated attendee ingress, MongoDB and Google partner sponsor booths, green-room speaker transitions, and resolved track-2 AV downtime in under 3 minutes.",
-    scale: "Event Scale: 800+ registrations, 189+ industry professionals",
+    contribution: "Core organizing team alongside Gagandeep, Reyhana Shafi, Apoorva Mudabagil, Sanjana Patil, Suman Mandal, and lead Alok Kumar. Coordinated attendee reception, speaker green-room prep, partner booths (MongoDB, Google for Developers, IBM), and rapid AV resolution for 189+ tech professionals.",
+    scale: "800+ registrations · 189+ tech pros (Google, IBM, TCS, Amazon, Cisco, Salesforce, Airtel)",
     proofText: "Conference Page ↗",
     proofUrl: "https://www.linkedin.com/in/hitesh-rao-m-593775358/"
   },
@@ -49,7 +62,7 @@ const TIMELINE_EXPERIENCE = [
     org: "CareerGroww @ VibeXathon 1.0",
     type: "AI Prototyping",
     contribution: "Formulated the problem architecture, chained Gemini prompts to parse job requirements against skill vectors, and pitched the prototype live on stage to the judging panel.",
-    scale: "Competed as 1st-year team against senior undergraduates · 4,566+ post reach",
+    scale: "36-hr AI sprint · Competed as 1st-year team against senior undergraduates",
     proofText: "Pitch summary ↗",
     proofUrl: "https://www.linkedin.com/in/hitesh-rao-m-593775358/"
   },
@@ -96,6 +109,7 @@ const TIMELINE_EXPERIENCE = [
 ];
 
 export default function RecognitionSection() {
+  const [isPaytmModalOpen, setIsPaytmModalOpen] = useState(false);
   const [filterType, setFilterType] = useState('ALL');
 
   const types = ['ALL', 'Internship & Operations', 'Campus Leadership', 'DevRel & Conference Ops', 'Certification', 'Data Foundations'];
@@ -105,6 +119,7 @@ export default function RecognitionSection() {
     : TIMELINE_EXPERIENCE.filter((item) => item.type === filterType || (filterType === 'Certification' && (item.type === 'Simulation & Modeling' || item.type === 'Certification')));
 
   const getOrgLogo = (org = '', role = '') => {
+    if (org.includes('NCET') || org.includes('Nagarjuna')) return <NCETLogo size="xs" />;
     if (org.includes('Paytm')) return <PaytmLogo size="xs" />;
     if (role.includes('Google') || org.includes('Google for Education')) return <GoogleLogo size="xs" />;
     if (org.includes('Presto') || org.includes('MUG')) {
@@ -123,7 +138,7 @@ export default function RecognitionSection() {
   };
 
   return (
-    <section id="experience" className="relative px-5 md:px-10 py-24 md:py-32 max-w-7xl mx-auto z-10 border-b border-[rgba(236,235,230,0.14)] text-left">
+    <section id="credentials-ledger" className="relative px-5 md:px-10 py-24 md:py-32 max-w-7xl mx-auto z-10 border-b border-[rgba(236,235,230,0.14)] text-left">
       {/* Header */}
       <div className="rv flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-white/10">
         <div>
@@ -211,15 +226,26 @@ export default function RecognitionSection() {
 
                 {/* Proof Link Chip */}
                 <td className="py-5 px-4 align-top text-right whitespace-nowrap">
-                  <a
-                    href={item.proofUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono text-[#d4ff4f] bg-[#d4ff4f]/10 border border-[#d4ff4f]/25 hover:bg-[#d4ff4f]/20 hover:border-[#d4ff4f]/50 transition-all"
-                    data-cursor="pointer"
-                  >
-                    <span>{item.proofText}</span>
-                  </a>
+                  {item.isPaytmCertificate || item.proofUrl === "#paytm-certificate" ? (
+                    <button
+                      type="button"
+                      onClick={() => setIsPaytmModalOpen(true)}
+                      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono text-[#00baf2] bg-[#00baf2]/10 border border-[#00baf2]/30 hover:bg-[#00baf2]/20 hover:border-[#00baf2]/60 transition-all cursor-pointer font-semibold shadow-xs"
+                      data-cursor="pointer"
+                    >
+                      <span>{item.proofText}</span>
+                    </button>
+                  ) : (
+                    <a
+                      href={item.proofUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono text-[#d4ff4f] bg-[#d4ff4f]/10 border border-[#d4ff4f]/25 hover:bg-[#d4ff4f]/20 hover:border-[#d4ff4f]/50 transition-all"
+                      data-cursor="pointer"
+                    >
+                      <span>{item.proofText}</span>
+                    </a>
+                  )}
                 </td>
               </tr>
             );
@@ -227,6 +253,8 @@ export default function RecognitionSection() {
         </tbody>
         </table>
       </div>
+      {/* One97 Communications Limited Certificate Modal */}
+      <PaytmCertificateModal isOpen={isPaytmModalOpen} onClose={() => setIsPaytmModalOpen(false)} />
     </section>
   );
 }

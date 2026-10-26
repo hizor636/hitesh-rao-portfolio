@@ -22,12 +22,24 @@ export default function ValueProposition() {
         {PERSONAL_INFO.proofStats.map((stat) => (
           <div
             key={stat.label}
-            className="interactive-card p-6 md:p-7 bg-[#0b0b0c] hover:bg-[#121216] transition-colors flex flex-col justify-between"
+            className="interactive-card p-6 md:p-7 bg-[#0b0b0c] hover:bg-[#121216] transition-colors flex flex-col justify-between group"
           >
             <div>
-              <p className="text-3xl md:text-5xl font-semibold tracking-tight text-white leading-none">
-                {stat.num}
-              </p>
+              <div className="flex items-start justify-between gap-3">
+                <p className="text-3xl md:text-5xl font-semibold tracking-tight text-white leading-none">
+                  {stat.num}
+                </p>
+                {stat.logoImg && (
+                  <div className="shrink-0 px-2 py-1 bg-white rounded-lg border border-white/20 shadow-md flex items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                    <img
+                      src={stat.logoImg}
+                      alt={stat.institution || stat.label}
+                      className="h-6 w-auto object-contain max-w-[84px]"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
+              </div>
               <p className="text-sm font-medium text-white mt-3">
                 {stat.label}
               </p>
@@ -66,7 +78,7 @@ export default function ValueProposition() {
             I got into marketing through events and communities, then realised the best decisions come from data. So I study both: I write SQL and Python for my BCA degree, and I apply them while running student communities, workshops and hackathon operations.
           </p>
           <p>
-            Over the past year I’ve been a Google Student Ambassador, worked on the organising team at a Paytm hackathon as a marketing intern, helped on the organising side of a Bengaluru developer meetup, and pitched an AI skill-gap idea at a student hackathon. I’m early in my career, and I’m looking for internships where I can contribute, get feedback and grow.
+            Over the past year I’ve completed a corporate internship as Marketing Intern - Social & PR at One97 Communications Limited at Paytm (One97 Communications), served as a Google Student Ambassador, helped coordinate city-scale developer summits, and pitched an AI skill-gap platform at a student hackathon. I’m early in my career, and I’m looking for internships where I can contribute, get feedback and grow.
           </p>
           <div className="pt-2">
             <a

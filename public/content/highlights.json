@@ -2,28 +2,28 @@
   "highlights": [
     {
       "id": "professional",
-      "title": "Professional",
+      "title": "One97 Communications (Paytm) — Social & PR",
       "initials": "PR",
       "hue": 200,
       "cover": "/images/highlight-professional.jpg",
       "slides": [
         {
-          "kicker": "Events & Operations",
+          "kicker": "AI Hackathon Ops & Support",
           "stat": "800+",
-          "title": "Paytm Bengaluru Hackathon",
-          "text": "Core organizing team member managing university partner outreach and on-ground attendee verification for 800+ student developers.",
+          "title": "Paytm AI Hackathon, Bengaluru",
+          "text": "Core organizing & participant support team assisting 800+ AI builders, coordinating on-ground execution alongside HackBriven & Paytm leads.",
           "img": "/images/highlight-professional.jpg",
-          "alt": "Namma Bengaluru Hackathon tech event with collegiate developers and stage",
+          "alt": "Paytm AI Hackathon event with builder teams and innovators in Bengaluru",
           "link": {
             "href": "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
-            "label": "View post verification"
+            "label": "Event Highlights"
           }
         },
         {
           "kicker": "DevRel & Conference",
-          "stat": "189+",
+          "stat": "800+",
           "title": "Build with Presto & Namma MUG",
-          "text": "Coordinated developer summit logistics with MongoDB & Google partner booths, speaker green-room prep, and crowd ingress for 189+ industry pros.",
+          "text": "Core organizing team alongside Gagandeep, Reyhana Shafi, Apoorva Mudabagil, Sanjana Patil, Suman Mandal, and lead Alok Kumar. Coordinated 800+ registrations and 189+ tech pros from Google, IBM, Amazon, Cisco, and Airtel.",
           "img": "/images/highlight-professional.jpg",
           "alt": "Build with Presto & Namma MUG Developer Conference in Bengaluru",
           "link": {
@@ -43,7 +43,8 @@
             "label": "View selection record"
           }
         }
-      ]
+      ],
+      "text": "Marketing Intern – Social & PR (Social & PR). Executed corporate PR releases and supported 800+ builders at Paytm AI Hackathon, Bengaluru."
     },
     {
       "id": "college",

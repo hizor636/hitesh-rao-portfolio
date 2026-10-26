@@ -21,17 +21,17 @@ export const HIGHLIGHTS = [
     slides: [
       {
         img: '/images/highlight-professional.jpg',
-        alt: 'Namma Bengaluru Hackathon tech event with collegiate developers and stage',
-        tag: 'Paytm Bengaluru Hackathon',
-        date: 'Jun – Oct 2026',
-        text: 'Core organizing team member managing university partner outreach and on-ground attendee verification for 800+ student developers.'
+        alt: 'Paytm / One97 Communications Marketing Intern Social & PR and AI Hackathon Bengaluru',
+        tag: 'Paytm (One97 Communications)',
+        date: '07-07-2026 – 07-10-2026',
+        text: 'Marketing Intern – Social & PR. Worked on corporate PR and supported 800+ AI builders at Paytm AI Hackathon, Bengaluru.'
       },
       {
         img: '/images/highlight-professional.jpg',
         alt: 'Build with Presto & Namma MUG Developer Conference in Bengaluru',
         tag: 'Presto & Namma MUG Summit',
         date: 'Oct 2026',
-        text: 'Coordinated developer summit logistics with MongoDB & Google partner booths, speaker green-room prep, and crowd ingress for 189+ industry pros.'
+        text: 'Core organizing team with Gagandeep, Reyhana, Apoorva, Sanjana, Suman & lead Alok Kumar. Coordinated 800+ registrations & 189+ pros from Google, IBM, Amazon, Cisco & Salesforce.'
       },
       {
         img: '/images/highlight-professional.jpg',

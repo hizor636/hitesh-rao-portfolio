@@ -11,6 +11,7 @@ import FeaturedProjects from './components/FeaturedProjects';
 import ProcessSection from './components/ProcessSection';
 import AboutDegreeLife from './components/AboutDegreeLife';
 import RecognitionSection from './components/RecognitionSection';
+import ExperienceEducationFolio from './components/ExperienceEducationFolio';
 import Capabilities from './components/Capabilities';
 import TestimonialsSection from './components/TestimonialsSection';
 import ContactSection from './components/ContactSection';
@@ -119,7 +120,10 @@ function AppContent() {
         {/* 5. About + Degree Life: BCA at NCET, coursework matrix */}
         <AboutDegreeLife onOpenContact={() => setIsContactOpen(true)} />
 
-        {/* 6. Credentials & Experience: Compact timeline with verified proof links */}
+        {/* 6. Dynamic Folio Rows: Professional Experience & Education History */}
+        <ExperienceEducationFolio />
+
+        {/* 7. Credentials & Supporting Ledger */}
         <RecognitionSection />
 
         {/* 7. Beyond Work: Outside the laptop + working style philosophy */}

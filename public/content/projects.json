@@ -3,24 +3,24 @@
     {
       "index": "00-1",
       "category": "Career",
-      "title": "Paytm Bengaluru Hackathon",
-      "kind": "Fintech Campus Marketing & Event Ops",
+      "title": "One97 Communications (Paytm) — Social & PR",
+      "kind": "Marketing Intern – Social & PR (Public Relations)",
       "year": "2026",
-      "stat": "8,261+",
-      "stat_label": "LinkedIn post impressions",
-      "description": "Supported campaign frameworks aligned to national brand strategy, managed collegiate partner outreach across Karnataka universities, and handled attendee verification operations under enterprise privacy standards.",
+      "stat": "3 Mos",
+      "stat_label": "Trainee Code · One97 Communications",
+      "description": "Completed 3-month corporate training certified by Vice President Aparna Srivastava. Worked on Social & PR projects, public relations releases, and supported participant operations at the Paytm AI Hackathon in Bengaluru.",
       "tags": [
-        "Google Sheets",
-        "Event Operations",
-        "Partner Outreach",
-        "Data Privacy"
+        "One97 Communications",
+        "Paytm Social & PR",
+        "Social & PR",
+        "AI Hackathon Ops"
       ],
-      "recognition": "Jun – Oct 2026 · Core Organising Team",
+      "recognition": "07-07-2026 to 07-10-2026 · Social & PR · Vice President Aparna Srivastava",
       "hue": 250,
       "image": "/images/highlight-professional.jpg",
-      "image_alt": "Paytm Hackathon event operations in Bengaluru",
-      "link_url": "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
-      "link_label": "Post verification"
+      "image_alt": "Paytm AI Hackathon event operations in Bengaluru",
+      "link_url": "#paytm-certificate",
+      "link_label": "Official Certificate Letter"
     },
     {
       "index": "00-2",
@@ -51,13 +51,13 @@
       "kind": "DevRel & Conference Ops",
       "year": "2026",
       "stat": "800+",
-      "stat_label": "Summit registrations",
-      "description": "Coordinated developer summit logistics with MongoDB and Google partner booths, green-room speaker transitions, and resolved track-2 AV downtime in under 3 minutes for 189+ industry pros.",
+      "stat_label": "Registrations (189+ Tech Pros)",
+      "description": "Core organizing team with Gagandeep, Reyhana Shafi, Apoorva Mudabagil, Sanjana Patil, Suman Mandal, and lead Alok Kumar. Coordinated attendee reception, speaker green-rooms, and partner sponsor booths across Google for Developers, IBM, and MongoDB for 189+ tech professionals from Google, IBM, TCS, Amazon, Cisco, Salesforce, and Airtel.",
       "tags": [
+        "Core Organising Team",
         "DevRel Ops",
-        "Crowd Ingress",
-        "Speaker Prep",
-        "Sponsor Alignment"
+        "Speaker Coordination",
+        "Partner Alignment"
       ],
       "recognition": "Oct 2026 · Bengaluru Edition",
       "hue": 285,
@@ -72,8 +72,8 @@
       "title": "CareerGroww @ VibeXathon 1.0",
       "kind": "AI Prototyping & Pitching",
       "year": "2026",
-      "stat": "4,566+",
-      "stat_label": "Post reach & impressions",
+      "stat": "36h",
+      "stat_label": "Prototyping & Pitch Sprint",
       "description": "First-year team of four that formulated the problem architecture, chained Gemini prompts to parse job requirements against skill vectors, and pitched the prototype live on stage to tech founders.",
       "tags": [
         "Prompt Chaining",

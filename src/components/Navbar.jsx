@@ -118,17 +118,17 @@ export default function Navbar({ onOpenContact }) {
         <div
           className={`pointer-events-auto mx-auto max-w-6xl h-14 md:h-[58px] rounded-full px-3.5 sm:px-5 flex items-center justify-between gap-3 md:gap-6 transition-all duration-300 ${
             isScrolled
-              ? 'bg-[#121214]/90 backdrop-blur-md border border-white/10 shadow-[0_12px_36px_rgba(0,0,0,0.7),0_2px_8px_rgba(0,0,0,0.4)]'
-              : 'bg-[#161619]/80 backdrop-blur-md border border-white/10 shadow-[0_8px_30px_rgba(0,0,0,0.5)]'
+              ? 'bg-[#121216]/95 backdrop-blur-xl border border-white/15 shadow-[0_12px_36px_rgba(0,0,0,0.7),0_2px_8px_rgba(0,0,0,0.4)]'
+              : 'bg-[#161619]/90 backdrop-blur-xl border border-white/15 shadow-[0_8px_30px_rgba(0,0,0,0.5)]'
           }`}
         >
           {/* ========================================================= */}
           {/* LEFT ZONE: Logo & Brand + Available Status               */}
           {/* ========================================================= */}
-          <div className="flex items-center gap-3 shrink-0">
+          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
             <a
               href="#"
-              className="flex items-center gap-2 group rounded-full focus-visible:outline-2 focus-visible:outline-[#d4ff4f] focus-visible:outline-offset-2"
+              className="flex items-center gap-2 group rounded-full focus-visible:outline-2 focus-visible:outline-[#d4ff4f] focus-visible:outline-offset-2 min-w-0"
               data-cursor="pointer"
               aria-label="HITESH RAO M home"
             >
@@ -136,11 +136,13 @@ export default function Navbar({ onOpenContact }) {
                 <LogoVisual size="sm" interactive={false} />
               </div>
 
-              <BrandSignatureName size="sm" />
+              <div className="min-w-0">
+                <BrandSignatureName size="sm" />
+              </div>
             </a>
 
             {/* Organic Available Status Pill */}
-            <div className="hidden lg:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[rgba(52,168,83,0.12)] border border-[rgba(52,168,83,0.25)] text-[#81C995] text-[11px] font-medium select-none">
+            <div className="hidden lg:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[rgba(52,168,83,0.15)] border border-[rgba(52,168,83,0.3)] text-[#81C995] text-[11px] font-mono select-none shrink-0">
               <span className="relative flex h-1.5 w-1.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#34A853] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#34A853]"></span>
@@ -153,7 +155,7 @@ export default function Navbar({ onOpenContact }) {
           {/* CENTER ZONE: Unified Segmented Navigation Links           */}
           {/* ========================================================= */}
           <nav
-            className="hidden md:flex items-center gap-1 p-1 rounded-full bg-black/30 border border-white/5"
+            className="hidden md:flex items-center gap-1 p-1 rounded-full bg-black/40 border border-white/10"
             aria-label="Primary navigation"
           >
             {navItems.map((item) => {
@@ -166,8 +168,8 @@ export default function Navbar({ onOpenContact }) {
                   onClick={() => handleNavClick(item.id)}
                   className={`px-3 py-1.5 rounded-full text-xs font-medium tracking-normal transition-all duration-200 focus-visible:outline-2 focus-visible:outline-[#d4ff4f] focus-visible:outline-offset-1 ${
                     isActive
-                      ? 'bg-white/15 text-white shadow-xs font-semibold'
-                      : 'text-neutral-400 hover:text-white hover:bg-white/5'
+                      ? 'bg-white/20 text-white shadow-xs font-semibold'
+                      : 'text-neutral-400 hover:text-white hover:bg-white/10'
                   }`}
                   aria-current={isActive ? 'page' : undefined}
                   data-cursor="pointer"
@@ -181,7 +183,7 @@ export default function Navbar({ onOpenContact }) {
           {/* ========================================================= */}
           {/* RIGHT ZONE: Primary CTA, Theme Toggle & Mobile Toggle    */}
           {/* ========================================================= */}
-          <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
+          <div className="flex items-center gap-1.5 sm:gap-2.5 shrink-0">
             {/* Theme Toggle Button */}
             <ThemeToggle />
 
@@ -190,22 +192,22 @@ export default function Navbar({ onOpenContact }) {
               href={PERSONAL_INFO.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-xs font-mono text-neutral-300 hover:text-white transition-all focus-visible:outline-2 focus-visible:outline-[#d4ff4f] focus-visible:outline-offset-1"
+              className="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 text-xs font-mono text-neutral-300 hover:text-white transition-all focus-visible:outline-2 focus-visible:outline-[#d4ff4f] focus-visible:outline-offset-1"
               data-cursor="pointer"
             >
               <span>Résumé</span>
               <ArrowUpRight className="w-3 h-3 text-neutral-400" />
             </a>
 
-            {/* Primary Action Button */}
+            {/* Primary Action Button — High-Contrast Glowing "Connect" CTA */}
             <button
               onClick={onOpenContact}
-              className="px-3.5 sm:px-4 py-1.5 rounded-full bg-[#1e1f24] hover:bg-[#282a30] text-xs font-medium text-white border border-white/15 hover:border-white/30 flex items-center gap-1.5 transition-all focus-visible:outline-2 focus-visible:outline-[#d4ff4f] focus-visible:outline-offset-1"
+              className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[#d4ff4f] hover:bg-white text-black font-semibold text-xs font-mono uppercase tracking-wider flex items-center gap-1 sm:gap-1.5 transition-all shadow-[0_0_20px_rgba(212,255,79,0.35)] hover:scale-105 active:scale-95 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 border border-[#d4ff4f]"
               data-cursor="pointer"
-              aria-label="Connect with Hitesh"
+              aria-label="Connect with Hitesh Rao M"
             >
               <span>Connect</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-[#d4ff4f]" />
+              <ArrowUpRight className="w-3.5 h-3.5 text-black stroke-[2.5]" />
             </button>
 
             {/* Mobile Hamburger Button */}

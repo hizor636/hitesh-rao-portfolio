@@ -18,14 +18,14 @@
         "label": "SQL programs solved"
       },
       {
-        "value": "2",
-        "label": "Industry credentials"
+        "value": "7.50",
+        "label": "Current CGPA (BCA, NCET)"
       }
     ]
   },
   "about": {
     "statement": "A 2nd-year BCA student who connects technology, analytics and community to help brands reach their audience and leave a mark.",
-    "paragraph": "I’m Hitesh, a second-year BCA student at Nagarjuna College of Engineering and Technology in Bengaluru (Class of 2028). I got into marketing through events and communities, then realised the best decisions come from data. So I study both: I write SQL and Python for my degree, and I apply them while running student communities, workshops, and hackathon operations."
+    "paragraph": "I’m Hitesh, a second-year BCA student at Nagarjuna College of Engineering and Technology (NCET) in Bengaluru (Current CGPA: 7.50 · Class of 2028). I got into marketing through events and communities, then realised the best decisions come from data. So I study both: I write SQL and Python for my degree, and I apply them while running student communities, workshops, and hackathon operations."
   },
   "contact": {
     "email": "hiteshraom@email.com",

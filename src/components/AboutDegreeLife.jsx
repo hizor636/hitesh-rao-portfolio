@@ -29,7 +29,7 @@ export default function AboutDegreeLife({ onOpenContact }) {
     },
     {
       title: "Event Operations at Scale",
-      desc: "Core organizing teams for Paytm Bengaluru Hackathon and Presto & Namma MUG Summit (800+ event registrations).",
+      desc: "Marketing Intern (Social & PR) at One97 Communications Limited (Paytm); core organizing teams for Paytm AI Hackathon, Bengaluru and Presto & Namma MUG Summit (800+ registrations, 189+ tech pros across Google, IBM, Amazon, Cisco, Airtel).",
       tag: "Operations"
     }
   ];
@@ -53,7 +53,7 @@ export default function AboutDegreeLife({ onOpenContact }) {
       <div className="rv grid grid-cols-1 md:grid-cols-12 gap-8 text-[rgba(236,235,230,0.8)] text-base sm:text-lg leading-relaxed mb-16">
         <div className="md:col-span-6 space-y-4">
           <p>
-            I’m <span className="font-sans font-bold text-white tracking-wide uppercase">Hitesh</span> <span className="font-serif italic font-normal text-[#d4ff4f] text-xl ml-1">Rao M</span>, a second-year BCA student at <strong className="text-white font-medium">Nagarjuna College of Engineering and Technology</strong> in Bengaluru (Class of 2028). I got into marketing through events and communities, then realised the best decisions come from data.
+            I’m <span className="font-sans font-bold text-white tracking-wide uppercase">Hitesh</span> <span className="font-serif italic font-normal text-[#d4ff4f] text-xl ml-1">Rao M</span>, a second-year BCA student at <strong className="text-white font-medium">Nagarjuna College of Engineering and Technology (NCET)</strong> in Bengaluru (<strong className="text-[#d4ff4f] font-mono">Current CGPA: 7.50</strong> · Class of 2028). I got into marketing through events and communities, then realised the best decisions come from data.
           </p>
           <p>
             So I study both: I write SQL and Python for my degree, and I apply them while running student communities, workshops, and hackathon operations.
@@ -61,7 +61,7 @@ export default function AboutDegreeLife({ onOpenContact }) {
         </div>
         <div className="md:col-span-6 space-y-4">
           <p>
-            Over the past year I’ve been a Google Student Ambassador, worked on the organising team at a Paytm hackathon as a marketing intern, helped coordinate a Bengaluru developer meetup, and pitched an AI skill-gap idea at a student hackathon.
+            Over the past year I’ve completed a 3-month corporate internship as Marketing Intern - Social & PR at One97 Communications Limited (Paytm), served as a Google Student Ambassador, helped coordinate city-scale developer summits, and pitched an AI skill-gap platform at a student hackathon.
           </p>
           <p>
             I’m early in my career, and I’m looking for internships where I can contribute, get feedback, and grow alongside an ambitious team.
@@ -71,18 +71,35 @@ export default function AboutDegreeLife({ onOpenContact }) {
 
       {/* Degree Life Matrix: In Class vs Outside Class */}
       <div className="rv mb-16">
-        <div className="flex items-center gap-2 mb-6">
-          <GraduationCap className="w-5 h-5 text-[#d4ff4f]" />
-          <h3 className="text-xl sm:text-2xl font-medium text-white tracking-tight">
-            Classroom Foundations vs Real-World Application
-          </h3>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+          <div className="flex items-center gap-2">
+            <GraduationCap className="w-5 h-5 text-[#d4ff4f]" />
+            <h3 className="text-xl sm:text-2xl font-medium text-white tracking-tight">
+              Classroom Foundations vs Real-World Application
+            </h3>
+          </div>
+
+          {/* Institutional Academic Badge */}
+          <div className="inline-flex items-center gap-3 px-4 py-2 rounded-2xl bg-white/[0.04] border border-white/15 shadow-md">
+            <div className="px-2 py-1 rounded-md bg-white shrink-0 shadow-xs">
+              <img
+                src="/assets/aistudio/image_098a23c4.png"
+                alt="Nagarjuna College of Engineering & Technology (NCET)"
+                className="h-8 w-auto object-contain"
+              />
+            </div>
+            <div>
+              <span className="font-mono text-xs font-semibold text-white block">NCET Bengaluru</span>
+              <span className="font-mono text-[11px] text-neutral-300">BCA 2028 · CGPA: <strong className="text-[#d4ff4f] font-semibold">7.50</strong></span>
+            </div>
+          </div>
         </div>
 
         <div className="overflow-x-auto border border-white/10 rounded-2xl bg-white/[0.02]">
           <table className="w-full text-left border-collapse">
             <thead>
               <tr className="border-b border-white/10 text-xs font-mono uppercase tracking-widest text-neutral-400 bg-white/[0.02]">
-                <th className="py-4 px-6 w-2/5 font-medium">In Class (NCET BCA Curriculum)</th>
+                <th className="py-4 px-6 w-2/5 font-medium">In Class (NCET BCA Curriculum · Current CGPA: 7.50)</th>
                 <th className="py-4 px-6 w-3/5 font-medium text-[#d4ff4f]">Outside Class (Shipping Real Work)</th>
               </tr>
             </thead>

@@ -10,8 +10,55 @@ import React from 'react';
  * - Cisco (Official 9-bar Golden Gate bridge wave)
  * - Presto Foundation (Official Linux Foundation Presto SQL wave)
  * - HackerRank (Official green geometric H mark)
+ * - Nagarjuna College of Engineering & Technology (NCET) Official Institutional Logo
  * - LinkedIn & GitHub
  */
+
+// 0. Nagarjuna College of Engineering & Technology (NCET) Official Logo
+export function NCETLogo({ size = 'md', variant = 'badge', className = '' }) {
+  const heightClasses = {
+    xs: 'h-6',
+    sm: 'h-7',
+    md: 'h-8 sm:h-9',
+    lg: 'h-10 sm:h-12',
+    xl: 'h-14 sm:h-16'
+  }[size] || 'h-8';
+
+  const logoSrc = "/images/ncet-logo.png";
+  const fallbackSrc = "/assets/aistudio/image_098a23c4.png";
+
+  const handleImgError = (e) => {
+    if (e.currentTarget.src !== fallbackSrc) {
+      e.currentTarget.src = fallbackSrc;
+    }
+  };
+
+  if (variant === 'raw') {
+    return (
+      <img
+        src={logoSrc}
+        onError={handleImgError}
+        alt="Nagarjuna College of Engineering & Technology (NCET)"
+        className={`${heightClasses} w-auto object-contain transition-transform duration-300 group-hover:scale-105 ${className}`}
+        loading="eager"
+        decoding="sync"
+      />
+    );
+  }
+
+  return (
+    <div className={`inline-flex items-center px-2 py-1 rounded-lg bg-white select-none shadow-[0_2px_12px_rgba(0,0,0,0.35)] transition-transform duration-300 group-hover:scale-105 border border-white/40 ${className}`}>
+      <img
+        src={logoSrc}
+        onError={handleImgError}
+        alt="Nagarjuna College of Engineering & Technology (NCET)"
+        className={`${heightClasses} w-auto object-contain`}
+        loading="eager"
+        decoding="sync"
+      />
+    </div>
+  );
+}
 
 // 1. Google 4-Color Official 'G' Mark
 export function GoogleLogo({ size = 'md', className = '' }) {
@@ -351,7 +398,7 @@ export function BrandSignatureName({
 
   return (
     <span className={`inline-flex items-baseline select-none group font-editorial ${className}`}>
-      <span className={`font-sans uppercase text-white transition-colors group-hover:text-neutral-200 ${styles.first}`}>
+      <span className={`font-sans uppercase text-[var(--text-primary)] transition-colors group-hover:opacity-80 font-bold ${styles.first}`}>
         HITESH
       </span>
       <span className={`font-serif italic font-normal ${accentClass} ml-1.5 leading-none transition-all duration-300 group-hover:scale-105 ${styles.last}`}>

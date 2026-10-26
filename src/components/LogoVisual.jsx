@@ -1,72 +1,124 @@
 import React from 'react';
+import { useTheme } from '../context/ThemeContext';
 
-export default function LogoVisual({ size = 'md', interactive = true }) {
-  const sizeClasses = {
-    sm: 'w-8 h-8',
-    md: 'w-10 h-10',
-    lg: 'w-20 h-20 md:w-24 md:h-24',
-    xl: 'w-32 h-32 md:w-36 md:h-36'
-  }[size] || 'w-10 h-10';
+export default function LogoVisual({ size = 'md', interactive = true, className = '' }) {
+  const { isDark } = useTheme();
+
+  const sizeMap = {
+    xs: { box: 'w-7 h-7 min-w-[28px] min-h-[28px]', text: 'text-[11px]', inner: 'w-6 h-6' },
+    sm: { box: 'w-9 h-9 min-w-[36px] min-h-[36px]', text: 'text-xs', inner: 'w-8 h-8' },
+    md: { box: 'w-11 h-11 min-w-[44px] min-h-[44px]', text: 'text-sm', inner: 'w-10 h-10' },
+    lg: { box: 'w-16 h-16 min-w-[64px] min-h-[64px] md:w-20 md:h-20', text: 'text-xl', inner: 'w-14 h-14 md:w-18 md:h-18' },
+    xl: { box: 'w-24 h-24 min-w-[96px] min-h-[96px] md:w-28 md:h-28', text: 'text-3xl', inner: 'w-20 h-20 md:w-24 md:h-24' }
+  };
+
+  const currentSize = sizeMap[size] || sizeMap.md;
 
   return (
     <div
-      className={`relative group inline-flex items-center justify-center select-none ${sizeClasses}`}
+      className={`relative inline-flex items-center justify-center select-none group shrink-0 ${currentSize.box} ${className}`}
       data-cursor={interactive ? 'pointer' : undefined}
+      title="Hitesh Rao M — Portfolio Logo"
     >
       {/* Outer ambient glow */}
-      <div className="absolute inset-0 rounded-full bg-[#d4ff4f]/10 blur-md group-hover:bg-[#d4ff4f]/25 transition-all duration-500" />
+      <div
+        className={`absolute inset-0 rounded-2xl blur-md transition-all duration-500 pointer-events-none ${
+          isDark
+            ? 'bg-[#d4ff4f]/25 group-hover:bg-[#d4ff4f]/45 group-hover:blur-lg'
+            : 'bg-emerald-500/20 group-hover:bg-emerald-500/35'
+        }`}
+      />
 
-      {/* Rotating Outer Astrolabe / Data Compass Ring */}
+      {/* Outer Orbiting Precision Ring */}
       <svg
-        className="absolute inset-0 w-full h-full text-white/30 group-hover:text-[#d4ff4f]/80 transition-colors duration-500 animate-[spin_24s_linear_infinite]"
+        className={`absolute -inset-1 w-full h-full scale-125 transition-colors duration-500 animate-[spin_20s_linear_infinite] pointer-events-none ${
+          isDark ? 'text-[#d4ff4f]/60' : 'text-emerald-600/50'
+        }`}
         viewBox="0 0 100 100"
       >
         <circle
           cx="50"
           cy="50"
-          r="47"
+          r="46"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1"
-          strokeDasharray="2 4"
+          strokeWidth="2"
+          strokeDasharray="4 6"
         />
-        <circle cx="50" cy="3" r="2" fill="#d4ff4f" />
-        <circle cx="97" cy="50" r="1.5" fill="currentColor" />
-        <circle cx="50" cy="97" r="1.5" fill="currentColor" />
-        <circle cx="3" cy="50" r="1.5" fill="currentColor" />
+        <circle cx="50" cy="4" r="3" fill={isDark ? '#d4ff4f' : '#16a34a'} />
+        <circle cx="50" cy="96" r="2" fill="currentColor" />
+        <circle cx="4" cy="50" r="2" fill="currentColor" />
+        <circle cx="96" cy="50" r="2" fill="currentColor" />
       </svg>
 
-      {/* Inner Precision Hexagon / Diamond Shield */}
-      <div className="relative w-[82%] h-[82%] rounded-xl bg-[#0e0e12] border border-white/20 group-hover:border-[#d4ff4f]/70 flex items-center justify-center transition-all duration-500 shadow-xl overflow-hidden backdrop-blur-md">
-        {/* Subtle grid lines background inside badge */}
-        <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#ffffff15_1px,transparent_1px),linear-gradient(to_bottom,#ffffff15_1px,transparent_1px)] bg-[size:6px_6px]" />
+      {/* Main High-Contrast Monogram Shield */}
+      <div
+        className={`relative ${currentSize.inner} rounded-xl border flex items-center justify-center transition-all duration-300 shadow-xl overflow-hidden backdrop-blur-md ${
+          isDark
+            ? 'bg-[#0a0a0d] border-[#d4ff4f]/40 group-hover:border-[#d4ff4f] group-hover:shadow-[0_0_20px_rgba(212,255,79,0.35)]'
+            : 'bg-white border-neutral-300 group-hover:border-emerald-600 group-hover:shadow-[0_0_15px_rgba(22,163,74,0.25)]'
+        }`}
+      >
+        {/* Subtle grid lines background */}
+        <div
+          className={`absolute inset-0 opacity-25 bg-[linear-gradient(to_right,currentColor_1px,transparent_1px),linear-gradient(to_bottom,currentColor_1px,transparent_1px)] bg-[size:5px_5px] ${
+            isDark ? 'text-white' : 'text-neutral-900'
+          }`}
+        />
 
-        {/* Monogram Monolith SVG: Interlocking H + Data Pulse */}
+        {/* Clean, Bold, 100% Legible Geometric H Monogram */}
         <svg
-          className="w-[68%] h-[68%] transition-transform duration-500 group-hover:scale-105"
-          viewBox="0 0 60 60"
+          className="relative z-10 w-[65%] h-[65%] transition-transform duration-300 group-hover:scale-110"
+          viewBox="0 0 40 40"
           fill="none"
         >
-          {/* Left Pillar */}
-          <line x1="14" y1="12" x2="14" y2="48" stroke="#ffffff" strokeWidth="4.5" strokeLinecap="round" />
-          
-          {/* Right Pillar */}
-          <line x1="46" y1="12" x2="46" y2="48" stroke="#ffffff" strokeWidth="4.5" strokeLinecap="round" />
-          
-          {/* Crossbar with Electric Lime Data Bridge */}
-          <line x1="14" y1="30" x2="46" y2="30" stroke="#d4ff4f" strokeWidth="3.5" strokeLinecap="round" />
+          {/* Left Vertical Pillar */}
+          <rect
+            x="7"
+            y="7"
+            width="5"
+            height="26"
+            rx="2.5"
+            fill={isDark ? '#ffffff' : '#0f172a'}
+          />
 
-          {/* Central Data Matrix Dot */}
-          <circle cx="30" cy="30" r="4.5" fill="#d4ff4f" className="group-hover:animate-ping opacity-90" />
-          <circle cx="30" cy="30" r="2.5" fill="#080808" />
+          {/* Right Vertical Pillar */}
+          <rect
+            x="28"
+            y="7"
+            width="5"
+            height="26"
+            rx="2.5"
+            fill={isDark ? '#ffffff' : '#0f172a'}
+          />
 
-          {/* Precision Corner Ticks */}
-          <line x1="8" y1="12" x2="14" y2="12" stroke="#d4ff4f" strokeWidth="1.5" />
-          <line x1="46" y1="48" x2="52" y2="48" stroke="#d4ff4f" strokeWidth="1.5" />
+          {/* Vibrant Data Bridge Crossbar */}
+          <rect
+            x="10"
+            y="17.5"
+            width="20"
+            height="5"
+            rx="2.5"
+            fill={isDark ? '#d4ff4f' : '#16a34a'}
+          />
+
+          {/* Core Pulse Pip */}
+          <circle
+            cx="20"
+            cy="20"
+            r="3"
+            fill={isDark ? '#080808' : '#ffffff'}
+          />
+          <circle
+            cx="20"
+            cy="20"
+            r="1.8"
+            fill={isDark ? '#d4ff4f' : '#16a34a'}
+          />
         </svg>
 
-        {/* Glass reflection gradient */}
-        <div className="absolute top-0 left-0 right-0 h-1/2 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
+        {/* Diagonal Gloss Highlight */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none" />
       </div>
     </div>
   );
@@ -81,7 +133,8 @@ import {
   GeminiLogo,
   CiscoLogo,
   PrestoLogo,
-  HackerRankLogo
+  HackerRankLogo,
+  NCETLogo
 } from './CompanyLogos';
 
 export function PartnerLogosBar() {
@@ -89,91 +142,98 @@ export function PartnerLogosBar() {
     {
       name: 'Google',
       role: 'Student Ambassador 2026',
-      badge: '125K+ APPLICANTS',
+      badge: '125K+ POOL',
       logo: <GoogleLogo size="md" />,
-      brandClass: 'font-sans font-medium tracking-tight text-white'
+      brandClass: 'font-sans font-medium tracking-tight text-white dark:text-white'
     },
     {
-      name: 'Paytm',
-      role: 'Hackathon Core Ops',
-      badge: 'ONE97 COMM',
+      name: 'NCET Bengaluru',
+      role: 'BCA (CGPA: 7.50)',
+      badge: 'OFFICIAL LOGO',
+      logo: <NCETLogo size="md" />,
+      brandClass: 'font-sans font-bold text-white dark:text-white'
+    },
+    {
+      name: 'Paytm (One97)',
+      role: 'Marketing Intern (Social & PR)',
+      badge: 'TRAINEE T5113',
       logo: <PaytmLogo size="md" />,
-      brandClass: 'font-sans font-bold text-white'
+      brandClass: 'font-sans font-bold text-white dark:text-white'
     },
     {
       name: 'MongoDB',
       role: 'Namma MUG Partner',
       badge: '800+ ATTENDEES',
       logo: <MongoDBLogo size="md" />,
-      brandClass: 'font-sans font-semibold text-white'
+      brandClass: 'font-sans font-semibold text-white dark:text-white'
     },
     {
-      name: 'Deloitte.',
+      name: 'Deloitte Australia',
       role: 'Analytics Simulation',
-      badge: 'BUSINESS INTEL',
+      badge: 'FORAGE VERIFIED',
       logo: <DeloitteLogo size="sm" />,
-      brandClass: 'font-sans font-bold text-white'
+      brandClass: 'font-sans font-bold text-white dark:text-white'
     },
     {
       name: 'Google Gemini',
       role: 'Certified Student',
-      badge: 'GOOGLE FOR EDU',
+      badge: 'AI CREDENTIAL',
       logo: <GeminiLogo size="md" />,
-      brandClass: 'font-sans font-medium text-white'
+      brandClass: 'font-sans font-medium text-white dark:text-white'
     },
     {
       name: 'Cisco',
       role: 'Python Essentials 1',
       badge: 'PROGRAMMING',
       logo: <CiscoLogo size="sm" />,
-      brandClass: 'font-sans font-semibold text-white'
+      brandClass: 'font-sans font-semibold text-white dark:text-white'
     },
     {
       name: 'Presto Foundation',
       role: 'Distributed SQL Summit',
-      badge: 'LINUX FOUNDATION',
+      badge: 'ORGANIZER TEAM',
       logo: <PrestoLogo size="md" />,
-      brandClass: 'font-sans font-medium text-white'
+      brandClass: 'font-sans font-medium text-white dark:text-white'
     },
     {
       name: 'HackerRank',
       role: 'SQL Intermediate',
-      badge: 'VERIFIED SKILL',
+      badge: '70+ PROBLEMS',
       logo: <HackerRankLogo size="md" />,
-      brandClass: 'font-mono text-white'
+      brandClass: 'font-mono text-white dark:text-white'
     }
   ];
 
   return (
     <div className="w-full pt-10 pb-6 border-y border-white/10">
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6">
-        <span className="font-mono-tech text-[10px] tracking-[0.25em] text-neutral-400 uppercase flex items-center gap-2">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#d4ff4f]" />
+        <span className="font-mono text-[11px] tracking-[0.2em] text-neutral-400 uppercase flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-[#d4ff4f] animate-pulse" />
           [OFFICIAL MNC PARTNERS &amp; VERIFIED INSTITUTIONAL CREDENTIALS]
         </span>
-        <span className="font-mono-tech text-[10px] tracking-widest text-[#d4ff4f] uppercase flex items-center gap-1.5">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#d4ff4f] animate-pulse" />
-          ACTIVE ROLES · NATIONAL SELECTIONS
+        <span className="font-mono text-[11px] tracking-widest text-[#d4ff4f] uppercase flex items-center gap-1.5">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#d4ff4f]" />
+          ACTIVE ROLES · HIGH-IMPACT COMMUNITY
         </span>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-9 gap-3">
         {partners.map((p) => (
           <div
             key={p.name}
             className="group p-3.5 rounded-xl border border-white/10 bg-white/[0.02] hover:border-[#d4ff4f]/50 hover:bg-white/[0.05] transition-all duration-300 flex flex-col justify-between"
           >
-            <div className="flex items-center justify-between h-7 mb-2">
+            <div className="flex items-center justify-between h-9 mb-2">
               <div className="transition-transform duration-300 group-hover:scale-105">
                 {p.logo}
               </div>
-              <span className="text-[8px] font-mono-tech text-neutral-500 group-hover:text-[#d4ff4f] transition-colors tracking-tight">
+              <span className="text-[8px] font-mono text-neutral-400 group-hover:text-[#d4ff4f] transition-colors tracking-tight">
                 {p.badge}
               </span>
             </div>
             <div className="mt-2">
-              <span className={`block text-xs text-white ${p.brandClass}`}>{p.name}</span>
-              <span className="block text-[10px] font-mono-tech text-neutral-400 truncate">{p.role}</span>
+              <span className={`block text-xs font-semibold ${p.brandClass}`}>{p.name}</span>
+              <span className="block text-[10px] font-mono text-neutral-400 truncate">{p.role}</span>
             </div>
           </div>
         ))}
