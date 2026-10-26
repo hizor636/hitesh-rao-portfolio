@@ -25,9 +25,11 @@ export function ThemeProvider({ children }) {
     if (theme === 'dark') {
       root.classList.remove('light');
       root.classList.add('dark');
+      root.setAttribute('data-theme', 'dark');
     } else {
       root.classList.remove('dark');
       root.classList.add('light');
+      root.setAttribute('data-theme', 'light');
     }
 
     localStorage.setItem('portfolio-theme', theme);

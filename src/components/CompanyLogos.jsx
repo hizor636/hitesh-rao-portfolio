@@ -391,15 +391,15 @@ export function BrandSignatureName({
   };
 
   const accentClass = {
-    lime: 'text-[#d4ff4f]',
-    gold: 'text-[#e5c158]',
-    white: 'text-white',
-    cyan: 'text-[#00baf2]'
-  }[accentColor] || 'text-[#d4ff4f]';
+    lime: 'text-[#15803d] dark:text-[#d4ff4f]',
+    gold: 'text-[#b45309] dark:text-[#e5c158]',
+    white: 'text-black dark:text-white',
+    cyan: 'text-[#0284c7] dark:text-[#00baf2]'
+  }[accentColor] || 'text-[#15803d] dark:text-[#d4ff4f]';
 
   return (
     <span className={`inline-flex items-baseline select-none group font-editorial ${className}`}>
-      <span className={`font-sans uppercase text-[var(--text-primary)] transition-colors group-hover:opacity-80 font-bold ${styles.first}`}>
+      <span className={`font-sans uppercase text-black dark:text-white transition-colors group-hover:opacity-80 font-bold ${styles.first}`}>
         HITESH
       </span>
       <span className={`font-serif italic font-normal ${accentClass} ml-1.5 leading-none transition-all duration-300 group-hover:scale-105 ${styles.last}`}>

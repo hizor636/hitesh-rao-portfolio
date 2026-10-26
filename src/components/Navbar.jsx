@@ -1,11 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, ArrowUpRight, MapPin } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
+import { useContent } from '../context/ContentContext';
 import LogoVisual from './LogoVisual';
 import { BrandSignatureName } from './CompanyLogos';
 import ThemeToggle from './ThemeToggle';
 
 export default function Navbar({ onOpenContact }) {
+  const { personalInfo: contextInfo } = useContent();
+  const info = contextInfo || PERSONAL_INFO;
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('work');
@@ -116,11 +120,7 @@ export default function Navbar({ onOpenContact }) {
         role="banner"
       >
         <div
-          className={`pointer-events-auto mx-auto max-w-6xl h-14 md:h-[58px] rounded-full px-3.5 sm:px-5 flex items-center justify-between gap-3 md:gap-6 transition-all duration-300 ${
-            isScrolled
-              ? 'bg-[#121216]/95 backdrop-blur-xl border border-white/15 shadow-[0_12px_36px_rgba(0,0,0,0.7),0_2px_8px_rgba(0,0,0,0.4)]'
-              : 'bg-[#161619]/90 backdrop-blur-xl border border-white/15 shadow-[0_8px_30px_rgba(0,0,0,0.5)]'
-          }`}
+          className={`pointer-events-auto mx-auto max-w-6xl h-14 md:h-[58px] rounded-full px-3.5 sm:px-5 flex items-center justify-between gap-3 md:gap-6 transition-all duration-300 bg-[var(--nav-bg)] backdrop-blur-xl border border-[var(--nav-border)] shadow-[var(--nav-shadow)]`}
         >
           {/* ========================================================= */}
           {/* LEFT ZONE: Logo & Brand + Available Status               */}
@@ -142,10 +142,10 @@ export default function Navbar({ onOpenContact }) {
             </a>
 
             {/* Organic Available Status Pill */}
-            <div className="hidden lg:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[rgba(52,168,83,0.15)] border border-[rgba(52,168,83,0.3)] text-[#81C995] text-[11px] font-mono select-none shrink-0">
+            <div className="hidden lg:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--nav-status-bg)] border border-[var(--nav-status-border)] text-[var(--nav-status-text)] text-[11px] font-mono select-none shrink-0 font-medium transition-colors">
               <span className="relative flex h-1.5 w-1.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#34A853] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#34A853]"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#16a34a] dark:bg-[#34A853] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#16a34a] dark:bg-[#34A853]"></span>
               </span>
               <span>Available</span>
             </div>
@@ -155,7 +155,7 @@ export default function Navbar({ onOpenContact }) {
           {/* CENTER ZONE: Unified Segmented Navigation Links           */}
           {/* ========================================================= */}
           <nav
-            className="hidden md:flex items-center gap-1 p-1 rounded-full bg-black/40 border border-white/10"
+            className="hidden md:flex items-center gap-1 p-1 rounded-full bg-[var(--nav-inner-bg)] border border-[var(--nav-inner-border)] transition-colors"
             aria-label="Primary navigation"
           >
             {navItems.map((item) => {
@@ -166,10 +166,10 @@ export default function Navbar({ onOpenContact }) {
                   key={item.id}
                   href={item.href}
                   onClick={() => handleNavClick(item.id)}
-                  className={`px-3 py-1.5 rounded-full text-xs font-medium tracking-normal transition-all duration-200 focus-visible:outline-2 focus-visible:outline-[#d4ff4f] focus-visible:outline-offset-1 ${
+                  className={`px-3 py-1.5 rounded-full text-xs tracking-normal transition-all duration-200 focus-visible:outline-2 focus-visible:outline-[#d4ff4f] focus-visible:outline-offset-1 ${
                     isActive
-                      ? 'bg-white/20 text-white shadow-xs font-semibold'
-                      : 'text-neutral-400 hover:text-white hover:bg-white/10'
+                      ? 'bg-[var(--nav-active-pill)] text-black dark:text-white shadow-xs font-semibold'
+                      : 'text-neutral-700 hover:text-black hover:bg-black/5 dark:text-neutral-400 dark:hover:text-white dark:hover:bg-white/10 font-medium'
                   }`}
                   aria-current={isActive ? 'page' : undefined}
                   data-cursor="pointer"
@@ -189,32 +189,32 @@ export default function Navbar({ onOpenContact }) {
 
             {/* Direct Résumé Link */}
             <a
-              href={PERSONAL_INFO.resumeUrl}
+              href={info.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/15 border border-white/10 text-xs font-mono text-neutral-300 hover:text-white transition-all focus-visible:outline-2 focus-visible:outline-[#d4ff4f] focus-visible:outline-offset-1"
+              className="hidden sm:inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-black/5 hover:bg-black/10 border-black/10 dark:bg-white/5 dark:hover:bg-white/15 dark:border-white/10 text-xs font-mono text-neutral-800 hover:text-black dark:text-neutral-300 dark:hover:text-white transition-all focus-visible:outline-2 focus-visible:outline-[#d4ff4f] focus-visible:outline-offset-1"
               data-cursor="pointer"
             >
               <span>Résumé</span>
-              <ArrowUpRight className="w-3 h-3 text-neutral-400" />
+              <ArrowUpRight className="w-3 h-3 text-neutral-500 dark:text-neutral-400" />
             </a>
 
-            {/* Primary Action Button — High-Contrast Glowing "Connect" CTA */}
+            {/* Primary Action Button — High-Contrast "Connect" CTA */}
             <button
               onClick={onOpenContact}
-              className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[#d4ff4f] hover:bg-white text-black font-semibold text-xs font-mono uppercase tracking-wider flex items-center gap-1 sm:gap-1.5 transition-all shadow-[0_0_20px_rgba(212,255,79,0.35)] hover:scale-105 active:scale-95 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 border border-[#d4ff4f]"
+              className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[#15803d] hover:bg-[#166534] text-white dark:bg-[#d4ff4f] dark:hover:bg-white dark:text-black font-semibold text-xs font-mono uppercase tracking-wider flex items-center gap-1 sm:gap-1.5 transition-all shadow-[0_2px_10px_rgba(21,128,61,0.25)] dark:shadow-[0_0_20px_rgba(212,255,79,0.35)] hover:scale-105 active:scale-95 focus-visible:outline-2 focus-visible:outline-black dark:focus-visible:outline-white focus-visible:outline-offset-2 border border-emerald-700/30 dark:border-[#d4ff4f]"
               data-cursor="pointer"
               aria-label="Connect with Hitesh Rao M"
             >
               <span>Connect</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-black stroke-[2.5]" />
+              <ArrowUpRight className="w-3.5 h-3.5 text-white dark:text-black stroke-[2.5]" />
             </button>
 
             {/* Mobile Hamburger Button */}
             <button
               ref={toggleBtnRef}
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="md:hidden w-8 h-8 rounded-full bg-white/5 hover:bg-white/10 active:bg-white/15 border border-white/10 flex items-center justify-center text-neutral-200 hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-[#d4ff4f] focus-visible:outline-offset-1"
+              className="md:hidden w-8 h-8 rounded-full bg-black/5 hover:bg-black/10 border-black/10 dark:bg-white/5 dark:hover:bg-white/10 dark:border-white/10 flex items-center justify-center text-neutral-800 hover:text-black dark:text-neutral-200 dark:hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-[#d4ff4f] focus-visible:outline-offset-1"
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-nav-menu"
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
@@ -239,21 +239,21 @@ export default function Navbar({ onOpenContact }) {
           role="dialog"
           aria-modal="true"
           aria-label="Site navigation"
-          className="fixed inset-x-3 top-20 z-50 md:hidden p-5 rounded-3xl bg-[#161619]/95 backdrop-blur-2xl border border-white/15 shadow-[0_20px_60px_rgba(0,0,0,0.85)] space-y-4 animate-in fade-in zoom-in-95 duration-200"
+          className="fixed inset-x-3 top-20 z-50 md:hidden p-5 rounded-3xl bg-[var(--modal-bg)] backdrop-blur-2xl border border-[var(--border-subtle)] shadow-[0_20px_60px_rgba(0,0,0,0.25)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.85)] space-y-4 animate-in fade-in zoom-in-95 duration-200 text-[var(--text-primary)]"
         >
           {/* Header row in sheet */}
-          <div className="flex items-center justify-between pb-3 border-b border-white/10">
+          <div className="flex items-center justify-between pb-3 border-b border-black/10 dark:border-white/10">
             <div className="flex items-center gap-2">
-              <span className="font-sans text-xs font-semibold uppercase text-white tracking-wider">Navigation</span>
-              <span className="w-1 h-1 rounded-full bg-neutral-600" />
-              <span className="text-[11px] text-[#81C995] font-mono">Available for internships</span>
+              <span className="font-sans text-xs font-semibold uppercase text-black dark:text-white tracking-wider">Navigation</span>
+              <span className="w-1 h-1 rounded-full bg-neutral-400 dark:bg-neutral-600" />
+              <span className="text-[11px] text-[#15803d] dark:text-[#81C995] font-mono">Available for internships</span>
             </div>
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
                 if (toggleBtnRef.current) toggleBtnRef.current.focus();
               }}
-              className="p-1 rounded-full text-neutral-400 hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-[#d4ff4f]"
+              className="p-1 rounded-full text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-[#d4ff4f]"
               aria-label="Close navigation"
             >
               <X className="w-4 h-4" />
@@ -271,32 +271,32 @@ export default function Navbar({ onOpenContact }) {
                   onClick={() => handleNavClick(item.id)}
                   className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-[#d4ff4f] ${
                     isActive
-                      ? 'bg-white/15 text-white font-semibold'
-                      : 'text-neutral-300 hover:text-white hover:bg-white/5'
+                      ? 'bg-black/10 dark:bg-white/15 text-black dark:text-white font-semibold'
+                      : 'text-neutral-700 hover:text-black hover:bg-black/5 dark:text-neutral-300 dark:hover:text-white dark:hover:bg-white/5'
                   }`}
                   aria-current={isActive ? 'page' : undefined}
                 >
                   <span>{item.label}</span>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-neutral-500" />
+                  <ArrowUpRight className="w-3.5 h-3.5 text-neutral-400 dark:text-neutral-500" />
                 </a>
               );
             })}
             <a
-              href={PERSONAL_INFO.resumeUrl}
+              href={info.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-[#d4ff4f] hover:bg-white/5 transition-colors focus-visible:outline-2 focus-visible:outline-[#d4ff4f]"
+              className="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium text-[#15803d] dark:text-[#d4ff4f] hover:bg-black/5 dark:hover:bg-white/5 transition-colors focus-visible:outline-2 focus-visible:outline-[#d4ff4f]"
             >
               <span>Download Résumé (PDF)</span>
-              <ArrowUpRight className="w-3.5 h-3.5 text-[#d4ff4f]" />
+              <ArrowUpRight className="w-3.5 h-3.5 text-[#15803d] dark:text-[#d4ff4f]" />
             </a>
           </nav>
 
           {/* Bottom details */}
-          <div className="pt-3 border-t border-white/10 flex items-center justify-between text-xs text-neutral-400">
+          <div className="pt-3 border-t border-black/10 dark:border-white/10 flex items-center justify-between text-xs text-neutral-600 dark:text-neutral-400">
             <span className="flex items-center gap-1">
-              <MapPin className="w-3 h-3 text-[#d4ff4f]" />
+              <MapPin className="w-3 h-3 text-[#15803d] dark:text-[#d4ff4f]" />
               Bengaluru, Karnataka
             </span>
             <div className="flex items-center gap-2">
@@ -306,7 +306,7 @@ export default function Navbar({ onOpenContact }) {
                   setMobileMenuOpen(false);
                   onOpenContact();
                 }}
-                className="px-3.5 py-1.5 rounded-full bg-[#d4ff4f] text-black text-xs font-semibold hover:bg-[#c2ef3e] transition-colors focus-visible:outline-2 focus-visible:outline-black"
+                className="px-3.5 py-1.5 rounded-full bg-[#15803d] text-white dark:bg-[#d4ff4f] dark:text-black text-xs font-semibold hover:opacity-90 transition-colors focus-visible:outline-2 focus-visible:outline-black"
               >
                 Connect →
               </button>

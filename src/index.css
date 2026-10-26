@@ -23,9 +23,36 @@
     --pill-bg: rgba(212, 255, 79, 0.1);
     --pill-border: rgba(212, 255, 79, 0.25);
     --pill-text: #d4ff4f;
+
+    /* Dedicated Navigation & Modal Tokens (Dark Mode) */
+    --nav-bg: rgba(18, 18, 22, 0.92);
+    --nav-border: rgba(255, 255, 255, 0.14);
+    --nav-shadow: 0 12px 36px rgba(0, 0, 0, 0.7), 0 2px 8px rgba(0, 0, 0, 0.4);
+    --nav-inner-bg: rgba(0, 0, 0, 0.45);
+    --nav-inner-border: rgba(255, 255, 255, 0.1);
+    --nav-text: #ecebe6;
+    --nav-text-muted: rgba(236, 235, 230, 0.66);
+    --nav-active-pill: rgba(255, 255, 255, 0.18);
+    --nav-status-bg: rgba(52, 168, 83, 0.15);
+    --nav-status-border: rgba(52, 168, 83, 0.3);
+    --nav-status-text: #81C995;
+
+    --modal-bg: #0d0d11;
+    --modal-header-bg: rgba(13, 13, 17, 0.95);
+    --modal-border: rgba(255, 255, 255, 0.16);
+    --modal-card-bg: rgba(255, 255, 255, 0.03);
+    --modal-card-border: rgba(255, 255, 255, 0.1);
+    --modal-input-bg: rgba(255, 255, 255, 0.04);
+    --modal-input-border: rgba(255, 255, 255, 0.12);
+    --modal-input-text: #ffffff;
+    --modal-input-placeholder: rgba(255, 255, 255, 0.4);
+    --modal-label: rgba(236, 235, 230, 0.65);
+    --modal-backdrop: rgba(0, 0, 0, 0.85);
   }
 
-  html.light {
+  html.light,
+  html[data-theme="light"],
+  body.light {
     /* Theme Tokens (Editorial Warm Paper Light Mode) */
     --bg-primary: #f8f7f4;
     --bg-surface: #f0eee9;
@@ -42,6 +69,31 @@
     --pill-bg: rgba(22, 101, 52, 0.08);
     --pill-border: rgba(22, 101, 52, 0.22);
     --pill-text: #166534;
+
+    /* Dedicated Navigation & Modal Tokens (Light Mode) */
+    --nav-bg: rgba(255, 255, 255, 0.88);
+    --nav-border: rgba(0, 0, 0, 0.08);
+    --nav-shadow: 0 10px 30px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04);
+    --nav-inner-bg: rgba(0, 0, 0, 0.04);
+    --nav-inner-border: rgba(0, 0, 0, 0.06);
+    --nav-text: #0f172a;
+    --nav-text-muted: #4b5563;
+    --nav-active-pill: rgba(0, 0, 0, 0.08);
+    --nav-status-bg: rgba(22, 163, 74, 0.12);
+    --nav-status-border: rgba(22, 163, 74, 0.26);
+    --nav-status-text: #15803d;
+
+    --modal-bg: #ffffff;
+    --modal-header-bg: rgba(255, 255, 255, 0.95);
+    --modal-border: rgba(0, 0, 0, 0.1);
+    --modal-card-bg: #f9fafb;
+    --modal-card-border: rgba(0, 0, 0, 0.08);
+    --modal-input-bg: #ffffff;
+    --modal-input-border: rgba(0, 0, 0, 0.14);
+    --modal-input-text: #0f172a;
+    --modal-input-placeholder: #9ca3af;
+    --modal-label: #374151;
+    --modal-backdrop: rgba(15, 23, 42, 0.45);
   }
 
   body {
