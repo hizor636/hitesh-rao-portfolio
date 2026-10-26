@@ -8,11 +8,11 @@ export default defineConfig({
     react(),
     tailwindcss(),
     {
-      name: 'studio-portal-redirect',
+      name: 'legacy-admin-redirect',
       configureServer(server) {
         server.middlewares.use((req, res, next) => {
-          if (req.url === '/studio-portal') {
-            res.writeHead(301, { Location: '/studio-portal/' });
+          if (req.url && (req.url.startsWith('/studio-portal') || req.url.startsWith('/admin'))) {
+            res.writeHead(302, { Location: '/' });
             res.end();
             return;
           }
