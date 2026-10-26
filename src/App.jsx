@@ -63,16 +63,19 @@ export default function App() {
           }
         });
       },
-      { threshold: 0.08, rootMargin: '0px 0px -40px 0px' }
+      { threshold: 0, rootMargin: '150px 0px 150px 0px' }
     );
 
     const observeElements = () => {
       const elements = document.querySelectorAll('.rv, .rv-stagger');
-      elements.forEach((el) => observer.observe(el));
+      elements.forEach((el) => {
+        el.classList.add('in');
+        observer.observe(el);
+      });
     };
 
     observeElements();
-    const timer = setTimeout(observeElements, 300);
+    const timer = setTimeout(observeElements, 100);
 
     return () => {
       observer.disconnect();
