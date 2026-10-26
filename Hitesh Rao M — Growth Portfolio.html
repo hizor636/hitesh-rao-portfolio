@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hitesh Rao M – Tech Marketer & Data Builder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<style>
+:root{
+  --sans:'Inter Tight',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  --serif:'Instrument Serif',Georgia,serif;
+  --bg:#0b0b0c;
+  --tx:#ecebe6;
+  --mu:rgba(236,235,230,.5);
+  --ln:rgba(236,235,230,.14);
+  --ac:#d4ff4f;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{background:var(--bg);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 1rem/1.6 var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.mono{font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;text-transform:uppercase}
+.it{font-family:var(--serif);font-style:italic;font-weight:400}
+.mu{color:var(--mu)}
+:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+a,button{cursor:pointer}
+.nv a{position:relative;padding:.1rem 0}.nv a.on:after,.nv a:hover:after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1px;background:var(--tx)}
+.view{animation:vin .8s cubic-bezier(.16,1,.3,1) both}@keyframes vin{from{opacity:0;transform:translateY(24px)}}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}.rv.in{opacity:1;transform:none}
+.row{display:grid;grid-template-columns:3.2rem 1fr auto;gap:1rem;align-items:baseline;padding:1.3rem 0;border-top:1px solid var(--ln);transition:padding .35s,color .3s;width:100%;text-align:left;background:none;color:inherit}
+.row:hover{padding-left:1rem;color:var(--ac)}
+.cover{position:relative;overflow:hidden;aspect-ratio:4/3;display:flex;flex-direction:column;justify-content:space-between;padding:1.25rem;border-radius:12px;border:1px solid rgba(255,255,255,.12);box-shadow:0 16px 40px rgba(0,0,0,.7)}
+.cover:before{content:"";position:absolute;inset:0;opacity:.5;background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px);background-size:28px 28px;pointer-events:none}
+#pv{position:fixed;left:0;top:0;width:290px;z-index:60;pointer-events:none;opacity:0;transform:scale(.92);transition:opacity .22s cubic-bezier(.16,1,.3,1),transform .22s cubic-bezier(.16,1,.3,1)}
+#pv.on{opacity:1;transform:scale(1)}
+.chip{border:1px solid var(--ln);border-radius:99px;padding:.35rem .9rem;font-size:.8rem;transition:.25s;background:none;color:inherit}.chip:hover,.chip.on{background:var(--tx);color:#080808;font-weight:500}
+.li li{padding:.5rem 0;border-bottom:1px solid var(--ln);transition:padding .3s cubic-bezier(.16,1,.3,1),color .3s ease}.li li:hover{padding-left:.65rem;color:var(--ac)}
+input,textarea{background:none;border:0;border-bottom:1px solid var(--ln);color:inherit;width:100%;padding:.8rem 0;font:inherit;font-size:1rem;outline-offset:4px}
+.err{color:#ff8a7a;font-size:.8rem;min-height:1.1rem}
+details{border-top:1px solid var(--ln);padding:1.1rem 0}summary{cursor:pointer;font-size:1.3rem;list-style:none}summary::-webkit-details-marker{display:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a href="#main" class="sr-only focus:not-sr-only">Skip to content</a>
+<header class="fixed top-0 inset-x-0 z-50 backdrop-blur-xl bg-black/30 border-b border-white/10">
+ <div class="flex items-center justify-between gap-4 px-5 md:px-10 py-4">
+  <div class="flex items-center gap-6">
+   <a href="#/" class="text-lg font-semibold tracking-tight">Hitesh<span class="it text-xl ml-1" style="color:var(--ac)">Rao M</span></a>
+   <span class="hidden lg:flex gap-2 mono mu"><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>/<a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance</a>/<a href="https://www.linkedin.com/in/hitesh-rao-m-593775358/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+   <span class="hidden md:inline mono mu">Bengaluru <span id="clk"></span></span>
+  </div>
+  <nav class="nv flex gap-5 text-sm" aria-label="Primary" id="nav"><a href="#/">Home</a><a href="#/work">Work</a><a href="#/info">Info</a><a href="#/contact">Contact</a></nav>
+ </div>
+</header>
+<main id="main" class="pt-20 min-h-screen"><div id="v"></div></main>
+<div id="pv" aria-hidden="true"></div>
+<div id="toast" role="status" aria-live="polite" class="fixed left-1/2 -translate-x-1/2 bottom-6 z-[90] border border-white/20 bg-black/80 backdrop-blur-xl px-4 py-2 mono opacity-0 pointer-events-none transition-opacity"></div>
+
+<script>
+const $=s=>document.querySelector(s),FINE=matchMedia('(pointer:fine)').matches;
+const EM='hiteshraom@email.com',LI='https://www.linkedin.com/in/hitesh-rao-m-593775358/';
+const P=[
+{i:'00-1',c:'Project',t:'Paytm Bengaluru Hackathon',y:'2026',h:250,k:'Fintech Campus Marketing',s:['8,261+','post impressions'],d:'Marketing intern and campus ambassador at Paytm (One97 Communications). Supported campaign frameworks aligned to brand strategy, coordinated partnership discussions and meetups, built relationships with colleges and brand partners, and served on the core organising team for the flagship Bengaluru Hackathon under strict data-privacy and security standards.',sv:['Campus Marketing','Event Operations','Brand Partnerships'],aw:['4 months, Jun – Oct 2026','Core organising team']},
+{i:'00-2',c:'Career',t:'Google Student Ambassador',y:'2026',h:215,k:'Community & Campus Programs',s:['125,000+','applicants, selected'],d:'Selected from 125,000+ applicants across India to represent Google on campus. Organised workshops and tech talks, built a community of students around Google developer and career resources, and created content that helped peers discover tools, certifications and opportunities.',sv:['Community Building','Event Management','Content'],aw:['Google Student Ambassadors India','May – Oct 2026']},
+{i:'00-3',c:'Project',t:'Build with Presto & Namma MUG',y:'2026',h:285,k:'Developer Community',s:['800+','registrations'],d:'Joined the core Bengaluru organising team of a city-wide developer conference with 800+ registrations and 189+ industry professionals, coordinating with engineers, DevRel advocates and partners such as MongoDB and Google for Developers.',sv:['DevRel Operations','Cross-team Coordination'],aw:['Bengaluru Edition, Oct 2026']},
+{i:'00-4',c:'Project',t:'CareerGroww at VibeXathon 1.0',y:'2026',h:160,k:'AI Product & Pitching',s:['4,566+','post impressions'],d:'Co-built and pitched CareerGroww, an AI-driven skill-gap platform that maps industry demand to personalised learning paths, as first-year students competing against senior teams.',sv:['AI Prototyping','Prompt Engineering','Product Pitching'],aw:['Team of four','Mar 2026']},
+{i:'00-5',c:'Skill',t:'SQL Leaderboard Streak',y:'2025',h:190,k:'Data Analytics',s:['70+','SQL programs solved'],d:'Solved 70+ SQL programs on Torii Minds including a 50+ problem weekly sprint, ranking among top performers on university-wise and year-wise leaderboards. Also passed HackerRank SQL Intermediate and completed Cisco Python Essentials 1.',sv:['SQL','Python','Data Processing'],aw:['Top performer, university & year leaderboards','HackerRank SQL Intermediate']},
+{i:'00-6',c:'Skill',t:'Deloitte Analytics & Gemini Certified',y:'2026',h:320,k:'Analytics & AI Credentials',s:['2','credentials'],d:'Completed the Deloitte Australia Data Analytics virtual experience (pay-equality scoring and data classification) and earned the Gemini Certified Student credential from Google for Education.',sv:['Data Analytics','Google AI','Business Intelligence'],aw:['Feb – Apr 2026']},
+{i:'00-7',c:'Career',t:'Operations at KCET Coaching Centre',y:'2026',h:30,k:'Operations',s:['3','months'],d:'Ran daily operations for a KCET coaching centre: applicant intake, onboarding, structured follow-ups on student issues and process improvements.',sv:['Operations','Process Optimisation'],aw:['Mar – May 2026']}];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const cov=p=>`<div class="cover" style="background:linear-gradient(135deg,hsl(${p.h} 70% 24%),hsl(${p.h+40} 80% 7%))"><span class="mono">${p.i} · ${p.k}</span><div><p class="text-4xl md:text-5xl font-semibold tracking-tight text-white leading-none">${p.s[0]}</p><p class="mono mu mt-2">${p.s[1]}</p></div></div>`;
+const rows=l=>`<div class="border-b" style="border-color:var(--ln)">${l.map(p=>`<button class="row" data-id="${p.i}" aria-label="Open ${esc(p.t)} case study"><span class="mono mu">${p.i}</span><span class="text-2xl md:text-4xl tracking-tight font-medium">${p.t}</span><span class="mono mu hidden sm:block">${p.k} · ${p.y}</span></button>`).join('')}</div>`;
+const ft=()=>`<footer class="px-5 md:px-10 pt-24 pb-6 mt-24 border-t" style="border-color:var(--ln)"><div class="grid md:grid-cols-3 gap-8"><div><p class="mono mu mb-2">Email</p><a class="text-xl hover:text-[#d4ff4f] transition-colors" href="mailto:${EM}">${EM}</a></div><div><p class="mono mu mb-2">Social</p><p class="text-xl space-x-3"><a class="hover:text-[#d4ff4f] transition-colors" href="${LI}" target="_blank" rel="noopener noreferrer">LinkedIn</a><a class="hover:text-[#d4ff4f] transition-colors" href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance</a><a class="hover:text-[#d4ff4f] transition-colors" href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></p></div><div class="md:text-right"><a class="mono mr-4 hover:text-[#d4ff4f] transition-colors" href="#/workflow">Workflow</a><a class="mono hover:text-[#d4ff4f] transition-colors" href="#/faq">FAQ</a></div></div>
+<h2 class="mt-24 text-[clamp(2.6rem,10vw,9rem)] leading-[.92] tracking-tighter font-semibold">Tech marketer<br>&amp; <span class="it" style="color:var(--ac)">data builder.</span><br>Based in Bengaluru.</h2>
+<div class="flex justify-between items-center mt-16 mono mu"><span>©<span class="yr"></span> All rights reserved</span><button class="mono hover:text-[#d4ff4f] transition-colors" onclick="scrollTo({top:0,behavior:'smooth'})">Back to top ↑</button></div></footer>`;
+const V={
+home:()=>`<section class="px-5 md:px-10 pt-16 md:pt-28"><p class="mono mu mb-6 rv">(Hitesh Rao M — Tech Marketing & Data)</p><h1 class="rv text-[clamp(2.2rem,7.2vw,6.6rem)] leading-[.98] tracking-tighter font-medium max-w-6xl">Growth marketing, backed by <span class="it" style="color:var(--ac)">data</span>, for teams and brands ready to move forward.</h1></section>
+<section class="px-5 md:px-10 mt-24 grid md:grid-cols-[1fr_1.4fr] gap-10 items-start"><div class="rv"><p class="mono mu mb-4">(Info)</p><p class="text-xl md:text-2xl leading-snug max-w-md">A 2nd-year BCA student who connects technology, analytics and community to help brands reach their audience and leave a mark.</p><a href="#/info" class="inline-block mt-6 mono border-b pb-1">About me →</a></div>
+<div class="rv grid grid-cols-3 gap-px" style="background:var(--ln)">${[['125K+','Google SA pool'],['800+','event registrations'],['70+','SQL programs']].map(x=>`<div class="p-5" style="background:var(--bg)"><p class="text-3xl md:text-5xl font-semibold tracking-tight">${x[0]}</p><p class="mono mu mt-2">${x[1]}</p></div>`).join('')}</div></section>
+<section class="px-5 md:px-10 mt-28"><div class="flex justify-between items-end mb-8 rv"><h2 class="mono">(Folio)</h2><a href="#/work" class="mono">All (${P.length}) →</a></div><div class="rv">${rows(P.slice(0,5))}</div></section>
+<section class="px-5 md:px-10 mt-28"><p class="mono mu mb-3 rv">(My areas of focus)</p><h2 class="rv text-4xl md:text-7xl tracking-tighter font-medium mb-12">Key skills &amp; <span class="it" style="color:var(--ac)">interests</span></h2>
+<div class="grid md:grid-cols-3 gap-10">${[['Capabilities',['Growth & Campus Marketing','Event Operations','Community Building','Data Analytics','SQL','Python','Google Cloud','Gemini AI']],['Expertise',['Campus Programs','Fintech Marketing','DevRel Operations','Stakeholder Coordination']],['My Inspiration',['Outdoor Nature Exploration','Tech Innovation','Editorial Design','Digital Architecture']]].map(c=>`<div class="rv"><p class="mono mu mb-3">${c[0]}</p><ul class="li text-xl">${c[1].map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join('')}</div></section>${ft()}`,
+work:()=>`<section class="px-5 md:px-10 pt-16"><h1 class="rv text-5xl md:text-8xl tracking-tighter font-medium">Work <span class="it mu" style="font-size:.5em">(${P.length})</span></h1><div class="flex flex-wrap gap-2 my-8" role="group" aria-label="Filter work">${['All','Career','Project','Skill'].map(c=>`<button class="chip ${F==c?'on':''}" data-f="${c}" aria-pressed="${F==c}">${c}</button>`).join('')}</div><div id="wl">${rows(P.filter(p=>F=='All'||p.c==F))}</div></section>${ft()}`,
+info:()=>`<section class="px-5 md:px-10 pt-16"><p class="mono mu mb-4 rv">(Info)</p><h1 class="rv text-[clamp(2rem,6vw,5.2rem)] leading-[1] tracking-tighter font-medium max-w-5xl">My name is Hitesh. I believe in consistent improvement, learning from every experience, and turning achievements into <span class="it" style="color:var(--ac)">momentum</span>.</h1>
+<p class="rv mt-10 max-w-2xl text-lg mu">Pursuing a BCA (Class of 2028) at Nagarjuna College of Engineering and Technology in Bengaluru, I blend campus marketing, event operations and community building at Google and Paytm with Python, SQL, C and Google Cloud. Open to internships in marketing, growth, campus programs, fintech marketing and data analytics.</p>
+<div class="mt-20"><p class="mono mu mb-4">Experience</p>${[['Marketing Intern & Campus Ambassador','Paytm','Jun – Oct 2026'],['Google Student Ambassador','Google','May – Oct 2026'],['Operations Team Member','KCET coaching centre (MIT)','Mar – May 2026'],['BCA, Class of 2028','Nagarjuna College of Engineering and Technology','2025 – 2028']].map(r=>`<div class="rv grid md:grid-cols-[1fr_1fr_auto] gap-2 py-5 border-t" style="border-color:var(--ln)"><span class="text-2xl tracking-tight">${r[0]}</span><span class="mu">${r[1]}</span><span class="mono mu">${r[2]}</span></div>`).join('')}</div></section>${ft()}`,
+contact:()=>`<section class="px-5 md:px-10 pt-16 grid md:grid-cols-2 gap-12"><div><p class="mono mu mb-4 rv">(Contact)</p><h1 class="rv text-5xl md:text-8xl tracking-tighter font-medium leading-[.95]">Let’s build something <span class="it" style="color:var(--ac)">impactful.</span></h1><a href="mailto:${EM}" class="rv block mt-8 text-2xl underline underline-offset-8 break-all">${EM}</a><p class="mono mu mt-3">Ready for growth, marketing and data analytics collaborations.</p></div>
+<form id="cf" class="rv space-y-3" novalidate><label class="mono mu" for="n">Your name</label><input id="n" autocomplete="name"><p class="err" id="e1" role="alert"></p><label class="mono mu" for="e">Your email</label><input id="e" type="email" autocomplete="email"><p class="err" id="e2" role="alert"></p><label class="mono mu" for="m">Message</label><textarea id="m" rows="4"></textarea><p class="err" id="e3" role="alert"></p><button class="chip !px-6 !py-3 text-base">Compose email →</button><p class="mono mu">Opens your email app. Direct dispatch to ${EM}</p></form></section>${ft()}`,
+workflow:()=>`<section class="px-5 md:px-10 pt-16"><h1 class="rv text-5xl md:text-8xl tracking-tighter font-medium mb-12">Workflow</h1>${[['Listen','Understand the goal, audience and constraints.'],['Research','Pull the data: funnels, audience signals, past campaign results.'],['Build & run','Plan the campaign or event, coordinate partners, execute on the ground.'],['Measure','Report with real numbers, then iterate on what worked.']].map((s,i)=>`<div class="rv grid grid-cols-[3rem_1fr] md:grid-cols-[4rem_1fr_2fr] gap-4 py-7 border-t" style="border-color:var(--ln)"><span class="mono mu">0${i+1}</span><span class="text-3xl tracking-tight font-medium">${s[0]}</span><span class="mu text-lg">${s[1]}</span></div>`).join('')}</section>${ft()}`,
+faq:()=>`<section class="px-5 md:px-10 pt-16 max-w-4xl"><h1 class="rv text-5xl md:text-8xl tracking-tighter font-medium mb-12">FAQ</h1>${[['Are you open to work?','Yes: internships in marketing, growth, campus programs, fintech marketing and data analytics, on-site or hybrid in Bengaluru.'],['What tools do you use?','SQL, Python, C, Google Cloud, Gemini and standard marketing and community tools.'],['Do you do events?','Yes. I have organised workshops, tech talks and a hackathon, and helped run an 800+ registration developer conference.'],['Where are you based?','Bengaluru, Karnataka, India.']].map(q=>`<details><summary class="font-medium">${q[0]}</summary><p class="mu mt-3 text-lg">${q[1]}</p></details>`).join('')}</section>${ft()}`};
+let F='All';
+function toast(m){const t=$('#toast');t.textContent=m;t.style.opacity=1;clearTimeout(toast.t);toast.t=setTimeout(()=>t.style.opacity=0,3000)}
+function route(){const r=(location.hash.replace('#/','')||'home');const k=V[r]?r:'home';const v=$('#v');v.className='view';v.innerHTML=V[k]();void v.offsetWidth;
+ document.querySelectorAll('#nav a').forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#/'+(k==='home'?'':k)));
+ document.title='Hitesh Rao M – '+k[0].toUpperCase()+k.slice(1);scrollTo(0,0);
+ document.querySelectorAll('.yr').forEach(e=>e.textContent=new Date().getFullYear());
+ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.rv').forEach((e,i)=>{e.style.transitionDelay=(i%4)*70+'ms';io.observe(e)})}
+addEventListener('hashchange',route);route();
+const clk=()=>$('#clk').textContent=new Date().toLocaleTimeString('en-IN',{timeZone:'Asia/Kolkata',hour:'2-digit',minute:'2-digit',hour12:false});clk();setInterval(clk,30000);
+
+/* hover preview */
+const pv=$('#pv');let lastR=null;
+document.addEventListener('mousemove',e=>{if(!FINE)return;const r=e.target.closest&&e.target.closest('.row');
+ if(r){if(r!==lastR){pv.innerHTML=cov(P.find(p=>p.i===r.dataset.id));lastR=r}pv.classList.add('on');pv.style.transform=`translate(${Math.min(e.clientX+24,innerWidth-310)}px,${Math.max(80,e.clientY-90)}px)`}else{pv.classList.remove('on');lastR=null}});
+
+/* case dialog */
+let opener=null;const close=()=>{const d=$('#mdl');if(d){d.remove();opener&&opener.focus()}};
+addEventListener('keydown',e=>e.key==='Escape'&&close());
+document.addEventListener('click',e=>{
+ const f=e.target.closest('[data-f]');if(f){F=f.dataset.f;route();return}
+ const b=e.target.closest('[data-id]');if(b){opener=b;pv.classList.remove('on');const p=P.find(x=>x.i===b.dataset.id),d=document.createElement('div');d.id='mdl';d.className='fixed inset-0 z-[80] overflow-auto bg-black/80 backdrop-blur-md p-4 sm:p-6 md:p-10 flex justify-center items-start';
+  d.innerHTML=`<div role="dialog" aria-modal="true" aria-label="${esc(p.t)}" class="w-full max-w-4xl my-auto p-6 md:p-10 border rounded-2xl" style="background:var(--bg);border-color:var(--ln)"><div class="flex justify-between items-center mono mb-6 border-b pb-4" style="border-color:var(--ln)"><span class="mu">${p.i} · ${p.k}</span><button data-x class="px-3 py-1 rounded-full border border-white/20 hover:border-white/40" aria-label="Close case study">Close ✕</button></div>${cov(p).replace('aspect-ratio:4/3','min-height:200px')}<h2 class="text-3xl md:text-6xl tracking-tighter font-medium mt-8 text-white">${p.t}</h2><p class="mt-5 text-lg mu max-w-2xl leading-relaxed">${p.d}</p><div class="grid md:grid-cols-2 gap-8 mt-10 pt-6 border-t" style="border-color:var(--ln)"><div><p class="mono mu mb-3">Services</p><ul class="li text-lg">${p.sv.map(s=>`<li>${s}</li>`).join('')}</ul></div><div><p class="mono mu mb-3">Recognition</p><ul class="li text-lg">${p.aw.map(s=>`<li>${s}</li>`).join('')}</ul></div></div></div>`;
+  document.body.appendChild(d);d.querySelector('[data-x]').focus();d.addEventListener('click',ev=>{if(ev.target===d||ev.target.closest('[data-x]'))close()})}});
+document.addEventListener('submit',e=>{if(e.target.id!=='cf')return;e.preventDefault();const g=i=>$(i).value.trim();let ok=true;const s=(i,m)=>{$(i).textContent=m;if(m)ok=false};
+ s('#e1',g('#n')?'':'Please enter your name.');s('#e2',/^\S+@\S+\.\S+$/.test(g('#e'))?'':'Enter a valid email.');s('#e3',g('#m').length>=10?'':'Write at least 10 characters.');if(!ok)return;
+ location.href=`mailto:${EM}?subject=${encodeURIComponent('Hello from '+g('#n'))}&body=${encodeURIComponent(g('#m')+'\n\n'+g('#n')+' ('+g('#e')+')')}`;toast('Opening your email app…')});
+</script>
+</body>
+</html>
