@@ -22,7 +22,7 @@ export default function Navbar({ onOpenAbout, onOpenContact }) {
       setIsScrolled(window.scrollY > 30);
 
       // Section tracking for active segment
-      const sections = ['work', 'capabilities', 'process', 'awards'];
+      const sections = ['work', 'how-i-work', 'about', 'experience', 'beyond-work', 'contact'];
       const scrollY = window.scrollY + 200;
 
       for (const sectionId of sections) {
@@ -44,10 +44,11 @@ export default function Navbar({ onOpenAbout, onOpenContact }) {
 
   const navItems = [
     { label: 'Work', href: '#work', id: 'work' },
-    { label: 'Capabilities', href: '#capabilities', id: 'capabilities' },
-    { label: 'Experience', href: '#process', id: 'process' },
-    { label: 'Credentials', href: '#awards', id: 'awards' },
-    { label: 'About', href: '#about', id: 'about', action: onOpenAbout },
+    { label: 'How I Work', href: '#how-i-work', id: 'how-i-work' },
+    { label: 'About', href: '#about', id: 'about' },
+    { label: 'Experience', href: '#experience', id: 'experience' },
+    { label: 'Beyond Work', href: '#beyond-work', id: 'beyond-work' },
+    { label: 'Contact', href: '#contact', id: 'contact' },
   ];
 
   const handleNavClick = (e, item) => {
@@ -157,6 +158,17 @@ export default function Navbar({ onOpenAbout, onOpenContact }) {
               <span>Bengaluru</span>
             </div>
 
+            {/* Direct Résumé Link */}
+            <a
+              href={PERSONAL_INFO.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 text-xs font-mono text-neutral-200 hover:text-white transition-all"
+              data-cursor="pointer"
+            >
+              <span>Résumé ↗</span>
+            </a>
+
             {/* Primary Action Button: Gemini Gradient Container Pill */}
             <div className="relative group p-[1px] rounded-full bg-gradient-to-r from-[#4285F4] via-[#9B72CB] to-[#D96570] shadow-[0_2px_14px_rgba(66,133,244,0.3)] hover:shadow-[0_4px_22px_rgba(155,114,203,0.45)] transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98]">
               <button
@@ -229,6 +241,15 @@ export default function Navbar({ onOpenAbout, onOpenContact }) {
                 <ArrowUpRight className="w-4 h-4 text-neutral-500" />
               </a>
             ))}
+            <a
+              href={PERSONAL_INFO.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between px-3.5 py-2.5 rounded-xl text-[14px] font-medium text-[#d4ff4f] hover:bg-white/[0.06] transition-colors"
+            >
+              <span>Download Résumé (PDF)</span>
+              <ArrowUpRight className="w-4 h-4 text-[#d4ff4f]" />
+            </a>
           </nav>
 
           {/* Quick Actions & Location */}

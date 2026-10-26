@@ -83,11 +83,11 @@ export default function AboutModal({ isOpen, onClose, onOpenContact }) {
             </div>
             <div className="space-y-3">
               {[
-                { role: 'Marketing Intern & Campus Ambassador', org: 'Paytm (One97 Communications)', term: 'Jun – Oct 2026', desc: 'Core organizing team for flagship Bengaluru Hackathon; coordinated college partnerships and brand campaigns.' },
-                { role: 'Google Student Ambassador', org: 'Google India Campus Cohort', term: 'May – Oct 2026', desc: 'Selected from 125,000+ applicants; organized tech talks and guided students to Cloud/AI certifications.' },
-                { role: 'Conference Organizing Team', org: 'Presto & Namma MUG (MongoDB User Group)', term: 'Oct 2026', desc: 'Coordinated city-wide developer gathering with 800+ registrations and 189+ industry professionals.' },
-                { role: 'Operations Team Member', org: 'KCET Coaching Centre (MIT)', term: 'Mar – May 2026', desc: 'Managed student intake, applicant onboarding, structured follow-ups, and process improvements.' },
-                { role: 'BCA (Bachelor of Computer Applications)', org: 'Nagarjuna College of Engineering & Technology', term: '2025 – 2028', desc: 'Class of 2028; specializing in computer applications, databases, programming, and cloud technologies.' }
+                { role: 'Marketing Intern, Core Organising Team', org: 'Paytm Bengaluru Hackathon', term: 'Jun – Oct 2026', desc: 'Supported campaign framework, handled university partner outreach, and managed on-ground attendee verification operations.' },
+                { role: 'Google Student Ambassador', org: 'NCET Bengaluru (Google India Cohort)', term: 'May – Oct 2026', desc: 'Selected from 125,000+ applicants; organized AI Sandboxes and technical study circles for 500+ peers.' },
+                { role: 'Core Organising Team', org: 'Build with Presto & Namma MUG (Bengaluru)', term: 'Oct 2026', desc: 'Coordinated city-wide developer gathering with 800+ registrations and 189+ industry professionals.' },
+                { role: 'Operations Team Member', org: 'KCET Coaching Centre, Bengaluru', term: 'Mar – May 2026', desc: 'Managed student intake, applicant onboarding rosters, structured follow-ups, and process improvements.' },
+                { role: 'BCA (Bachelor of Computer Applications)', org: 'Nagarjuna College of Engineering & Technology', term: 'Class of 2028', desc: '2nd-year undergraduate; coursework in relational databases & SQL, Python, C, and system fundamentals.' }
               ].map((item, idx) => (
                 <div key={idx} className="p-4 rounded-xl border border-white/5 bg-white/[0.015] flex flex-col md:flex-row md:items-center justify-between gap-2">
                   <div>

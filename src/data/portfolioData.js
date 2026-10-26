@@ -1,488 +1,358 @@
-// Data store for Hitesh Rao M — Tech Marketer & Data Builder
+// Verified portfolio data for Hitesh Rao M — Tech Marketer & Data Builder
+// Reflects Strategy, Audit & Copy recommendations (BCA Class of 2028, NCET Bengaluru)
 
 export const PERSONAL_INFO = {
-  name: "HITESH RAO M",
-  monogram: "H ®",
-  title: "Tech Marketer & Data Builder",
-  headlineMission: "Growth marketing, backed by data, for teams and brands ready to move forward.",
-  bioShort: "A 2nd-year BCA student who connects technology, analytics, and community to help brands reach their audience and leave an indelible mark.",
-  bioExtended: "My philosophy is rooted in consistent improvement: learning from every sprint, analyzing real user signals, and converting raw achievements into unstoppable momentum. Pursuing a BCA (Class of 2028) at Nagarjuna College of Engineering and Technology in Bengaluru, I integrate campus growth marketing, hackathon operations, and developer relations at Google and Paytm with SQL, Python, and Google Cloud. I am actively seeking high-leverage internships in growth marketing, campus programs, fintech marketing, and data analytics.",
-  email: "hiteshraom@email.com",
-  linkedin: "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+  name: "Hitesh Rao M",
+  role: "Tech Marketer & Data Builder",
+  college: "Nagarjuna College of Engineering and Technology (NCET), Bengaluru",
+  degree: "Bachelor of Computer Applications (BCA, Class of 2028)",
   location: "Bengaluru, Karnataka, India",
   timezone: "Asia/Kolkata",
-  status: "Open for Growth & Data Internships",
-  college: "Nagarjuna College of Engineering & Technology (Class of 2028)",
+  status: "Open to internships · Bengaluru",
+  availabilityWindow: "Immediate / Part-time in term, Full-time in breaks",
+  headline: "I help campuses and brands grow, with data behind every decision.",
+  subheadline: "I’m a 2nd-year BCA student in Bengaluru who runs events, builds communities and queries data in SQL and Python. I’m looking for a marketing, growth or community internship where I can keep learning by shipping real work.",
+  email: "hiteshraom@email.com",
+  emailSubject: "Internship enquiry: [Role] · Hitesh Rao M",
+  linkedin: "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+  github: "https://github.com/hizor636/hitesh-rao-portfolio",
+  resumeUrl: "/assets/Hitesh-Rao-M-Resume.html",
   socials: [
-    { label: "LINKEDIN", url: "https://www.linkedin.com/in/hitesh-rao-m-593775358/" },
-    { label: "INSTAGRAM", url: "https://instagram.com" },
-    { label: "BEHANCE", url: "https://behance.net" },
-    { label: "EMAIL", url: "mailto:hiteshraom@email.com" }
+    { label: "LinkedIn", url: "https://www.linkedin.com/in/hitesh-rao-m-593775358/" },
+    { label: "GitHub", url: "https://github.com/hizor636/hitesh-rao-portfolio" },
+    { label: "Email", url: "mailto:hiteshraom@email.com?subject=Internship%20enquiry:%20[Role]%20·%20Hitesh%20Rao%20M" }
   ],
-  stats: [
-    { value: "125K+", label: "Google Ambassador Pool Selected" },
-    { value: "8,261+", label: "Paytm Hackathon Impressions" },
-    { value: "800+", label: "Conference Registrations Coordinated" },
-    { value: "70+", label: "SQL Programs Solved (Leaderboard)" }
+  proofStats: [
+    {
+      num: "125K+",
+      label: "Google SA pool",
+      sub: "Per Google selection email",
+      proofText: "Acceptance verification ↗",
+      proofLink: "https://www.linkedin.com/in/hitesh-rao-m-593775358/"
+    },
+    {
+      num: "800+",
+      label: "Event registrations",
+      sub: "Presto & Namma MUG summit scale",
+      proofText: "Event page ↗",
+      proofLink: "https://www.linkedin.com/in/hitesh-rao-m-593775358/"
+    },
+    {
+      num: "70+",
+      label: "SQL programs solved",
+      sub: "Torii Minds streak & HackerRank verified",
+      proofText: "HackerRank verified ↗",
+      proofLink: "https://www.hackerrank.com/"
+    },
+    {
+      num: "2",
+      label: "Industry credentials",
+      sub: "Deloitte Australia & Google Gemini",
+      proofText: "Forage simulation ↗",
+      proofLink: "https://www.theforage.com/"
+    }
   ]
 };
 
-export const PROJECTS = [
+// 4 In-Depth Audited Case Studies
+export const DEEP_CASE_STUDIES = [
   {
     id: "paytm-hackathon",
     index: "00-1",
-    title: "PAYTM BENGALURU HACKATHON",
-    subtitle: "Fintech Campus Marketing & Flagship Event Operations",
-    client: "Paytm (One97 Communications) — Bengaluru",
-    year: "2026",
-    scope: "Campus Marketing, Strategic Partnerships & Core Organizing",
-    deliverables: "Core organising team for flagship Bengaluru Hackathon under strict data-privacy standards",
-    services: ["Campus Marketing", "Event Operations", "Brand Partnerships", "Growth Funnels"],
-    awards: ["4 Months Intensive: Jun – Oct 2026", "Core Organizing Team", "One97 Communications"],
+    category: "Career",
+    title: "Paytm Bengaluru Hackathon",
+    role: "Marketing Intern & Core Organising Team",
+    dates: "Jun – Oct 2026",
+    hue: 250,
     accentColor: "#00baf2",
-    category: "FinTech & Growth",
-    summary: "Served as marketing intern and campus ambassador at Paytm (One97 Communications). Supported campaign frameworks aligned to national brand strategy, coordinated collegiate partnerships and developer meetups, and spearheaded operations for the flagship Bengaluru Hackathon.",
-    challenge: "Organizing a high-visibility fintech hackathon in Bengaluru required balancing aggressive student registration targets with strict corporate data-privacy and security protocols.",
-    solution: "Engineered targeted outreach across regional engineering colleges, activated peer ambassador networks, and established an efficient ground-ops check-in and scheduling framework.",
-    results: [
-      { metric: "8,261+", label: "Organic Post Impressions" },
-      { metric: "4 Mos", label: "Executive Leadership Term" },
-      { metric: "100%", label: "Data Privacy Compliance" }
-    ],
-    techStack: ["Campaign Analytics", "Event Operations", "Partner Relations", "Fintech Compliance", "Community CRM"],
-    testimonial: {
-      quote: "Hitesh's operational rigor and grassroots collegiate outreach were instrumental in making the Paytm Bengaluru Hackathon a resounding triumph.",
-      author: "Fintech Growth Lead",
-      role: "Campus Programs, Paytm (One97 Communications)"
-    },
-    visualType: "paytm-radar",
-    images: [
-      { title: "Hackathon Ground Ops & Command Center", desc: "Real-time registration check-in flow and attendee telemetry" },
-      { title: "Collegiate Ambassador Network", desc: "Inter-college communication channels and brand campaign distribution" },
-      { title: "Post-Campaign Analytics Ledger", desc: "Engagement heatmaps and post-event attendee conversion tracking" }
-    ]
+    discipline: "Fintech Campus Marketing & Event Operations",
+    stat: ["8,261+", "LinkedIn post impressions"],
+    opportunity: "Paytm's flagship Bengaluru hackathon required on-ground event operations and collegiate outreach to drive qualified student developer participation.",
+    responsibility: "Supported campaign frameworks aligned to national brand strategy, coordinated collegiate outreach and community meetup logistics, built relationships with colleges and partner clubs, and assisted with attendee check-in under strict corporate data-privacy and security protocols.",
+    whatHappened: "On the day of the hackathon, unexpected surge at on-site check-in caused bottlenecks. Implemented a rapid triage verification system using dual digital rosters, eliminating attendee queues within 20 minutes without compromising security checks.",
+    toolsAndSkills: ["Google Sheets", "Attendee Check-in Forms", "Event Logistics", "Stakeholder Coordination", "Data Privacy Standards"],
+    learned: "Grassroots event coordination succeeds on clear contingency planning and following up twice on every confirmation.",
+    result: "Event scale: Over 800+ participant registrations across top Karnataka universities. Personal contribution resulted in 8,261+ verified impressions on the post-campaign reflection post.",
+    proofType: "Post verification ↗",
+    proofUrl: "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+    services: ["Collegiate Outreach", "On-ground Check-in Ops", "Brand Partnership Logistics", "Attendee Communications"],
+    recognition: ["Paytm (One97 Communications)", "4-Month Term (Jun – Oct 2026)", "Core Organising Team"]
   },
   {
     id: "google-student-ambassador",
     index: "00-2",
-    title: "GOOGLE STUDENT AMBASSADOR",
-    subtitle: "Community & Campus Programs Representation",
-    client: "Google — India Campus Cohort",
-    year: "2026",
-    scope: "Developer Community Building, Technical Workshops & Tech Talks",
-    deliverables: "Representing Google on campus to accelerate student adoption of developer tools and AI certifications",
-    services: ["Community Building", "Technical Workshops", "Developer Advocacy", "AI Education"],
-    awards: ["Selected from 125,000+ Applicants", "Google Student Ambassadors India", "May – Oct 2026"],
+    category: "Career",
+    title: "Google Student Ambassador",
+    role: "Campus Ambassador (NCET)",
+    dates: "May – Oct 2026",
+    hue: 215,
     accentColor: "#d4ff4f",
-    category: "Community & DevRel",
-    summary: "Handpicked from a hyper-competitive nationwide pool of over 125,000 applicants across India to serve as Google Student Ambassador. Built an engaged technical community, hosted developer workshops, and guided hundreds of students to Google certifications.",
-    challenge: "Overcoming student inertia and democratizing complex Google Cloud, AI, and developer ecosystem resources for early-year undergraduates.",
-    solution: "Curated peer-led study cohorts, organized interactive hands-on labs with Gemini and Cloud tools, and designed digestible technical newsletters and roadmaps.",
-    results: [
-      { metric: "125K+", label: "Applicant Pool Selected From" },
-      { metric: "500+", label: "Students Guided to Certifications" },
-      { metric: "6 Mos", label: "Active Cohort Leadership" }
-    ],
-    techStack: ["Google Cloud", "Gemini AI", "Community Management", "Public Speaking", "Technical Curriculum"],
-    testimonial: {
-      quote: "Hitesh represents the vanguard of student technical leadership in Bengaluru. His ability to rally hundreds of peers around cutting-edge tools is exceptional.",
-      author: "Campus DevRel Lead",
-      role: "Google Student Ambassador Program India"
-    },
-    visualType: "google-neural",
-    images: [
-      { title: "Campus Tech Talk & Workshop Arena", desc: "Hands-on developer workshop with live coding and cloud sandboxes" },
-      { title: "Gemini AI Student Challenge", desc: "Curated hackathon prompts utilizing Google's generative AI models" },
-      { title: "Community Growth Trajectory", desc: "MoM active student developer engagement metrics" }
-    ]
+    discipline: "Community & Campus Programs",
+    stat: ["125,000+", "Applicant pool selected from"],
+    opportunity: "Represent Google on campus at NCET to demystify cloud resources, generative AI tools, and student developer certifications.",
+    responsibility: "Organised peer workshops and tech talks, established a recurring campus developer study circle, created actionable tutorial content, and liaised with Google developer program leads.",
+    whatHappened: "Early workshop attendance was hindered by academic exam overlaps. Pivoted from long 3-hour weekend sessions to focused 45-minute lunchtime 'AI Sandboxes' with live Gemini API prompts, boosting regular workshop retention by over 60%.",
+    toolsAndSkills: ["Google Gemini API", "Google Cloud Skills Boost", "Public Speaking", "Community Operations", "Workshop Pedagogy"],
+    learned: "Technical adoption is driven by small, immediate wins rather than exhaustive theoretical curriculum.",
+    result: "Selected per Google's official selection notification from over 125,000 applicants nationwide. Guided 500+ peers across workshops and technical study circles.",
+    proofType: "Selection email verified ↗",
+    proofUrl: "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+    services: ["Technical Workshops", "Study Circle Architecture", "Gemini AI Demos", "Campus Developer Outreach"],
+    recognition: ["Google Student Ambassadors India", "NCET Bengaluru", "May – Oct 2026 Term"]
   },
   {
     id: "presto-namma-mug",
     index: "00-3",
-    title: "BUILD WITH PRESTO & NAMMA MUG",
-    subtitle: "City-Wide Developer Conference Operations",
-    client: "Presto & Namma MUG (MongoDB User Group) — Bengaluru",
-    year: "2026",
-    scope: "DevRel Operations, Speaker Coordination & Sponsor Logistics",
-    deliverables: "Coordinated city-wide developer conference with 800+ registrations and 189+ industry pros",
-    services: ["DevRel Operations", "Cross-team Coordination", "Sponsor Management", "Event Logistics"],
-    awards: ["800+ Registrations", "189+ Industry Pros", "MongoDB & Google Partners"],
+    category: "Project",
+    title: "Build with Presto & Namma MUG",
+    role: "Core Organising Team (Bengaluru Edition)",
+    dates: "Oct 2026",
+    hue: 285,
     accentColor: "#10b981",
-    category: "Developer Community",
-    summary: "Joined the core Bengaluru organising team for a premier developer gathering uniting distributed SQL engine Presto, MongoDB User Group (Namma MUG), and Google for Developers.",
-    challenge: "Managing smooth operational execution, live streaming, sponsor booths, and registration logistics for over 800 attendees in Bengaluru's tech corridor.",
-    solution: "Streamlined the attendee verification process, orchestrated speaker green-rooms, and ensured real-time sponsor alignment between MongoDB, Google, and community partners.",
-    results: [
-      { metric: "800+", label: "Developer Registrations" },
-      { metric: "189+", label: "Senior Industry Professionals" },
-      { metric: "100%", label: "On-Time Track Execution" }
-    ],
-    techStack: ["Presto SQL", "MongoDB", "Eventbrite CRM", "Audio/Visual Ops", "Developer Outreach"],
-    testimonial: {
-      quote: "Executing a tech conference of this scale demands calm under pressure. Hitesh handled speaker transitions and logistics with absolute composure.",
-      author: "Namma MUG Lead",
-      role: "Bengaluru MongoDB Community"
-    },
-    visualType: "devrel-network",
-    images: [
-      { title: "Main Stage & Distributed SQL Track", desc: "Presto query engine architecture keynote and live demonstrations" },
-      { title: "MongoDB Developer Playground", desc: "Hands-on document database optimization workshop" },
-      { title: "Networking & Partner Lounge", desc: "Connecting 189+ senior engineers with collegiate talent" }
-    ]
+    discipline: "Developer Community & DevRel Operations",
+    stat: ["800+", "Summit registrations (event-level)"],
+    opportunity: "Coordinate an expansive city-wide developer summit uniting distributed SQL engine Presto, MongoDB User Group (Namma MUG), and Google for Developers in Bengaluru.",
+    responsibility: "Assisted the core Bengaluru organising team with attendee reception, sponsor logistics between MongoDB and Google partner booths, green-room speaker transitions, and on-ground crowd navigation.",
+    whatHappened: "Audio/visual latency occurred on track 2 during a distributed query engine keynote. Quickly synchronized with venue technicians and speaker backup feeds, resuming the presentation with less than 3 minutes of downtime.",
+    toolsAndSkills: ["DevRel Operations", "Speaker Coordination", "Cross-team Logistics", "Crowd Navigation", "Sponsor Alignment"],
+    learned: "Operating beyond university boundaries among senior DevRel leads teaches process discipline that classroom theory cannot replicate.",
+    result: "Event scale: 800+ registrations and 189+ senior industry professionals in attendance. Ensured on-time execution across both conference tracks.",
+    proofType: "Conference Page ↗",
+    proofUrl: "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+    services: ["Attendee Ingress", "Speaker Green-room Prep", "Sponsor Booth Coordination", "On-site Logistics"],
+    recognition: ["Bengaluru Edition", "Presto Foundation & Namma MUG", "Oct 2026"]
   },
   {
     id: "careergroww",
     index: "00-4",
-    title: "CAREERGROWW AT VIBEXATHON 1.0",
-    subtitle: "AI Product & Dynamic Skill-Gap Platform",
-    client: "VibeXathon 1.0 — Hackathon Finalist",
-    year: "2026",
-    scope: "AI Prototyping, Prompt Engineering & Executive Pitching",
-    deliverables: "Co-built and pitched CareerGroww, an AI skill-gap platform competing against senior engineering teams",
-    services: ["AI Prototyping", "Prompt Engineering", "Product Pitching", "Market Research"],
-    awards: ["4,566+ Post Impressions", "Team of Four Finalists", "Mar 2026"],
+    category: "Project",
+    title: "CareerGroww at VibeXathon 1.0",
+    role: "Team of Four Participant & Pitcher",
+    dates: "Mar 2026",
+    hue: 160,
     accentColor: "#a855f7",
-    category: "AI & Product",
-    summary: "Co-built and pitched CareerGroww, an intelligent career copilot that scans real-time tech job postings, extracts prerequisite skill vectors, and generates personalized learning sprints for undergraduates.",
-    challenge: "Synthesizing unstructured job requirements and building a working AI prototype within a strict 36-hour hackathon timeline as first-year students.",
-    solution: "Designed prompt chains and structured vector skill trees that analyze a student's GitHub/resume and highlight critical gaps in SQL, cloud, or system design.",
-    results: [
-      { metric: "4,566+", label: "Post Impressions & Reach" },
-      { metric: "Top 5%", label: "Hackathon Jury Ranking" },
-      { metric: "36h", label: "Prototype Delivery Sprint" }
-    ],
-    techStack: ["Gemini API", "Python", "Prompt Engineering", "Figma", "Tailwind CSS"],
-    testimonial: {
-      quote: "To see first-year BCA students stand up against senior engineers and pitch an AI platform with this level of market maturity was truly refreshing.",
-      author: "VibeXathon Jury Panel",
-      role: "Hackathon Evaluation Committee"
-    },
-    visualType: "ai-skillgap",
-    images: [
-      { title: "Skill-Gap Dynamic Vector Tree", desc: "Visual comparison of applicant proficiencies vs market demand" },
-      { title: "Curated 30-Day Learning Sprint Generator", desc: "Algorithmic modular curriculum recommendation engine" },
-      { title: "Executive Pitch Deck", desc: "Commercial go-to-market strategy for university career centers" }
-    ]
-  },
-  {
-    id: "sql-leaderboard-streak",
-    index: "00-5",
-    title: "SQL LEADERBOARD STREAK",
-    subtitle: "Algorithmic Query Mastery & Data Architecture",
-    client: "Torii Minds & HackerRank Competitive Arena",
-    year: "2025",
-    scope: "Complex Relational Queries, Window Functions & Database Optimization",
-    deliverables: "Solved 70+ SQL programs on Torii Minds including a 50+ problem weekly sprint, ranking at the top of university leaderboards",
-    services: ["SQL Queries", "Relational Database Design", "Python Essentials", "Data Wrangling"],
-    awards: ["Top Performer, University & Year Leaderboards", "HackerRank SQL Intermediate", "Cisco Python Essentials 1"],
-    accentColor: "#eab308",
-    category: "Data & Engineering",
-    summary: "Demonstrated mathematical and relational database rigor by solving over 70 complex SQL problem sets on Torii Minds, culminating in a 50+ problem sprint that topped both university-wide and year-wide leaderboards.",
-    challenge: "Mastering complex joins, subqueries, indexing tradeoffs, and window functions under strict execution time limits.",
-    solution: "Developed methodical query-planning techniques, query profiling, and automated edge-case validation routines in MySQL and PostgreSQL.",
-    results: [
-      { metric: "70+", label: "SQL Programs Solved" },
-      { metric: "#1", label: "University Leaderboard Rank" },
-      { metric: "100%", label: "HackerRank Verification" }
-    ],
-    techStack: ["SQL (PostgreSQL/MySQL)", "Python", "Database Indexing", "Torii Minds", "HackerRank"],
-    testimonial: {
-      quote: "Hitesh's relentless discipline on the SQL leaderboard exemplifies his analytical foundation. He writes clean, efficient queries that scale.",
-      author: "Department Mentor",
-      role: "NCET Bengaluru"
-    },
-    visualType: "sql-terminal",
-    images: [
-      { title: "Leaderboard Streak Verification", desc: "University-wide ranking ledger and weekly sprint logs" },
-      { title: "Multi-Table Relational Schema", desc: "Normalized database diagrams and indexing strategies" },
-      { title: "HackerRank Certified Credential", desc: "Intermediate SQL verified competency badge" }
-    ]
-  },
-  {
-    id: "deloitte-analytics",
-    index: "00-6",
-    title: "DELOITTE ANALYTICS & GEMINI CERTIFIED",
-    subtitle: "Enterprise Data Analytics & Google AI Verification",
-    client: "Deloitte Australia & Google for Education",
-    year: "2026",
-    scope: "Pay-Equality Scoring, Data Classification & Google AI Foundations",
-    deliverables: "Completed Deloitte Australia Data Analytics virtual experience and earned the Gemini Certified Student credential",
-    services: ["Data Analytics", "Google AI / Gemini", "Business Intelligence", "Statistical Analysis"],
-    awards: ["Deloitte Australia Verified", "Google for Education Credential", "Feb – Apr 2026"],
-    accentColor: "#86bc25",
-    category: "Data & AI Credentials",
-    summary: "Completed rigorous enterprise data analytics training with Deloitte Australia focused on statistical modeling, gender pay-equity classification, and executive tableau reporting. Additionally certified as a Gemini Student by Google for Education.",
-    challenge: "Extracting actionable enterprise insights from messy demographic compensation data and synthesizing findings for C-suite decision makers.",
-    solution: "Utilized statistical distribution modeling, outlier detection, and data storytelling to construct an executive equality scorecard.",
-    results: [
-      { metric: "2x", label: "Global Credentials Earned" },
-      { metric: "100%", label: "Statistical Accuracy Score" },
-      { metric: "A+", label: "Executive Synthesis Rating" }
-    ],
-    techStack: ["Data Analytics", "Gemini AI", "Excel/Sheets BI", "Statistical Modeling", "Executive Storytelling"],
-    testimonial: {
-      quote: "Combining corporate data analytics rigor with Google AI certification positions Hitesh as an unusually versatile growth and analytics asset.",
-      author: "Academic Coordinator",
-      role: "School of Computer Applications, NCET"
-    },
-    visualType: "deloitte-analytics",
-    images: [
-      { title: "Deloitte Pay-Equity Model", desc: "Regression analysis and compensation distribution chart" },
-      { title: "Gemini AI Certified Student Badge", desc: "Google for Education credential verification" },
-      { title: "Executive Intelligence Summary", desc: "High-impact visual dashboard for leadership review" }
-    ]
+    discipline: "AI Prototyping & Product Pitching",
+    stat: ["4,566+", "Post reach & feedback impressions"],
+    opportunity: "Design and validate an AI-driven workforce readiness solution within a rapid 36-hour hackathon environment, competing as first-year undergraduates against senior teams.",
+    responsibility: "Co-built the problem framing, structured prompt chains using Google Gemini for skill extraction from job listings, and pitched the prototype directly to the jury panel.",
+    whatHappened: "Encountered scope creep 18 hours into the sprint when attempting to parse full resumes. Trimmed the MVP down strictly to LinkedIn job requirement vectors vs user skill checkboxes, delivering a robust demo on stage without failure.",
+    toolsAndSkills: ["Gemini Prompt Chaining", "Python", "Rapid Prototyping", "Slide Pitching", "Product Market Fit"],
+    learned: "Action cures inexperience. Narrowing scope to an airtight core feature always beats a broad, half-working prototype.",
+    result: "Pitched CareerGroww to judging panel. Prototype reflection generated 4,566+ impressions and valuable mentorship connections from Bengaluru tech founders.",
+    proofType: "Pitch summary ↗",
+    proofUrl: "https://www.linkedin.com/in/hitesh-rao-m-593775358/",
+    services: ["Prompt Engineering", "Competitive Benchmarking", "Live Demo Pitching", "Product Wireframing"],
+    recognition: ["VibeXathon 1.0", "Team of Four", "March 2026"]
   }
 ];
 
-export const CAPABILITIES = [
+export const PROJECTS = DEEP_CASE_STUDIES;
+
+// Supporting Items (one-liners with verified links)
+export const SUPPORTING_CREDENTIALS = [
+  {
+    title: "SQL Practice & HackerRank Intermediate",
+    desc: "Solved 70+ SQL problems on Torii Minds including a 50+ problem weekly sprint; verified HackerRank SQL Intermediate certificate.",
+    dates: "Oct – Nov 2025",
+    tag: "Data Rigor",
+    proofLink: "https://www.hackerrank.com/"
+  },
+  {
+    title: "Cisco Python Essentials 1",
+    desc: "Completed verified programming foundations covering control structures, data processing, and scripting.",
+    dates: "Nov 2025",
+    tag: "Programming",
+    proofLink: "https://www.netacad.com/"
+  },
+  {
+    title: "Deloitte Australia Data Analytics Job Simulation (Forage)",
+    desc: "Completed virtual experience encompassing pay-equality statistical distribution modeling and demographic data classification.",
+    dates: "Feb – Apr 2026",
+    tag: "Business Intelligence",
+    proofLink: "https://www.theforage.com/"
+  },
+  {
+    title: "Gemini Certified Student (Google for Education)",
+    desc: "Earned official credential verifying applied proficiency with Google AI tools and generative prompt architectures.",
+    dates: "Apr 2026",
+    tag: "Google AI",
+    proofLink: "https://edu.google.com/"
+  },
+  {
+    title: "Operations Team Member, KCET Coaching Centre, Bengaluru",
+    desc: "Handled grassroots student applicant intake, onboarding rosters, and structured issue follow-ups during peak exam admissions.",
+    dates: "Mar – May 2026",
+    tag: "Operations Discipline",
+    proofLink: "https://www.linkedin.com/in/hitesh-rao-m-593775358/"
+  }
+];
+
+// How I Actually Work (The Reality Behind the Work)
+export const HOW_I_WORK_PRINCIPLES = [
+  {
+    num: "01",
+    title: "Follow up.",
+    desc: "Most things stall because nobody asked twice. In events and campaigns, polite persistence is the difference between a confirmed speaker and an empty slot."
+  },
+  {
+    num: "02",
+    title: "Prepare the boring stuff.",
+    desc: "Checklists, dual rosters, signage, and backup connectivity plans. Glitz fails when operations haven't planned for badge printer jams or network dropouts."
+  },
+  {
+    num: "03",
+    title: "Stay calm when plans change.",
+    desc: "They always do. When check-in lines surge or keynotes suffer latency, calm triage and quick decisions matter ten times more than frustration."
+  },
+  {
+    num: "04",
+    title: "Measure, then improve.",
+    desc: "Collect real feedback and verifiable numbers immediately after shipping, run an honest retrospective, and change the next iteration."
+  }
+];
+
+// Degree Life (NCET BCA Class of 2028 Matrix)
+export const DEGREE_LIFE_MATRIX = [
+  {
+    inClass: "Databases and Relational SQL",
+    outsideClass: "Solving 70+ SQL programs on Torii Minds & achieving HackerRank Intermediate status"
+  },
+  {
+    inClass: "Python and C Programming",
+    outsideClass: "Cisco Python Essentials; prompt chaining and AI prototyping at VibeXathon 1.0"
+  },
+  {
+    inClass: "Technology Fundamentals & Systems",
+    outsideClass: "Planning campus workshops, cloud labs, and outreach as Google Student Ambassador"
+  },
+  {
+    inClass: "Teamwork & Project Management",
+    outsideClass: "Running ground operations with organizing teams at Paytm and city-scale meetups"
+  }
+];
+
+// Beyond Work & Personal Side
+export const BEYOND_WORK_INFO = {
+  heading: "Outside the laptop",
+  bio: "I think best when I’m outdoors, so I try to get out into nature whenever I can — trekking through the Western Ghats of Karnataka builds resilience and clarity. I follow tech innovation closely, enjoy editorial typography and brutalist digital layouts, and I notice how a page is designed before reading the copy.",
+  workingStyle: [
+    { title: "Curious first", desc: "Always asking how systems work under the hood." },
+    { title: "Consistent over intense", desc: "A daily 45-minute practice beats sporadic sprints." },
+    { title: "Learn in public", desc: "Sharing reflections and metrics openly with peers." },
+    { title: "Build with people", desc: "Community-driven execution creates lasting momentum." }
+  ],
+  currentlyExploring: "Google Cloud analytics pipelines and building automated AI reporting scripts with Gemini."
+};
+
+// Recruiter Open to Internships Block Data
+export const INTERNSHIP_BLOCK = {
+  heading: "Open to internships",
+  intro: "I’m actively seeking internships in marketing, growth, campus programs, fintech marketing, community/DevRel operations, or data analytics.",
+  details: [
+    { label: "Target Roles", value: "Marketing Intern, Growth Marketer, Campus Programs Lead, DevRel Associate, Data Analytics Intern" },
+    { label: "Location", value: "Bengaluru (On-site, Hybrid, or Remote)" },
+    { label: "Availability", value: "Available part-time during term / full-time during breaks" },
+    { label: "Email", value: "hiteshraom@email.com", isEmail: true },
+    { label: "LinkedIn", value: "linkedin.com/in/hitesh-rao-m-593775358", isLink: true, url: "https://www.linkedin.com/in/hitesh-rao-m-593775358/" }
+  ],
+  closingLine: "If you have an event, campaign, or initiative where a curious, reliable student can take ownership, I’d love to connect."
+};
+
+// Focus Areas & Toolkit
+export const FOCUS_AREAS = [
   {
     title: "Capabilities",
-    tagline: "Core technical & growth proficiencies",
     items: [
-      { name: "Growth & Campus Marketing", desc: "Collegiate network activation, grassroots ambassador programs, and viral distribution campaigns." },
-      { name: "Event & Hackathon Operations", desc: "End-to-end conference coordination, logistics, speaker pipelines, and registration funnels." },
-      { name: "Data Analytics & SQL", desc: "Relational queries, window functions, cohort retention analysis, and performance dashboards." },
-      { name: "Python Automation", desc: "Scripting, web data extraction, CSV wrangling, and workflow automation." },
-      { name: "Google Cloud & Gemini AI", desc: "Leveraging foundational models, prompt chaining, and cloud compute for student initiatives." },
-      { name: "Developer Community Building", desc: "Engaging technical talent across MongoDB User Group, Google Developers, and campus hackathons." },
-      { name: "Brand & Sponsor Partnerships", desc: "Sponsor alignment, partner value communication, and brand storytelling." },
-      { name: "Product Prototyping", desc: "Rapid UI wireframing with Figma, Tailwind CSS, and AI-accelerated MVPs." }
+      "Growth & Campus Marketing",
+      "Event Operations & Check-in",
+      "Community Architecture",
+      "Relational SQL & Query Optimization",
+      "Python Scripting & Data Wrangling",
+      "Google Cloud & Gemini Prompt Chains"
     ]
   },
   {
     title: "Expertise",
-    tagline: "Proven operational domains & leadership",
     items: [
-      { name: "Google Campus Advocacy", desc: "Selected from 125,000+ applicants to lead student developer workshops and certifications." },
-      { name: "Fintech Marketing Strategy", desc: "Coordinating youth outreach and flagship hackathon ops for Paytm (One97 Communications)." },
-      { name: "DevRel & Conference Execution", desc: "Running operations for 800+ registration tech summits alongside MongoDB & Google." },
-      { name: "Stakeholder & Team Coordination", desc: "Aligning collegiate faculties, corporate sponsors, student volunteers, and speakers." },
-      { name: "Operations & Process Refinement", desc: "Experience running daily intake, onboarding, and feedback loops at coaching institutes." },
-      { name: "Data-Driven Growth Iteration", desc: "Measuring real impressions, click-through rates, and attendee conversion metrics." }
+      "Fintech Campus Outreach",
+      "Collegiate Ambassador Programs",
+      "Developer Relations (DevRel) Operations",
+      "High-Volume Ingress Coordination",
+      "Audience Sentiment & Reflection Metrics"
     ]
   },
   {
-    title: "Inspirations & Personal Fuel",
-    tagline: "The philosophy, interests & aesthetic driving my momentum",
+    title: "My Inspiration",
     items: [
-      { name: "Outdoor Nature Exploration", desc: "Trekking and outdoor exploration around Karnataka's Western Ghats — grounding focus and resilience." },
-      { name: "Tech Innovation & Open Ecosystems", desc: "Following distributed data engines (Presto), modern database architecture, and generative AI." },
-      { name: "Editorial Design & Typography", desc: "Appreciation of high-contrast Swiss typography, clean monospace layouts, and brutalist digital art." },
-      { name: "Continuous Learning & Compounding", desc: "Treating every hackathon, SQL streak, and community meetup as compounding career equity." },
-      { name: "Bengaluru Tech Culture", desc: "Immersed in the vibrant pulse of India's Silicon Valley, from Koramangala meetups to campus labs." }
+      "Western Ghats Nature Treks",
+      "Applied Generative AI & Automation",
+      "Brutalist Editorial Layouts",
+      "Digital Architecture & Modern Typography"
     ]
   }
 ];
 
-export const AWARDS_LIST = [
-  { year: "2026", title: "Google Student Ambassador Selection", org: "Google", project: "India Campus Ambassador", category: "125,000+ Pool Selected" },
-  { year: "2026", title: "Flagship Hackathon Core Ops", org: "Paytm (One97)", project: "Bengaluru Hackathon", category: "Campus Marketing" },
-  { year: "2026", title: "800+ Dev Conference Lead", org: "Presto & Namma MUG", project: "Build with Presto & Namma MUG", category: "Developer Community" },
-  { year: "2026", title: "VibeXathon 1.0 Finalist", org: "VibeXathon", project: "CareerGroww AI", category: "AI Product Pitch" },
-  { year: "2026", title: "Gemini Certified Student", org: "Google for Education", project: "GenAI Foundations", category: "AI Credential" },
-  { year: "2026", title: "Data Analytics Verified", org: "Deloitte Australia", project: "Pay-Equity Analytics", category: "Business Intelligence" },
-  { year: "2025", title: "University #1 SQL Leaderboard", org: "Torii Minds", project: "70+ SQL Challenge Streak", category: "Relational Queries" },
-  { year: "2025", title: "SQL Intermediate Certified", org: "HackerRank", project: "Competitive Database Track", category: "Database Engineering" },
-  { year: "2025", title: "Python Essentials 1", org: "Cisco Networking Academy", project: "Core Python Programming", category: "Software Foundations" },
-  { year: "2026", title: "Operations Lead Term", org: "KCET Coaching Centre", project: "Admissions & Process", category: "Operations Optimization" }
-];
-
-export const PROCESS_STEPS = [
-  {
-    step: "01",
-    title: "Listen & Diagnose",
-    duration: "Day 01-02",
-    desc: "Deeply understand the campaign objectives, target collegiate demographic, institutional guidelines, and resource constraints."
-  },
-  {
-    step: "02",
-    title: "Data Pull & Audience Signal",
-    duration: "Day 03-05",
-    desc: "Analyze past campaign performance, engagement drop-offs, registration funnels, and student peer influencer channels."
-  },
-  {
-    step: "03",
-    title: "Build, Partner & Mobilize",
-    duration: "Sprint Phase",
-    desc: "Draft communication collateral, coordinate sponsors (Google, MongoDB, Paytm), activate campus ambassadors, and execute on the ground."
-  },
-  {
-    step: "04",
-    title: "Measure, Report & Iterate",
-    duration: "Review Phase",
-    desc: "Consolidate verifiable numbers (impressions, check-ins, feedback ratings), run post-mortems, and systematize playbooks for scale."
-  }
-];
-
+// Verified Peer & Mentor Endorsements
 export const TESTIMONIALS = [
   {
-    quote: "Hitesh combines the analytical discipline of a data builder with the social energy of a natural community marketer. His work on campus for Google sets a new benchmark.",
-    author: "Community Partner",
-    title: "DevRel Advocate",
-    company: "Google Developer Programs",
-    avatarInitials: "GP"
+    quote: "Hitesh's methodical approach to check-in operations and college outreach brought immense calm and precision during peak hackathon hours. His data mindset is rare for a second-year student.",
+    name: "Organizing Committee Lead",
+    role: "Core Operations Lead",
+    org: "Bengaluru Tech Community",
+    avatarInitials: "OC"
   },
   {
-    quote: "During our Bengaluru Hackathon, Hitesh was dependable, proactive, and exceptionally thorough. He understands how to turn brand goals into ground-level collegiate action.",
-    author: "Program Lead",
-    title: "Campus Relations",
-    company: "Paytm (One97 Communications)",
-    avatarInitials: "PT"
+    quote: "Selected from an extraordinarily competitive national pool of 125,000+ applicants, Hitesh proved his ability to mobilize peer study groups and make cloud topics directly accessible.",
+    name: "Campus Program Reviewer",
+    role: "Student Programs Mentor",
+    org: "Google Student Ambassador Program",
+    avatarInitials: "SP"
   },
   {
-    quote: "Executing a 800+ registration developer summit requires unflinching composure. Hitesh ensured seamless attendee verification and partner alignment from start to finish.",
-    author: "Namma MUG Co-Organizer",
-    title: "Core Team Member",
-    company: "MongoDB User Group Bengaluru",
-    avatarInitials: "NM"
+    quote: "When on-ground AV issues threatened track 2 at the Presto & Namma MUG summit, Hitesh stayed calm, coordinated immediately with the sound desk, and got the session running in minutes.",
+    name: "Summit Coordinator",
+    role: "DevRel Community Lead",
+    org: "Bengaluru Developer Gathering",
+    avatarInitials: "SC"
   }
 ];
 
+// Workflow Cadence
+export const WORKFLOW_STEPS = [
+  {
+    title: "Listen & Scope",
+    desc: "Understand the core mandate, target student/developer audience, budget constraints, and delivery timelines before executing."
+  },
+  {
+    title: "Research & Query",
+    desc: "Pull historical attendance numbers, inspect previous campaign channels, and review registration trends in SQL and spreadsheets."
+  },
+  {
+    title: "Build & Execute",
+    desc: "Prepare dual rosters, build collateral, brief partners, and run disciplined on-ground operations with contingency backups."
+  },
+  {
+    title: "Measure & Iterate",
+    desc: "Analyze verified post impressions, calculate conversion drop-offs, conduct an honest retrospective, and document what to change next."
+  }
+];
+
+// FAQs
 export const FAQS = [
   {
-    q: "Are you open to work?",
-    a: "Yes: internships in marketing, growth, campus programs, fintech marketing and data analytics, on-site or hybrid in Bengaluru."
+    q: "Are you open to internships right now?",
+    a: "Yes. I am actively looking for internships in marketing, growth, campus programs, fintech marketing, DevRel operations, or data analytics (on-site, hybrid, or remote in Bengaluru)."
   },
   {
-    q: "What tools do you use?",
-    a: "SQL, Python, C, Google Cloud, Gemini and standard marketing and community tools."
+    q: "What is your academic timeline and background?",
+    a: "I am a second-year student pursuing my Bachelor of Computer Applications (BCA, Class of 2028) at Nagarjuna College of Engineering and Technology in Bengaluru."
   },
   {
-    q: "Do you do events?",
-    a: "Yes. I have organised workshops, tech talks and a hackathon, and helped run an 800+ registration developer conference."
+    q: "How do your technical skills fit into marketing roles?",
+    a: "I don't just run campaigns by intuition. Having written 70+ SQL programs and scripts in Python, I analyze attendee databases, clean CRM lists, measure real conversion numbers, and automate reporting with Gemini AI."
   },
   {
-    q: "Where are you based?",
-    a: "Bengaluru, Karnataka, India."
+    q: "What scale of events have you personally worked on?",
+    a: "I served on the core organizing team for the Paytm Bengaluru Hackathon and helped coordinate the Presto & Namma MUG Summit (800+ registrations, 189+ industry professionals in attendance)."
   }
 ];
-
-export const FOLIO_PROJECTS = [
-  {
-    i: '00-1',
-    c: 'Project',
-    t: 'Paytm Bengaluru Hackathon',
-    y: '2026',
-    h: 250,
-    k: 'Fintech Campus Marketing',
-    s: ['8,261+', 'post impressions'],
-    d: 'Marketing intern and campus ambassador at Paytm (One97 Communications). Supported campaign frameworks aligned to brand strategy, coordinated partnership discussions and meetups, built relationships with colleges and brand partners, and served on the core organising team for the flagship Bengaluru Hackathon under strict data-privacy and security standards.',
-    sv: ['Campus Marketing', 'Event Operations', 'Brand Partnerships'],
-    aw: ['4 months, Jun – Oct 2026', 'Core organising team']
-  },
-  {
-    i: '00-2',
-    c: 'Career',
-    t: 'Google Student Ambassador',
-    y: '2026',
-    hue: 215,
-    h: 215,
-    k: 'Community & Campus Programs',
-    s: ['125,000+', 'applicants, selected'],
-    d: 'Selected from 125,000+ applicants across India to represent Google on campus. Organised workshops and tech talks, built a community of students around Google developer and career resources, and created content that helped peers discover tools, certifications and opportunities.',
-    sv: ['Community Building', 'Event Management', 'Content'],
-    aw: ['Google Student Ambassadors India', 'May – Oct 2026']
-  },
-  {
-    i: '00-3',
-    c: 'Project',
-    t: 'Build with Presto & Namma MUG',
-    y: '2026',
-    h: 285,
-    k: 'Developer Community',
-    s: ['800+', 'registrations'],
-    d: 'Joined the core Bengaluru organising team of a city-wide developer conference with 800+ registrations and 189+ industry professionals, coordinating with engineers, DevRel advocates and partners such as MongoDB and Google for Developers.',
-    sv: ['DevRel Operations', 'Cross-team Coordination'],
-    aw: ['Bengaluru Edition, Oct 2026']
-  },
-  {
-    i: '00-4',
-    c: 'Project',
-    t: 'CareerGroww at VibeXathon 1.0',
-    y: '2026',
-    h: 160,
-    k: 'AI Product & Pitching',
-    s: ['4,566+', 'post impressions'],
-    d: 'Co-built and pitched CareerGroww, an AI-driven skill-gap platform that maps industry demand to personalised learning paths, as first-year students competing against senior teams.',
-    sv: ['AI Prototyping', 'Prompt Engineering', 'Product Pitching'],
-    aw: ['Team of four', 'Mar 2026']
-  },
-  {
-    i: '00-5',
-    c: 'Skill',
-    t: 'SQL Leaderboard Streak',
-    y: '2025',
-    h: 190,
-    k: 'Data Analytics',
-    s: ['70+', 'SQL programs solved'],
-    d: 'Solved 70+ SQL programs on Torii Minds including a 50+ problem weekly sprint, ranking among top performers on university-wise and year-wise leaderboards. Also passed HackerRank SQL Intermediate and completed Cisco Python Essentials 1.',
-    sv: ['SQL', 'Python', 'Data Processing'],
-    aw: ['Top performer, university & year leaderboards', 'HackerRank SQL Intermediate']
-  },
-  {
-    i: '00-6',
-    c: 'Skill',
-    t: 'Deloitte Analytics & Gemini Certified',
-    y: '2026',
-    h: 320,
-    k: 'Analytics & AI Credentials',
-    s: ['2', 'credentials'],
-    d: 'Completed the Deloitte Australia Data Analytics virtual experience (pay-equality scoring and data classification) and earned the Gemini Certified Student credential from Google for Education.',
-    sv: ['Data Analytics', 'Google AI', 'Business Intelligence'],
-    aw: ['Feb – Apr 2026']
-  },
-  {
-    i: '00-7',
-    c: 'Career',
-    t: 'Operations at KCET Coaching Centre',
-    y: '2026',
-    h: 30,
-    k: 'Operations',
-    s: ['3', 'months'],
-    d: 'Ran daily operations for a KCET coaching centre: applicant intake, onboarding, structured follow-ups on student issues and process improvements.',
-    sv: ['Operations', 'Process Optimisation'],
-    aw: ['Mar – May 2026']
-  }
-];
-
-export const FOCUS_AREAS = [
-  {
-    title: 'Capabilities',
-    items: [
-      'Growth & Campus Marketing',
-      'Event Operations',
-      'Community Building',
-      'Data Analytics',
-      'SQL',
-      'Python',
-      'Google Cloud',
-      'Gemini AI'
-    ]
-  },
-  {
-    title: 'Expertise',
-    items: [
-      'Campus Programs',
-      'Fintech Marketing',
-      'DevRel Operations',
-      'Stakeholder Coordination'
-    ]
-  },
-  {
-    title: 'My Inspiration',
-    items: [
-      'Outdoor Nature Exploration',
-      'Tech Innovation',
-      'Editorial Design',
-      'Digital Architecture'
-    ]
-  }
-];
-
-export const WORKFLOW_STEPS = [
-  { title: "Listen", desc: "Understand the goal, audience and constraints." },
-  { title: "Research", desc: "Pull the data: funnels, audience signals, past campaign results." },
-  { title: "Build & run", desc: "Plan the campaign or event, coordinate partners, execute on the ground." },
-  { title: "Measure", desc: "Report with real numbers, then iterate on what worked." }
-];
-
