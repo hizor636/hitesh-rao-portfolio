@@ -3,8 +3,11 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
 // https://vite.dev/config/
+// Support root domain (Vercel, custom domain, local) and GitHub Pages subpath
+const base = process.env.GITHUB_ACTIONS && !process.env.VERCEL ? '/hitesh-rao-portfolio/' : '/';
+
 export default defineConfig({
-  base: '/hitesh-rao-portfolio/',
+  base,
   plugins: [
     react(),
     tailwindcss(),
